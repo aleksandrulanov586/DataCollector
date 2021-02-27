@@ -16,7 +16,7 @@ public class Cat
 
     }
 
-    public void meow(double v)
+    public void meow()
     {
         weight = weight - 1;
         System.out.println("Meow");
@@ -53,6 +53,6 @@ public class Cat
         }
     }
 
-    public void meow() {
+    public void meow () {
     }
 }

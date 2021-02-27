@@ -31,6 +31,29 @@ public class Loader {
         }  while (m <= 10000);
 
         System.out.println("рыжик статус " + rizhik.getStatus ());
+//==================================================================================================================
+        Cat bars = new Cat();
+        rizhik.drink();
+        System.out.println(rizhik.getWeight());
+        int d = 1000000;
+        do {
+            System.out.println(rizhik.getWeight() - d);
+            d--;
+        }  while (m <= 10000);
+
+        System.out.println("bars статус " + bars.getStatus ());
+ //==================================================================================================================
+        Cat kuzy = new Cat();
+        rizhik.getWeight();
+        System.out.println(rizhik.getWeight());
+        int w = 1000000;
+        do {
+            System.out.println(rizhik.getWeight() - w);
+            w--;
+        }  while (w <= 10000);
+
+        System.out.println("рыжик статус " + kuzy.getStatus ());
+
 
 
              {
