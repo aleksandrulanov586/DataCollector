@@ -52,7 +52,4 @@ public class Cat
             return "Playing";
         }
     }
-
-    public void meow () {
-    }
 }
