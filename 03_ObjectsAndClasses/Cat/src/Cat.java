@@ -7,16 +7,19 @@ public class Cat
 
     private double minWeight;
     private double maxWeight;
-    private double eatenfeed;
+    private double foodWeight ;
+
 
 
 
     public Cat()
     {
-        weight = 50.0 + 50.0 ;
+        weight = 1500.0 + 3000.0 * Math.random() ;
         originWeight = weight;
-        minWeight = 100.0;
-        maxWeight = 150.0;
+        minWeight = 1000.0;
+        maxWeight = 9000.0;
+        foodWeight = 250.0;
+
 
     }
     public void pee()
@@ -33,6 +36,8 @@ public class Cat
     public void feed(Double amount)
     {
         weight = weight + amount;
+        foodWeight = foodWeight + amount;
+
     }
 
     public void drink(Double amount)
@@ -48,7 +53,10 @@ public class Cat
     public String getStatus()
 
     {
-
+if (foodWeight == foodWeight)
+{
+return ", сьела корма 250g";
+}
 
         if(weight < minWeight) {
             return "Dead";
