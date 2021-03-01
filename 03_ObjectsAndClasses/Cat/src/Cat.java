@@ -1,21 +1,29 @@
 
 public class Cat
 {
+
     private double originWeight;
     private double weight;
 
     private double minWeight;
     private double maxWeight;
+    private double eatenfeed;
+
+
 
     public Cat()
     {
-        weight = 1500.0 + 3000.0 * Math.random();
+        weight = 50.0 + 50.0 ;
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
+        minWeight = 100.0;
+        maxWeight = 150.0;
 
     }
-
+    public void pee()
+    {
+        weight = weight - 1;
+        System.out.println("pee");
+    }
     public void meow()
     {
         weight = weight - 1;
@@ -38,7 +46,10 @@ public class Cat
     }
 
     public String getStatus()
+
     {
+
+
         if(weight < minWeight) {
             return "Dead";
         }
