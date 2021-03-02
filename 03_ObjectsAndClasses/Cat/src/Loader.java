@@ -45,15 +45,17 @@ public class Loader {
         //   System.out.println("kuzy статус " + kuzy.getStatus());
 //======================================================================================================================
         Cat nym = new Cat();
-        nym.feed((double) 3000);
+        nym.feed((double) 0);
         System.out.println(nym.getWeight());
         nym.pee();
         nym.pee();
         System.out.println(nym.getWeight());
+        System.out.println(nym.eatenfood());
 
         {
             System.out.println("ням облегчилась " + nym.getStatus());
         }
+
 
 
 
