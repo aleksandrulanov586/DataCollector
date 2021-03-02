@@ -44,21 +44,53 @@ public class Loader {
         //    kuzy.getWeight();
         //   System.out.println("kuzy статус " + kuzy.getStatus());
 //======================================================================================================================
+        //       Cat nym = new Cat();
+        //       nym.feed((double) 0);
+        //       System.out.println(nym.getWeight());
+        //      nym.pee();
+        //      nym.pee();
+        //       System.out.println(nym.getWeight());
+        //       System.out.println(nym.eatenfood());
+
+        //       {
+        //           System.out.println("ням облегчилась " + nym.getStatus());
+        //      }
+
         Cat nym = new Cat();
-        nym.feed((double) 0);
-        System.out.println(nym.getWeight());
-        nym.pee();
-        nym.pee();
-        System.out.println(nym.getWeight());
-        System.out.println(nym.eatenfood());
+        Cat kuzy = new Cat();
+        Cat bars = new Cat();
+        Cat rizhik = new Cat();
+//======================================================================================================================
+        System.out.println(Cat.сatcount());
+        while (nym.getWeight() > 1000)
+            nym.meow();
+        System.out.println("nym вес:" + nym.getWeight() + nym.getStatus());
+        System.out.println(Cat.сatcount());
+//======================================================================================================================
 
-        {
-            System.out.println("ням облегчилась " + nym.getStatus());
+        System.out.println(Cat.сatcount());
+        while (kuzy.getWeight() < 1000)
+            kuzy.meow();
+        System.out.println("кузя вес:" + kuzy.getWeight() + kuzy.getStatus());
+        System.out.println(Cat.сatcount());
+
+//======================================================================================================================
+
+        System.out.println(nym.getWeight());
+        bars.feed((double) 10000);
+        bars.drink((double) 10000);
+        bars.pee();
+        int r = 1000;
+        do {
+            System.out.println(bars.getWeight() + r);
+            r++;
+            if (bars.catdead() == (bars.catexploded())) ;
+            break;
         }
-
-
-
-
+        while (r <= 9000);
+           System.out.println("барс статус " + bars.getStatus ());
+        System.out.println(bars.getWeight());
+        System.out.println(bars.getWeight());
     }
 }
 
