@@ -1,4 +1,4 @@
-public enum Enum
+public enum CatColor
 {
     GREEN,BLACK,RED
 }

@@ -16,6 +16,38 @@ public class Cat {
     private double exploded;
     private String name;
     private double mingetKitten;
+    private String GREEN;
+    private String BLACK;
+    private String RED;
+
+    public String getRED()
+    {
+        return RED;
+    }
+    public void setRED(String newRED)
+    {
+        RED = newRED;
+    }
+
+
+    public String getBLACK()
+    {
+        return BLACK;
+    }
+    public void setBLACK(String newBLACK)
+    {
+        BLACK = newBLACK;
+    }
+
+    public String getGREEN()
+    {
+        return GREEN;
+    }
+    public void setGREEN(String newGREEN)
+    {
+        GREEN = newGREEN;
+    }
+
 
     public Cat() {
         weight = 1500.0 + 3000.0 * Math.random();
@@ -24,7 +56,6 @@ public class Cat {
         maxWeight = 9000.0;
         foodWeight = 250.0;
         mingetKitten = 1100.0;
-
     }
 
 
