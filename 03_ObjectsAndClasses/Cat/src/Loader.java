@@ -1,7 +1,7 @@
 
 public class Loader {
-    private static Cat getKitten() {
- return new Cat ("лула"  );
+    private static Cat getKitten () {
+ return new Cat ("лула" );
 
 
     }

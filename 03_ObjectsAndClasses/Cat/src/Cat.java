@@ -2,7 +2,7 @@
 public class Cat {
 
     public static final int EYES = 2;
-    public static final int MINWEIGHT = 1100;
+    public static final int MINWEIGHT = 1200;
     public static final int MAXWEIGHT = 9000;
     private double originWeight;
     private double weight;
@@ -14,7 +14,7 @@ public class Cat {
     private double alive;
     private double dead;
     private double exploded;
-    private String lula;
+    private String name;
     private double mingetKitten;
 
     public Cat() {
@@ -26,20 +26,31 @@ public class Cat {
         mingetKitten = 1100.0;
 
     }
-    public Cat (String lula)
-    {
-        this.mingetKitten = mingetKitten;
-        this.getWeight();
-        this.lula = lula;
-    }
 
+
+
+
+    public Cat (String name  )
+    {
+        this();
+
+
+      this.name = name;
+
+
+    }
+    public Cat (double catWeight)
+    {
+        this.weight = catWeight;
+        this.mingetKitten = catWeight;
+    }
 
 
 
         public String getName()
 
         {
-            return lula;
+            return name;
         }
 
 
