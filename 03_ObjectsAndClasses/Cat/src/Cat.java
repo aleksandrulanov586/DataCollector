@@ -6,19 +6,22 @@ public class Cat {
     public static final int MAXWEIGHT = 9000;
     private double originWeight;
     private double weight;
-
     private double minWeight;
     private double maxWeight;
     private double foodWeight;
     private static int count = 0;
-    private double alive;
-    private double dead;
+
     private double exploded;
     private String name;
     private double mingetKitten;
     private String GREEN;
     private String BLACK;
     private String RED;
+
+    private boolean alive;
+    private boolean dead;
+    private boolean thereistail;
+    private boolean tailno;
 
     public String getRED()
     {
@@ -118,15 +121,25 @@ public class Cat {
     }
 
 
-        public Double catlive ()
-        {
-            return alive;
-        }
 
-    public Double catdead()
-    {
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public boolean isDead() {
         return dead;
     }
+    public boolean hasTail()
+    {
+        return thereistail;
+    }
+    public boolean hasnoTail()
+    {
+        return tailno;
+    }
+
+
+
     public Double catexploded()
     {
         return exploded;
@@ -147,6 +160,10 @@ public class Cat {
 
         {
             {
+
+
+
+
                 if (weight < minWeight) {
                     count--;
                 } else if (weight > maxWeight) ;
