@@ -21,7 +21,7 @@ public class Cat {
     private boolean alive;
     private boolean isAlive;
     private boolean thereistail;
-    private boolean tailno;
+    private boolean hasTail;
 
     public CatColor getRED() {
         return RED;
@@ -120,11 +120,11 @@ public class Cat {
     }
 
     public boolean hasTail() {
-        return thereistail;
+        return hasTail;
     }
 
-    public boolean hasnoTail() {
-        return tailno;
+    public void SetHasnoTail (boolean hasTail) {
+        this.hasTail = hasTail;
     }
 
 
