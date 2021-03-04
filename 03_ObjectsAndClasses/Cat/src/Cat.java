@@ -14,40 +14,37 @@ public class Cat {
     private double exploded;
     private String name;
     private double mingetKitten;
-    private String GREEN;
-    private String BLACK;
-    private String RED;
+    private CatColor GREEN;
+    private CatColor BLACK;
+    private CatColor RED;
 
     private boolean alive;
-    private boolean dead;
+    private boolean isAlive;
     private boolean thereistail;
     private boolean tailno;
 
-    public String getRED()
-    {
+    public CatColor getRED() {
         return RED;
     }
-    public void setRED(String newRED)
-    {
+
+    public void setRED(CatColor newRED) {
         RED = newRED;
     }
 
 
-    public String getBLACK()
-    {
+    public CatColor getBLACK() {
         return BLACK;
     }
-    public void setBLACK(String newBLACK)
-    {
+
+    public void setBLACK(CatColor newBLACK) {
         BLACK = newBLACK;
     }
 
-    public String getGREEN()
-    {
+    public CatColor getGREEN() {
         return GREEN;
     }
-    public void setGREEN(String newGREEN)
-    {
+
+    public void setGREEN(CatColor newGREEN) {
         GREEN = newGREEN;
     }
 
@@ -61,19 +58,15 @@ public class Cat {
         mingetKitten = 1100.0;
     }
 
-    public Cat (double catWeight)
-    {
+    public Cat(double catWeight) {
         this();
-        this.mingetKitten = weight;
+        this.originWeight = weight;
         this.weight = weight;
 
     }
 
 
-
-    public Cat (String name  )
-    {
-
+    public Cat(String name) {
 
 
         this.name = name;
@@ -82,13 +75,9 @@ public class Cat {
     }
 
 
-
-        public String getName()
-
-        {
-            return name;
-        }
-
+    public String getName() {
+        return name;
+    }
 
 
     {
@@ -117,43 +106,37 @@ public class Cat {
     }
 
 
-
     public void drink(Double amount) {
         weight = weight + amount;
     }
 
 
-
     public boolean isAlive() {
-        return alive;
+        return isAlive;
     }
 
-    public boolean isDead() {
-        return dead;
+    public void setAlive (boolean alive) {
+        isAlive = alive;
     }
-    public boolean hasTail()
-    {
+
+    public boolean hasTail() {
         return thereistail;
     }
-    public boolean hasnoTail()
-    {
+
+    public boolean hasnoTail() {
         return tailno;
     }
 
 
-
-    public Double catexploded()
-    {
+    public Double catexploded() {
         return exploded;
     }
 
-    public Double getWeight()
-    {
+    public Double getWeight() {
         return weight;
     }
 
-    public Double eatenfood()
-    {
+    public Double eatenfood() {
         return foodWeight;
     }
 
@@ -162,8 +145,6 @@ public class Cat {
 
         {
             {
-
-
 
 
                 if (weight < minWeight) {

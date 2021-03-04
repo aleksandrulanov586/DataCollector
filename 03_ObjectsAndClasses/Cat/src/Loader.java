@@ -1,10 +1,13 @@
 
 public class Loader {
-    private static Cat getKitten() {
+    private static Cat catWeight () {
         return new Cat("лула");
 
-
     }
+    {
+        System.out.print(catWeight().getName());
+    }
+
 
 
     public static void main(String[] args) {
