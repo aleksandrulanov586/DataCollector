@@ -1,9 +1,10 @@
 
-public class Cat {
+public class Cat implements Cloneable {
 
     public static final int EYES = 2;
     public static final int MINWEIGHT = 1200;
     public static final int MAXWEIGHT = 9000;
+
     private double originWeight;
     private double weight;
     private double minWeight;
@@ -12,41 +13,41 @@ public class Cat {
     private static int count = 0;
 
     private double exploded;
-    private String name;
+
     private double mingetKitten;
-    private CatColor GREEN;
-    private CatColor BLACK;
-    private CatColor RED;
+    private CatColor color;
+
+
+    public CatColor getColor() {
+        return color;
+    }
+    public void setColor(CatColor color) {
+        this.color = color;
+    }
+
+
+
 
     private boolean alive;
     private boolean isAlive;
     private boolean thereistail;
     private boolean hasTail;
+    private String name;
 
-    public CatColor getRED() {
-        return RED;
+
+    public String getCloname() {
+        return cloname;
     }
 
-    public void setRED(CatColor newRED) {
-        RED = newRED;
+    public void setCloname (String cloname) {
+        this.cloname = cloname;
     }
+    private String cloname;
 
 
-    public CatColor getBLACK() {
-        return BLACK;
-    }
 
-    public void setBLACK(CatColor newBLACK) {
-        BLACK = newBLACK;
-    }
 
-    public CatColor getGREEN() {
-        return GREEN;
-    }
 
-    public void setGREEN(CatColor newGREEN) {
-        GREEN = newGREEN;
-    }
 
 
     public Cat() {
@@ -58,10 +59,19 @@ public class Cat {
         mingetKitten = 1100.0;
     }
 
-    public Cat(double catWeight) {
-        this();
-        this.originWeight = weight;
+    public Cat kittcatweight;
+
+    {
+        new Cat(1100.0);
+    }
+
+    public Cat (double catweight) {
+
+            this();
+            this.originWeight = weight;
         this.weight = weight;
+        this.kittcatweight = kittcatweight;
+
 
     }
 
@@ -179,4 +189,16 @@ public class Cat {
 
 
     }
-}
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+     {
+    }
+
+
+
+    }
+

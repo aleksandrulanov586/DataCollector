@@ -1,13 +1,17 @@
 
 public class Loader {
-    private static Cat catWeight () {
-        return new Cat("лула");
+    private static Cat getKitten() {
+        return new Cat ("lula");
+
+
+
+
 
     }
+
     {
-        System.out.print(catWeight().getName());
-    }
 
+    }
 
 
     public static void main(String[] args) {
@@ -108,6 +112,26 @@ public class Loader {
 
         //    Cat nym = new Cat("ням");
         //   System.out.println(nym.getWeight());
+
+
+  //      Cat kuzy = new Cat();
+ //       Cat kuzy2 = Cati(kuzy);
+
+ //       kuzy.setCloname("кузя");
+ //       kuzy2.setCloname("кузя 2");
+  //      System.out.println(kuzy.getName());
+  //      System.out.println(kuzy2.getName());
+
+ //   }
+
+  //  public static Cat Cati (Cat kuzy2) {
+  //      Cat kuzyclo = null;
+  //      try {
+   //         kuzyclo = (Cat) kuzy2.clone();
+  //      } catch (CloneNotSupportedException e) {
+  //          e.printStackTrace();
+   //     }
+   //     return kuzyclo;
 
 
     }
