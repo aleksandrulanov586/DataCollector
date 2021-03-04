@@ -61,22 +61,24 @@ public class Cat {
         mingetKitten = 1100.0;
     }
 
+    public Cat (double catWeight)
+    {
+        this();
+        this.mingetKitten = weight;
+        this.weight = weight;
+
+    }
 
 
 
     public Cat (String name  )
     {
-        this();
 
 
-      this.name = name;
+
+        this.name = name;
 
 
-    }
-    public Cat (double catWeight)
-    {
-        this.weight = catWeight;
-        this.mingetKitten = catWeight;
     }
 
 
