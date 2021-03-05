@@ -56,13 +56,15 @@ public class Cat implements Cloneable {
         minWeight = 1000.0;
         maxWeight = 9000.0;
         foodWeight = 250.0;
-        mingetKitten = 1100.0;
+      //  mingetKitten = 1100.0;
     }
+
 
     public Cat kittcatweight;
 
     {
         new Cat(1100.0);
+
     }
 
     public Cat (double catweight) {
@@ -70,7 +72,7 @@ public class Cat implements Cloneable {
             this();
             this.originWeight = weight;
         this.weight = weight;
-        this.kittcatweight = kittcatweight;
+
 
 
     }

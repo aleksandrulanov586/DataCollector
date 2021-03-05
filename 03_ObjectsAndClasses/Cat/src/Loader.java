@@ -1,20 +1,25 @@
 
 public class Loader {
+
+
+
+
     private static Cat getKitten() {
-        return new Cat ("lula");
-
-
-
+        return new Cat (1100.0);
 
 
     }
 
-    {
 
+    public Loader( int  ) {
+        this.
     }
-
 
     public static void main(String[] args) {
+
+        new Cat(1100.0);
+
+
 
 
         //   Cat murka = new Cat();
