@@ -17,6 +17,10 @@ public class Loader {
     public static void main(String[] args) {
 
 
+        Cat kitten = getKitten();
+
+        System.out.println("lula " + kitten );
+
 
 
 
@@ -118,24 +122,24 @@ public class Loader {
         //  System.out.println(nym.getWeight());
 
 
-       Cat kuzy = new Cat();
-        Cat kuzy2 = Cati(kuzy);
+ //      Cat kuzy = new Cat();
+ //       Cat kuzy2 = Cati(kuzy);
 
-        kuzy.setCloname("кузя");
-       kuzy2.setCloname("кузя 2");
-        System.out.println(kuzy.getName());
-       System.out.println(kuzy2.getName());
+ //       kuzy.setCloname("кузя");
+  //     kuzy2.setCloname("кузя 2");
+  //      System.out.println(kuzy.getName());
+  //     System.out.println(kuzy2.getName());
 
-   }
+ //  }
 
-    public static Cat Cati (Cat kuzy2) {
-       Cat kuzyclo = null;
-       try {
-           kuzyclo = kuzy2.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-       }
-        return kuzyclo;
+ //   public static Cat Cati (Cat kuzy2) {
+ //      Cat kuzyclo = null;
+ //      try {
+ //          kuzyclo = kuzy2.clone();
+ //       } catch (CloneNotSupportedException e) {
+  //          e.printStackTrace();
+  //     }
+ //       return kuzyclo;
 
 
     }
