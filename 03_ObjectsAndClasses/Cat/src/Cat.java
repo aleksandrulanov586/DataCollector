@@ -18,6 +18,8 @@ public class Cat implements Cloneable {
     private CatColor color;
 
 
+
+
     public CatColor getColor() {
         return color;
     }
@@ -38,14 +40,16 @@ public class Cat implements Cloneable {
     public String getCloname() {
         return cloname;
     }
-
     public void setCloname (String cloname) {
         this.cloname = cloname;
     }
     private String cloname;
 
 
-
+    public static Cat copy (Cat original)
+    {
+        return original;
+    }
 
 
 

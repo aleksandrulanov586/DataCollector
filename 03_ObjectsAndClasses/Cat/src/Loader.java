@@ -1,25 +1,24 @@
-import java.util.Objects;
-
-public class Loader {
 
 
+public class Loader implements Cloneable {
 
 
-    private static Cat getKitten()
-    {
-      return new Cat (1100.0);
+
+    //   private static Cat getKitten()
+ //   {
+ //     return new Cat (1100.0);
 
 
-    }
+ //   }
 
 
 
     public static void main(String[] args) {
 
 
-        Cat kitten = getKitten();
+     //   Cat kitten = getKitten();
 
-        System.out.println("lula " + kitten );
+
 
 
 
@@ -143,7 +142,57 @@ public class Loader {
 
 
     }
-}
+
+
+    public static Cat copy(Cat original) throws CloneNotSupportedException {
+
+        Cat kuzy = new Cat(1100);
+        kuzy.clone();
+        return new Cat  (1100);
+        return kuzy;
+
+
+
+
+
+
+    }
+
+
+
+
+    //         Cat kuzy = new Cat();
+   //         Cat copy = (kuzy);
+
+   //           kuzy.setCloname("кузя");
+   //         copy.setCloname("кузя 2");
+  //           System.out.println(kuzy.getName());
+   //         System.out.println(copy.getName());
+
+   //     Cat kuzyclo = null;
+  //      try {
+  //          kuzyclo = (Cat original) copy.clone();
+  //      } catch (CloneNotSupportedException e) {
+  //          e.printStackTrace();
+  //      }
+  //      return kuzyclo;
+
+
+
+
+    @Override
+    public Cat clone() throws CloneNotSupportedException {
+        return (Cat) super.clone();
+    }
+
+
+
+
+
+
+
+    }
+
 
 
 
