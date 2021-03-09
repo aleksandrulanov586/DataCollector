@@ -4,20 +4,20 @@ public class Loader implements Cloneable {
 
 
 
-    //   private static Cat getKitten()
- //   {
- //     return new Cat (1100.0);
+      private static Cat getKitten()
+    {
+      return new Cat (1100.0);
 
+    }
 
- //   }
 
 
 
     public static void main(String[] args) {
 
 
-     //   Cat kitten = getKitten();
-
+       Cat kitten = getKitten();
+        System.out.println(kitten.getWeight());
 
 
 
@@ -144,19 +144,19 @@ public class Loader implements Cloneable {
     }
 
 
-    public static Cat copy(Cat original) throws CloneNotSupportedException {
+ //   public static Cat copy(Cat original) throws CloneNotSupportedException {
 
-        Cat kuzy = new Cat(1100);
-        kuzy.clone();
-        return new Cat  (1100);
-        return kuzy;
-
-
+  //      Cat kuzy = new Cat(1100);
+ //       kuzy.clone();
+ //       return new Cat  (1100);
+ //       return kuzy;
 
 
 
 
-    }
+
+
+ //   }
 
 
 
@@ -180,8 +180,8 @@ public class Loader implements Cloneable {
 
 
 
-    @Override
-    public Cat clone() throws CloneNotSupportedException {
+   @Override
+   public Cat clone() throws CloneNotSupportedException {
         return (Cat) super.clone();
     }
 
