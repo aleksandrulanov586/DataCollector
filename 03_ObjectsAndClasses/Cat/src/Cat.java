@@ -5,6 +5,7 @@ public class Cat implements Cloneable {
     public static final int MINWEIGHT = 1200;
     public static final int MAXWEIGHT = 9000;
 
+    private static double getWeight;
     private double originWeight;
     private double weight;
     private double minWeight;
@@ -201,5 +202,6 @@ public class Cat implements Cloneable {
 
 
 
-    }
+}
+
 
