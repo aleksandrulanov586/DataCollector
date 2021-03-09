@@ -147,7 +147,8 @@ public class Loader implements Cloneable {
     public static  Cat copy(Cat original)  {
 
 
-        Cat copyCat = new Cat(1100);
+        Cat copyCat = new Cat();
+        Cat copy = ( copyCat);
         copyCat.getName() = original.getName();
         copyCat.getWeight() = original.getWeight();
 
