@@ -6,8 +6,10 @@ public class Cat implements Cloneable {
     public static final int MAXWEIGHT = 9000;
 
     private static double getWeight;
+    public double weight;
+    public String name;
     private double originWeight;
-    private double weight;
+  //  private double weight;
     private double minWeight;
     private double maxWeight;
     private double foodWeight;
@@ -35,7 +37,7 @@ public class Cat implements Cloneable {
     private boolean isAlive;
     private boolean thereistail;
     private boolean hasTail;
-    private String name;
+   // private String name;
 
 
     public String getCloname() {
