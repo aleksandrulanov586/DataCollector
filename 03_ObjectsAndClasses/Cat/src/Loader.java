@@ -150,14 +150,14 @@ public class Loader implements Cloneable {
 
         catCopy.weight = original.weight;
         catCopy.name = original.name;
+        return catCopy;
 
 
 
 
 
 
-
- //   }
+   }
 
 
 
@@ -181,10 +181,7 @@ public class Loader implements Cloneable {
 
 
 
-   @Override
-   public Cat clone() throws CloneNotSupportedException {
-        return (Cat) super.clone();
-    }
+
 
 
 
