@@ -70,8 +70,8 @@ public class Cat implements Cloneable {
     public Cat (double catweight) {
 
             this();
-            this.originWeight = weight;
-        this.weight = weight;
+            this.originWeight = catweight;
+        this.weight = catweight;
 
 
 

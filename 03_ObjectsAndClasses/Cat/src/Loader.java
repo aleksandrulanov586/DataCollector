@@ -16,8 +16,8 @@ public class Loader implements Cloneable {
     public static void main(String[] args) {
 
 
-      Cat kitten = getKitten();
- //       System.out.println(kitten.getWeight());
+  //    Cat kitten = getKitten();
+  //      System.out.println(kitten.getWeight());
 
 
 
@@ -150,7 +150,6 @@ public class Loader implements Cloneable {
         Cat catCopy = new Cat();
 
         catCopy.getWeight() = original.getWeight();
-        catCopy.weight = original.weight;
 
 
 
@@ -158,7 +157,8 @@ public class Loader implements Cloneable {
 
 
 
-    }
+
+ //   }
 
 
 
