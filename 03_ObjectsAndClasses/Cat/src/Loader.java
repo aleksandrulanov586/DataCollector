@@ -14,6 +14,10 @@ public class Loader implements Cloneable {
 
 
     public static void main(String[] args) {
+        Cat cat = new Cat();
+        Cat copyCat = copy(cat);
+        System.out.println(copyCat.getWeight());
+        System.out.println(cat.getWeight());
 
 
      Cat kitten = getKitten();

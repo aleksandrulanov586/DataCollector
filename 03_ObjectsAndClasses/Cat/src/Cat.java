@@ -1,23 +1,23 @@
 
-public class Cat implements Cloneable {
+public class Cat {
 
     public static final int EYES = 2;
     public static final int MINWEIGHT = 1200;
     public static final int MAXWEIGHT = 9000;
 
-    private static double getWeight;
+
     public double weight;
     public String name;
     private double originWeight;
-  //  private double weight;
+
     private double minWeight;
     private double maxWeight;
     private double foodWeight;
     private static int count = 0;
 
-    private double exploded;
 
-    private double mingetKitten;
+
+
     private CatColor color;
 
 
@@ -63,7 +63,7 @@ public class Cat implements Cloneable {
         minWeight = 1000.0;
         maxWeight = 9000.0;
         foodWeight = 250.0;
-       mingetKitten = 1100.0;
+
     }
 
 
@@ -142,9 +142,7 @@ public class Cat implements Cloneable {
     }
 
 
-    public Double catexploded() {
-        return exploded;
-    }
+
 
     public Double getWeight() {
         return weight;
@@ -193,16 +191,6 @@ public class Cat implements Cloneable {
 
 
     }
-
-    @Override
-    public Cat clone() throws CloneNotSupportedException {
-        return (Cat) super.clone();
-    }
-
-     {
-    }
-
-
 
 }
 
