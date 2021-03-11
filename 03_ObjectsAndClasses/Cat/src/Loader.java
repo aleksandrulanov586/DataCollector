@@ -3,14 +3,10 @@
 public class Loader implements Cloneable {
 
 
+    private static Cat getKitten() {
+        return new Cat(1100.0);
 
-    private static Cat getKitten()
-   {
-      return new Cat (1100.0);
-
-   }
-
-
+    }
 
 
     public static void main(String[] args) {
@@ -34,11 +30,8 @@ public class Loader implements Cloneable {
         System.out.println(cat.isAlive());
         System.out.println(cat.getStatus());
 
-     Cat kitten = getKitten();
-       System.out.println(kitten.getWeight());
-
-
-
+        Cat kitten = getKitten();
+        System.out.println(kitten.getWeight());
 
 
         //   Cat murka = new Cat();
@@ -134,34 +127,34 @@ public class Loader implements Cloneable {
 //======================================================================================================================
 
 
-         //  Cat nym = new Cat("ням");
+        //  Cat nym = new Cat("ням");
         //  System.out.println(nym.getWeight());
 
 
- //      Cat kuzy = new Cat();
- //       Cat kuzy2 = Cati(kuzy);
+        //      Cat kuzy = new Cat();
+        //       Cat kuzy2 = Cati(kuzy);
 
- //       kuzy.setCloname("кузя");
-  //     kuzy2.setCloname("кузя 2");
-  //      System.out.println(kuzy.getName());
-  //     System.out.println(kuzy2.getName());
+        //       kuzy.setCloname("кузя");
+        //     kuzy2.setCloname("кузя 2");
+        //      System.out.println(kuzy.getName());
+        //     System.out.println(kuzy2.getName());
 
- //  }
+        //  }
 
- //   public static Cat Cati (Cat kuzy2) {
- //      Cat kuzyclo = null;
- //      try {
- //          kuzyclo = kuzy2.clone();
- //       } catch (CloneNotSupportedException e) {
-  //          e.printStackTrace();
-  //     }
- //       return kuzyclo;
+        //   public static Cat Cati (Cat kuzy2) {
+        //      Cat kuzyclo = null;
+        //      try {
+        //          kuzyclo = kuzy2.clone();
+        //       } catch (CloneNotSupportedException e) {
+        //          e.printStackTrace();
+        //     }
+        //       return kuzyclo;
 
 
     }
 
 
-    public static  Cat copy(Cat original)  {
+    public static Cat copy(Cat original) {
 
 
         Cat catCopy = new Cat();
@@ -171,43 +164,27 @@ public class Loader implements Cloneable {
         return catCopy;
 
 
-
-
-
-
-   }
-
-
+    }
 
 
     //         Cat kuzy = new Cat();
-   //         Cat copy = (kuzy);
+    //         Cat copy = (kuzy);
 
-   //           kuzy.setCloname("кузя");
-   //         copy.setCloname("кузя 2");
-  //           System.out.println(kuzy.getName());
-   //         System.out.println(copy.getName());
+    //           kuzy.setCloname("кузя");
+    //         copy.setCloname("кузя 2");
+    //           System.out.println(kuzy.getName());
+    //         System.out.println(copy.getName());
 
-   //     Cat kuzyclo = null;
-  //      try {
-  //          kuzyclo = (Cat original) copy.clone();
-  //      } catch (CloneNotSupportedException e) {
-  //          e.printStackTrace();
-  //      }
-  //      return kuzyclo;
-
-
+    //     Cat kuzyclo = null;
+    //      try {
+    //          kuzyclo = (Cat original) copy.clone();
+    //      } catch (CloneNotSupportedException e) {
+    //          e.printStackTrace();
+    //      }
+    //      return kuzyclo;
 
 
-
-
-
-
-
-
-
-
-    }
+}
 
 
 
