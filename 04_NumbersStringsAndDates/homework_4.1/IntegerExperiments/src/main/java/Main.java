@@ -22,13 +22,18 @@ public class Main {
    */
 
   public static Integer sumDigits(Integer number) {
-    Integer a = 5487;
-    a = number;
+    String i = Integer.toString(number);
+    char[] chars = i.toCharArray();
+    int i1 = Character.getNumericValue(chars[5]);
+    int i2 = Character.getNumericValue(chars[3]);
+    int i3 = Character.getNumericValue(chars[4]);
+    int i4 = Character.getNumericValue(chars[9]);
+
+    int sum = i1 + i2 + i3 + i4;
+
+    return sum;
 
 
-
-
-    return 0  ;
   }
 
-
+}
