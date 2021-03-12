@@ -16,19 +16,20 @@ public class Cat {
     private static int count = 0;
 
 
+    public CatColor getColor() {
+        return color;
+    }
 
+    public void setColor(CatColor color) {
+        this.color = color;
+    }
 
     private CatColor color;
 
 
 
 
-    public CatColor getColor() {
-        return color;
-    }
-    public void setColor(CatColor color) {
-        this.color = color;
-    }
+
 
 
 
@@ -37,7 +38,7 @@ public class Cat {
     private boolean isAlive;
     private boolean thereistail;
     private boolean hasTail;
-   // private String name;
+
 
 
     public String getCloname() {
@@ -191,6 +192,7 @@ public class Cat {
 
 
     }
+
 
 }
 

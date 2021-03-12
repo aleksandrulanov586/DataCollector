@@ -8,27 +8,24 @@ public class Loader implements Cloneable {
 
     }
 
-
-    public static void main(String[] args) {
-           Cat cat = new Cat();
-           cat.feed((double) 10000);
-            cat.drink((double) 10000);
+          Cat cat = new Cat();
+           cat.feed(100.0);
+            cat.drink(100.0);
             cat.pee();
             cat.meow();
            Cat copyCat = copy(cat);
-            copyCat.feed((double) 10000);
-            copyCat.drink((double) 10000);
-            copyCat.pee();
-            copyCat.meow();
+        System.out.println(copyCat.weight);
              System.out.println(copyCat.getWeight());
              System.out.println(copyCat.hasTail());
               System.out.println(copyCat.isAlive());
             System.out.println(copyCat.getStatus());
-
+        System.out.println(copyCat.getWeight());
              System.out.println(cat.getWeight());
             System.out.println(cat.hasTail());
             System.out.println(cat.isAlive());
            System.out.println(cat.getStatus());
+        System.out.println(cat.weight);
+
 
         Cat kitten = getKitten();
         System.out.println(kitten.getWeight());

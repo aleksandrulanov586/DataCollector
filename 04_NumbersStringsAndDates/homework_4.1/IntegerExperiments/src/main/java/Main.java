@@ -20,7 +20,10 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
-    //@TODO: write code here and delete TODO line
+    Integer a =15
+
+
     return 0;
   }
-}
+
+
