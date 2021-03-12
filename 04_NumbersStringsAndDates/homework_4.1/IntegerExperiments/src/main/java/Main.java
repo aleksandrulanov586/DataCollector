@@ -1,5 +1,7 @@
 public class Main {
 
+  private static java.lang.Integer;
+
   public static void main(String[] args) {
     Container container = new Container();
     container.count += 7843;
@@ -19,11 +21,14 @@ public class Main {
   В противном случае тестовый метод не сможет проверить ваш код
    */
 
-  public static int sumDigits(Integer number) {
-    Integer a =15
+  public static Integer sumDigits(Integer number) {
+    Integer a = 5487;
+    a = number;
 
 
-    return 0;
+
+
+    return 0  ;
   }
 
 
