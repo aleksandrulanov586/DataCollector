@@ -1,6 +1,6 @@
 
 
-public class Loader implements Cloneable {
+public class Loader  {
 
 
     private static Cat getKitten() {
@@ -8,27 +8,37 @@ public class Loader implements Cloneable {
 
     }
 
-          Cat cat = new Cat();
-           cat.feed(100.0);
-            cat.drink(100.0);
-            cat.pee();
-            cat.meow();
-           Cat copyCat = copy(cat);
-        System.out.println(copyCat.weight);
-             System.out.println(copyCat.getWeight());
-             System.out.println(copyCat.hasTail());
-              System.out.println(copyCat.isAlive());
-            System.out.println(copyCat.getStatus());
-        System.out.println(copyCat.getWeight());
-             System.out.println(cat.getWeight());
-            System.out.println(cat.hasTail());
-            System.out.println(cat.isAlive());
-           System.out.println(cat.getStatus());
-        System.out.println(cat.weight);
+    public static void main(String[] args) {
 
+        Cat cat = new Cat();
+        cat.feed(100.0);
+        cat.drink(100.0);
+        cat.pee();
+        cat.meow();
+
+        Cat copyCat = copy(cat);
+        System.out.println(copyCat.weight);
+        System.out.println(copyCat.getWeight());
+        System.out.println(copyCat.hasTail());
+        System.out.println(copyCat.isAlive());
+        System.out.println(copyCat.eatenfood());
+        System.out.println(copyCat.getStatus());
+        System.out.println(copyCat.getWeight());
+        System.out.println(cat.weight);
+        System.out.println(cat.getWeight());
+        System.out.println(cat.hasTail());
+        System.out.println(cat.isAlive());
+        System.out.println(cat.getStatus());
+        System.out.println(cat.eatenfood());
+        System.out.println(cat.getColor();
+
+//======================================================================================================================
 
         Cat kitten = getKitten();
         System.out.println(kitten.getWeight());
+
+
+
 
 
         //   Cat murka = new Cat();

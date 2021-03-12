@@ -8,6 +8,7 @@ public class Cat {
 
     public double weight;
     public String name;
+    public double eatenfoodcat;
     private double originWeight;
 
     private double minWeight;
@@ -20,11 +21,9 @@ public class Cat {
         return color;
     }
 
-    public void setColor(CatColor color) {
-        this.color = color;
-    }
 
-    private CatColor color;
+
+   public CatColor color;
 
 
 
