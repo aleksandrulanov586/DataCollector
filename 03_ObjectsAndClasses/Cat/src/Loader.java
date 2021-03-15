@@ -17,6 +17,7 @@ public class Loader  {
         cat.meow();
 
         Cat copyCat = copy(cat);
+        System.out.println("this is copyCat");
         System.out.println(copyCat.weight);
         System.out.println(copyCat.getWeight());
         System.out.println(copyCat.hasTail());
@@ -24,13 +25,16 @@ public class Loader  {
         System.out.println(copyCat.eatenfood());
         System.out.println(copyCat.getStatus());
         System.out.println(copyCat.getWeight());
+        System.out.println(copyCat.getColor());
+
+        System.out.println("this is original Cat");
         System.out.println(cat.weight);
         System.out.println(cat.getWeight());
         System.out.println(cat.hasTail());
         System.out.println(cat.isAlive());
         System.out.println(cat.getStatus());
         System.out.println(cat.eatenfood());
-        System.out.println(cat.getColor();
+        System.out.println(cat.getColor());
 
 //======================================================================================================================
 
@@ -168,6 +172,8 @@ public class Loader  {
 
         catCopy.weight = original.weight;
         catCopy.name = original.name;
+        catCopy.foodWeight = original.foodWeight;
+        catCopy.setColor(original.getColor());
         return catCopy;
 
 

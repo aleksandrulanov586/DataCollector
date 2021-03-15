@@ -13,7 +13,7 @@ public class Cat {
 
     private double minWeight;
     private double maxWeight;
-    private double foodWeight;
+    public double foodWeight;
     private static int count = 0;
 
 
@@ -22,15 +22,11 @@ public class Cat {
     }
 
 
+    public void setColor(CatColor color) {
+        this.color = color;
+    }
 
-   public CatColor color;
-
-
-
-
-
-
-
+    public CatColor color;
 
 
     private boolean alive;
@@ -39,22 +35,20 @@ public class Cat {
     private boolean hasTail;
 
 
-
     public String getCloname() {
         return cloname;
     }
-    public void setCloname (String cloname) {
+
+    public void setCloname(String cloname) {
         this.cloname = cloname;
     }
+
     private String cloname;
 
 
-    public static Cat copy (Cat original)
-    {
+    public static Cat copy(Cat original) {
         return original;
     }
-
-
 
 
     public Cat() {
@@ -67,14 +61,11 @@ public class Cat {
     }
 
 
+    public Cat(double catweight) {
 
-
-    public Cat (double catweight) {
-
-            this();
-            this.originWeight = catweight;
+        this();
+        this.originWeight = catweight;
         this.weight = catweight;
-
 
 
     }
@@ -129,7 +120,7 @@ public class Cat {
         return isAlive;
     }
 
-    public void setAlive (boolean alive) {
+    public void setAlive(boolean alive) {
         isAlive = alive;
     }
 
@@ -137,11 +128,9 @@ public class Cat {
         return hasTail;
     }
 
-    public void SetHasnoTail (boolean hasTail) {
+    public void SetHasnoTail(boolean hasTail) {
         this.hasTail = hasTail;
     }
-
-
 
 
     public Double getWeight() {
