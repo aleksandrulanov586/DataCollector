@@ -8,7 +8,6 @@ public class Cat {
 
     public double weight;
     public String name;
-    public double eatenfoodcat;
     private double originWeight;
 
     private double minWeight;

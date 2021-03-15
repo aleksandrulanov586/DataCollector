@@ -173,6 +173,7 @@ public class Loader  {
         catCopy.weight = original.weight;
         catCopy.name = original.name;
         catCopy.foodWeight = original.foodWeight;
+
         catCopy.setColor(original.getColor());
         return catCopy;
 
