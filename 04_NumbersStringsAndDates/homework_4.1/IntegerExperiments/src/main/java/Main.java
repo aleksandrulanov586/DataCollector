@@ -1,6 +1,6 @@
 public class Main {
 
-  private static java.lang.Integer;
+  private static Integer amount;
 
   public static void main(String[] args) {
     Container container = new Container();
@@ -21,19 +21,54 @@ public class Main {
   В противном случае тестовый метод не сможет проверить ваш код
    */
 
-  public static Integer sumDigits(Integer number) {
-    String i = Integer.toString(number);
-    char[] chars = i.toCharArray();
-    int i1 = Character.getNumericValue(chars[5]);
-    int i2 = Character.getNumericValue(chars[3]);
-    int i3 = Character.getNumericValue(chars[4]);
-    int i4 = Character.getNumericValue(chars[9]);
+  public static int sumDigits(Integer number) {
 
-    int sum = i1 + i2 + i3 + i4;
+    // number которая уже имеет значение Integer
+    number = 5489;
+// приобразую number - Integer в String
+        String integerString = number.toString();
+        System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
+        // с помощью цикла выделаю длину строки number которая уже из int приобразовалась в строку
+    // ради любопытство решил посмотреть что получится
+    for (int i = 0; i < integerString.length(); i++) {
+      System.out.println(integerString.charAt(i));
+      //выверяю индкс строки
+      Character char1 = integerString.charAt(0);
+      Character char2 = integerString.charAt(1);
+      Character char3 = integerString.charAt(2);
+      Character char4 = integerString.charAt(3);
+      // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
+      int sum = char1 + char2 + char3 + char4 ;
 
-    return sum;
+
+
+return sum;
+      
+    }
+
 
 
   }
-
 }
+
+      //   String integerString = Integer.toString(number);
+ //   System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
+
+   // String i = Integer.toString(number);
+
+ //   int i1 = Character.getNumericValue(chars[5]);
+ //   int i2 = Character.getNumericValue(chars[3]);
+ //   int i3 = Character.getNumericValue(chars[4]);
+//   int i4 = Character.getNumericValue(chars[9]);
+
+ //   int sum = i1 + i2 + i3 + i4;
+
+  
+
+
+  
+
+
+
+  
+        
