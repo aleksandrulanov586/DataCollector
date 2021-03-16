@@ -1,8 +1,23 @@
+import static java.lang.Character.digit;
+import static java.lang.Character.forDigit;
+
 public class Main {
+
+
 
   private static Integer amount;
 
   public static void main(String[] args) {
+
+// метод получения int из char
+      digit(char ch, in; Object radix;
+      radix);
+      char ch = '9';
+ // обратный метод
+      forDigit(int digit; int radix)
+
+
+//======================================================================================================================
     Container container = new Container();
     container.count += 7843;
 
@@ -49,7 +64,8 @@ return sum;
 
 
   }
-}
+
+    }
 
       //   String integerString = Integer.toString(number);
  //   System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
