@@ -1,5 +1,4 @@
-import static java.lang.Character.digit;
-import static java.lang.Character.forDigit;
+import static java.lang.Character.*;
 
 public class Main {
 
@@ -10,11 +9,11 @@ public class Main {
   public static void main(String[] args) {
 
 // метод получения int из char
-      digit(char ch, in; Object radix;
-      radix);
-      char ch = '9';
+//      digit(char ch, in; Object radix;
+//      radix);
+//      char ch = '9';
  // обратный метод
-      forDigit(int digit; int radix)
+ //     forDigit(int digit; int radix)
 
 
 //======================================================================================================================
@@ -37,6 +36,10 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
+
+      char x = 0;
+      char y = 0;
+      Character.valueOf(x).compareTo(Character.valueOf(y));
 
     // number которая уже имеет значение Integer
     number = 5489;
@@ -65,7 +68,9 @@ return sum;
 
   }
 
-    }
+
+
+}
 
       //   String integerString = Integer.toString(number);
  //   System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
