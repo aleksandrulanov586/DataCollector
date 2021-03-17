@@ -46,19 +46,20 @@ public class Main {
         System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
         // с помощью цикла выделаю длину строки number которая уже из int приобразовалась в строку
     // ради любопытство решил посмотреть что получится
-    for (int i = 0; i < integerString.charAt(i); i++) {
-      System.out.println(integerString.charAt(i));
+    for (int i = 0; i < Character.getNumericValue (i++); {
+      char i = 0;
+      System.out.println(Character.getNumericValue(i));
       //выверяю индкс строки
 
-      int char1 = Character.getNumericValue(i);
-         int char2 = Character.getNumericValue(i);
-         int char3 = Character.getNumericValue(i);
-   int  char4 = Character.getNumericValue(i);
+    int char1 = Character.getNumericValue(5);
+    int char2 = Character.getNumericValue(4);
+        int char3 = Character.getNumericValue(8);
+  int  char4 = Character.getNumericValue(9);
 
-   //   Character char1 = integerString.charAt(0);
-   //   Character char2 = integerString.charAt(1);
-  //    Character char3 = integerString.charAt(2);
-  //    Character char4 = integerString.charAt(3);
+ //    Character char1 = integerString.charAt(0);
+ //    Character char2 = integerString.charAt(1);
+ //     Character char3 = integerString.charAt(2);
+ //     Character char4 = integerString.charAt(3);
       // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
      int sum = char1 + char2 + char3 + char4 ;
 
