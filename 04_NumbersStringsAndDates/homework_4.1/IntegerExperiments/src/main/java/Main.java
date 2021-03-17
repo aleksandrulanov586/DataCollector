@@ -1,5 +1,3 @@
-import static java.lang.Character.*;
-
 public class Main {
 
 
@@ -37,9 +35,9 @@ public class Main {
 
   public static int sumDigits(Integer number) {
 
-      char x = 0;
-      char y = 0;
-      Character.valueOf(x).compareTo(Character.valueOf(y));
+    //  char x = 0;
+   //   char y = 0;
+   //   Character.valueOf(x).compareTo(Character.valueOf(y));
 
     // number которая уже имеет значение Integer
     number = 5489;
@@ -48,25 +46,31 @@ public class Main {
         System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
         // с помощью цикла выделаю длину строки number которая уже из int приобразовалась в строку
     // ради любопытство решил посмотреть что получится
-    for (int i = 0; i < integerString.length(); i++) {
+    for (int i = 0; i < integerString.charAt(i); i++) {
       System.out.println(integerString.charAt(i));
       //выверяю индкс строки
-      Character char1 = integerString.charAt(0);
-      Character char2 = integerString.charAt(1);
-      Character char3 = integerString.charAt(2);
-      Character char4 = integerString.charAt(3);
+
+      int char1 = Character.getNumericValue(i);
+         int char2 = Character.getNumericValue(i);
+         int char3 = Character.getNumericValue(i);
+   int  char4 = Character.getNumericValue(i);
+
+   //   Character char1 = integerString.charAt(0);
+   //   Character char2 = integerString.charAt(1);
+  //    Character char3 = integerString.charAt(2);
+  //    Character char4 = integerString.charAt(3);
       // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
-      int sum = char1 + char2 + char3 + char4 ;
+     int sum = char1 + char2 + char3 + char4 ;
 
+      return sum;
 
-
-return sum;
       
     }
-
+return sumDigits(number);
 
 
   }
+
 
 
 
