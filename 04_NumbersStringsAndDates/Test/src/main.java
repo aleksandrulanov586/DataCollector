@@ -4,8 +4,8 @@ public class main {
         System.out.println(maxNumber);
 
 
-        System.out.println("Float MIN " + Float.MIN_VALUE);
-        System.out.println("double MIN " + Double.MIN_VALUE);
+        System.out.println("Float MIN " + Float.MIN_EXPONENT );
+        System.out.println("double MIN " + Double.MIN_EXPONENT);
         System.out.println("Integer MIN " + Integer.MIN_VALUE);
         System.out.println("Long  MIN " + Long.MIN_VALUE);
         System.out.println("Short  MIN " + Short.MIN_VALUE);
@@ -18,6 +18,7 @@ public class main {
         System.out.println("Short MAX " + Short.MAX_VALUE);
         System.out.println("Byte MAX " + Byte.MAX_VALUE);
 
-
+       // Float.NEGATIVE_INFINITY, Float.POSITIVE_INFINITY,
+       //     Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY
     }
 }
