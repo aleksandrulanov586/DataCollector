@@ -8,9 +8,9 @@ public class Main {
 
 // метод получения int из char
 
-   //     String string = null;
-   //     int i = 15;
-   //     Integer digit = Integer.parseInt(String.valueOf(string.charAt(i)));
+      String string = "15";
+      int i = 15;
+       Integer digit = Integer.parseInt(String.valueOf(string.charAt(i)));
 
 //======================================================================================================================
         Container container = new Container();
@@ -31,7 +31,7 @@ public class Main {
   В противном случае тестовый метод не сможет проверить ваш код
    */
 
-    public static int sumDigits(Integer number) {
+   public static void sumDigits(Integer number) {
 
        //  char x = 55528;
        //   char y = 0;
@@ -46,21 +46,21 @@ public class Main {
         //String integerString = number.toString();
        // System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
 
-     String getNumericValue = number.toString();
-     System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
+   //  String getNumericValue = number.toString();
+  //   System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
 
         // с помощью цикла выделаю длину строки number которая уже из int приобразовалась в строку
         // ради любопытство решил посмотреть что получится
-     for (int i = 0; i < Character.getNumericValue(i++)) {
+ //    for (int i = 0; i < Character.getNumericValue(i++)) {
 
-         System.out.println(Character.getNumericValue(i));
+   //      System.out.println(Character.getNumericValue(i));
 
 
 
         //выверяю индкс строки
 
 
-      int char1 = Character.getNumericValue(number);
+   //   int char1 = Character.getNumericValue(number);
 
 
         //    Character char1 = integerString.charAt(0);
@@ -68,21 +68,21 @@ public class Main {
         //     Character char3 = integerString.charAt(2);
         //     Character char4 = integerString.charAt(3);
         // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
-       int sum = char1 ;
+  //     int sum = char1 ;
 
 
 
    // }
 
-        return sumDigits(number);
+   //     return sumDigits(number);
 
 
-    }
+   }
 
 
 
 
-}
+ }
 
 //   String integerString = Integer.toString(number);
 //   System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
