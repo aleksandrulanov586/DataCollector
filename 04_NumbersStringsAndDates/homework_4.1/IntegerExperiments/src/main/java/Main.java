@@ -8,9 +8,9 @@ public class Main {
 
 // метод получения int из char
 
-        String string = null;
-        int i = 15;
-        Integer digit = Integer.parseInt(String.valueOf(string.charAt(i)));
+   //     String string = null;
+   //     int i = 15;
+   //     Integer digit = Integer.parseInt(String.valueOf(string.charAt(i)));
 
 //======================================================================================================================
         Container container = new Container();
@@ -39,36 +39,37 @@ public class Main {
 
         // number которая уже имеет значение Integer
 
-    //    number = 5489;
+
 
         // приобразую number - Integer в String
 
-    //    String integerString = number.toString();
-   //     System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
+        //String integerString = number.toString();
+       // System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
+
+     String getNumericValue = number.toString();
+     System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
 
         // с помощью цикла выделаю длину строки number которая уже из int приобразовалась в строку
         // ради любопытство решил посмотреть что получится
-    //    for (int i = 0; i < Character.getNumericValue(i++); {
+     for (int i = 0; i < Character.getNumericValue(i++)) {
 
-     //         System.out.println(Character.getNumericValue(i);
+         System.out.println(Character.getNumericValue(i));
 
 
 
         //выверяю индкс строки
 
 
-    //    int char1 = Character.getNumericValue(number);
-    //    int char2 = Character.getNumericValue(number);
-    //    int char3 = Character.getNumericValue(number);
-    //    int char4 = Character.getNumericValue(number);
+      int char1 = Character.getNumericValue(number);
+
 
         //    Character char1 = integerString.charAt(0);
         //    Character char2 = integerString.charAt(1);
         //     Character char3 = integerString.charAt(2);
         //     Character char4 = integerString.charAt(3);
         // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
-     //   int sum = char1 + char2 + char3 + char4;
-     //   return sum;
+       int sum = char1 ;
+
 
 
    // }
