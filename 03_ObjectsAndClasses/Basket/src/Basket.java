@@ -37,7 +37,7 @@ public class Basket {
 
     public void add(int massaallgoods, int price, String name, int weight) {
 
-if ()
+
     }
 
     public void add(String name, int price, int count, int weight) {
