@@ -50,10 +50,11 @@ public class Main {
         System.out.println(Character.getNumericValue(i));
         //выверяю индкс строки
 
-        int char1 = Character.getNumericValue(5);
-        int char2 = Character.getNumericValue(4);
-        int char3 = Character.getNumericValue(8);
-        int char4 = Character.getNumericValue(9);
+
+        int char1 = Character.getNumericValue(i);
+        int char2 = Character.getNumericValue(i);
+        int char3 = Character.getNumericValue(i);
+        int char4 = Character.getNumericValue(i);
 
         //    Character char1 = integerString.charAt(0);
         //    Character char2 = integerString.charAt(1);
@@ -61,7 +62,6 @@ public class Main {
         //     Character char4 = integerString.charAt(3);
         // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
         int sum = char1 + char2 + char3 + char4;
-
         return sum;
 
       
