@@ -4,6 +4,10 @@ public class Basket {
     private String items = "";
     private int totalPrice = 0;
     private int limit;
+
+
+
+
     public int massaallgoods = 0;
     public int weight = 0;
 
@@ -25,6 +29,12 @@ public class Basket {
         this.items = this.items + items;
         this.totalPrice = totalPrice;
     }
+
+    public Basket(int massaallgoods, int weight) {
+        this.massaallgoods = weight;
+        this.items = items;
+    }
+
 
     public static int getCount() {
         return count;
