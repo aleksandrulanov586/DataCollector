@@ -1,7 +1,7 @@
 import java.time.Period;
 
 public class Basket {
-    private String items = "";
+   public String items = "";
     private int totalPrice = 0;
     private int limit;
 
@@ -11,7 +11,7 @@ public class Basket {
     public int massaallgoods = 0;
     public int weight = 0;
 
-    private static int count = 0;
+    public static int count = 0;
 
     public Basket() {
         increaseCount(1);
@@ -30,10 +30,7 @@ public class Basket {
         this.totalPrice = totalPrice;
     }
 
-    public Basket(int massaallgoods, int weight) {
-        this.massaallgoods = weight;
-        this.items = items;
-    }
+
 
 
     public static int getCount() {
@@ -48,10 +45,13 @@ public class Basket {
     public void add(int massaallgoods, int price, String name, int weight) {
 
 
+      if(items + count * weight);
+
+
     }
 
     public void add(String name, int price, int count, int weight) {
-
+for (count = 0; )
     }
 //==================================================================================================
     public void add(String name, int price) {
