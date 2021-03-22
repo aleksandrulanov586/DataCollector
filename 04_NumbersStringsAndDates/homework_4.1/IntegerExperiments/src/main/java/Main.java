@@ -46,9 +46,16 @@ public class Main {
   //  System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
 
 
-    for (int i = 0; i < integerString.size(); i++);
+    for (int i = 0; i < integerString.length(); i++);
+    for (int i = 0; i < integerString.length(); i++);
+    for (int i = 0; i < integerString.length(); i++);
+    int char1 = integerString.charAt(0);
 
-
+    int char2 = integerString.charAt(0);
+   // int sum = char2;
+    int char3 = integerString.charAt(0);
+  //  int sum = char3;
+    int sum = char1;
      // for (int q = 0; q > 7; Character.getNumericValue(q++))
      //   for (int w = 0; w > 22; Character.getNumericValue(w++))
     {
@@ -68,7 +75,7 @@ public class Main {
 
     }
 
-    return 0;
+    return sum;
   }
 
 
