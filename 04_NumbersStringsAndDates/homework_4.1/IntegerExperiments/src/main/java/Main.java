@@ -8,10 +8,10 @@ public class Main {
 
 // метод получения int из char
 
-    String string = "15";
-    int i = 15;
-    Integer digit = Integer.parseInt(String.valueOf(string.charAt(i)));
-    System.out.println(digit);
+//    String string = "15";
+//    int i = 15;
+//    Integer digit = Integer.parseInt(String.valueOf(string.charAt(i)));
+//    System.out.println(digit);
 //======================================================================================================================
     Container container = new Container();
     container.count += 7843;
@@ -31,43 +31,44 @@ public class Main {
   В противном случае тестовый метод не сможет проверить ваш код
    */
 
-  public static void sumDigits(Integer number) {
+  public static int sumDigits(Integer number) {
 
     //  char x = 55528;
     //   char y = 0;
     //   Character.valueOf(x).compareTo(Character.valueOf(y));
 
-    // number которая уже имеет значение Integer
-
     // приобразую number - Integer в String
 
-    //String integerString = number.toString();
-    // System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
+    String integerString = number.toString();
+    //System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
 
-    //  String getNumericValue = number.toString();
-    //   System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
+  //  String getNumericValue = number.toString();
+  //  System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
 
-    // с помощью цикла выделаю длину строки number которая уже из int приобразовалась в строку
-    // ради любопытство решил посмотреть что получится
-    //    for (int i = 0; i < Character.getNumericValue(i++)) {
 
-    //      System.out.println(Character.getNumericValue(i));
+    for (int i = 0; i < integerString.size(); i++);
 
-    //выверяю индкс строки
 
-    //   int char1 = Character.getNumericValue(number);
+     // for (int q = 0; q > 7; Character.getNumericValue(q++))
+     //   for (int w = 0; w > 22; Character.getNumericValue(w++))
+    {
 
-    //    Character char1 = integerString.charAt(0);
-    //    Character char2 = integerString.charAt(1);
-    //     Character char3 = integerString.charAt(2);
-    //     Character char4 = integerString.charAt(3);
-    // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
-    //     int sum = char1 ;
+    //  System.out.println(Character.getNumericValue(sum));
+    //  System.out.println(Character.getNumericValue(q));
+    //  System.out.println(Character.getNumericValue(w));
 
-    // }
+   //   int char1 = Character.getNumericValue(number);
+    //  int sum = char1;
 
-    //     return sumDigits(number);
+      //    Character char1 = integerString.charAt(0);
+      //    Character char2 = integerString.charAt(1);
+      //     Character char3 = integerString.charAt(2);
+      //     Character char4 = integerString.charAt(3);
+      // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
 
+    }
+
+    return 0;
   }
 
 
