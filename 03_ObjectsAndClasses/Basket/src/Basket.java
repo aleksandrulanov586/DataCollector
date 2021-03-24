@@ -8,8 +8,8 @@ public class Basket {
 
 
 
-    public int massaallgoods = 0;
-    public int weight = 0;
+    public double massaallgoods = 0;
+    public double weight = 0;
 
     public static int count = 0;
 
@@ -42,15 +42,16 @@ public class Basket {
     }
 //==================================================================================================
 
-    public void add(int massaallgoods, int price, String name, int weight) {
+    public void add(double massaallgoods, int price, String name, double weight) {
 
 
-      if(items + count * weight);
+      if(items + count * weight = massaallgoods);
 
+else if ()
 
     }
 
-    public void add(String name, int price, int count, int weight) {
+    public void add(String name, int price, int count, double weight) {
 for (count = 0; )
     }
 //==================================================================================================
