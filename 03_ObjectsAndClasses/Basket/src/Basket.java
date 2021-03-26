@@ -45,9 +45,9 @@ public class Basket {
     public void add(double massaallgoods, int price, String name, double weight) {
 
 
-      if(items + count * weight = massaallgoods);
+      massaallgoods  = massaallgoods  + count * weight;
 
-else if ()
+
 
     }
 
