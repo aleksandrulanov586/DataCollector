@@ -6,9 +6,11 @@ public class Basket {
     private int limit;
 
 
+  public double getMassaallgoods() {
+    return massaallgoods;
+  }
 
-
-    public double massaallgoods = 0;
+  public double massaallgoods = 0;
     public double weight = 0;
 
     public static int count = 0;
