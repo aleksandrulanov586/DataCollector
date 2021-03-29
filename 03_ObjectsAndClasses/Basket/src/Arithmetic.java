@@ -22,23 +22,22 @@ public class Arithmetic {
    this.a = a;
    this.b = b;
   }
+  public String info(){
+    String result = "a = " + a + ", b=" + b;
+    return result;
+  }
 
 
   public static void main(String[] args) {
-
+    Arithmetic arithmetic = new Arithmetic(1,2);
+    System.out.println(arithmetic.info());
    // Arithmetic arithmetic = new Arithmetic();
   //  System.out.println(arithmetic.a + arithmetic.b);
 
 
   }
 
-  public int sumnumbers;
 
-  {
-
-   System.out.println("Сумма = " + (a+b));
-
-  }
 
 
 

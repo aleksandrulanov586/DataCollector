@@ -48,7 +48,7 @@ public class Basket {
 
 
       massaallgoods  = massaallgoods  + count * weight;
-
+      massaallgoods = currentWeight;
 
 
     }
