@@ -15,23 +15,23 @@ public static int numberOfPages;
 
   }
 // принятие на печать 2 метода
-  public  String accepForPrinting1()
-  {
+//  public  String accepForPrinting1()
+//  {
 
-  }
-  public  String accepForPrinting2()
-  {
+//  }
+//  public  String accepForPrinting2()
+ // {
 
-  }
+//  }
   //очищающий очередь печати (строку String queue).
-  public  void  clear()
+//  public  void  clear()
 
-  {
+//  {
 
-  }
+//  }
 
   // метод выводящий всю информацию о добавленных в принтер документах в консоль и очищающий очередь печати после этого.
-  public String print()
+//  public String print()
 
   {
 
@@ -39,20 +39,20 @@ public static int numberOfPages;
   }
 
   //возвращающий общее количество страниц, добавленных в принтер, но ещё не распечатанных, а также соответствующую переменную, в которой будет храниться это количество.
-  public  int getPagesCount()
+//  public  int getPagesCount()
 
   {
 
 
   }
   // возвращающий общее количество документов, которые добавлены в принтер, но ещё не распечатаны, а также соответствующую переменную, в которой будет храниться это количество.
-  public static int getDocumentsCount()
+//  public static int getDocumentsCount()
 
   {
 
   }
   // возвращающий общее количество распечатанных документов и страниц
-  public static int returnOfDocumentsPages()
+//  public static int returnOfDocumentsPages()
 
   {
 
