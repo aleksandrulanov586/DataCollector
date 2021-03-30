@@ -26,7 +26,7 @@ public class Arithmetic {
     String result = "a = " + a + ", b=" + b;
     return result;
   }
-  public Integer difference(){
+  public Integer sun(){
     Integer i = a + b;
     return i;
   }
@@ -35,7 +35,7 @@ public class Arithmetic {
   public static void main(String[] args) {
     Arithmetic arithmetic = new Arithmetic(1,2);
     System.out.println(arithmetic.info());
-    System.out.println(arithmetic.equals(arithmetic.difference()));
+    System.out.println(arithmetic.equals(arithmetic.sun()));
 
    // Arithmetic arithmetic = new Arithmetic();
   //  System.out.println(arithmetic.a + arithmetic.b);

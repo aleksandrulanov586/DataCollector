@@ -1,5 +1,6 @@
 import java.time.Period;
 
+
 public class Basket {
    public String items = "";
     private int totalPrice = 0;
@@ -56,6 +57,9 @@ public class Basket {
     public void add(String name, int price, int count, double weight) {
       double currentWeight = count * weight;
       massaallgoods = massaallgoods + currentWeight;
+     // add("Бетон", 100, 2);
+
+     add(name,price,count);
     }
 //==================================================================================================
     public void add(String name, int price) {
