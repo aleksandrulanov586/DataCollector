@@ -5,8 +5,8 @@ public class Main {
 Basket basket = new Basket();
 basket.add("Молоко", 50);
 basket.add("Кефир", 60);
+basket.add("Моллоко Кефир");
 
-
-System.out.println(Basket.getCount());
+System.out.println(basket.getTotalPrice());
     }
 }

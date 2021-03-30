@@ -1,7 +1,7 @@
 import java.time.Period;
 
 public class Basket {
-   public String items = add();
+   public String items = "";
     private int totalPrice = 0;
     private int limit;
 
@@ -101,4 +101,7 @@ public class Basket {
             System.out.println(items);
         }
     }
+
+
+
 }
