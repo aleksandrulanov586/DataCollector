@@ -5,7 +5,7 @@ public class Main {
 Basket basket = new Basket();
 basket.add("Молоко", 50);
 basket.add("Кефир", 60);
-  //    basket.add("Молоко,кефир");
+       basket.add("Бетон", 100, 2);
 
 System.out.println(basket.getTotalPrice());
     }
