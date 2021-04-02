@@ -49,11 +49,17 @@ public class Basket {
 
 
       massaallgoods  = massaallgoods  + count * weight;
-
+add(weight,count);
 
 
     }
+public double add(double weight,int count )
+{
+  add(weight,count);
 
+
+  return massaallgoods;
+}
     public void add(String name, int price, int count, double weight) {
       double currentWeight = count * weight;
       massaallgoods = massaallgoods + currentWeight;
