@@ -63,7 +63,7 @@ public double add(double weight,int count )
     public void add(String name, int price, int count, double weight) {
       double currentWeight = count * weight;
       massaallgoods = massaallgoods + currentWeight;
-     // add("Бетон", 100, 2);
+
 
      add(name,price,count);
     }
