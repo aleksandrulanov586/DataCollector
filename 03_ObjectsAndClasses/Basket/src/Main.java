@@ -8,5 +8,8 @@ basket.add("Кефир", 60);
        basket.add("Бетон", 100, 2);
 
 System.out.println(basket.getTotalPrice());
+
+
+
     }
 }

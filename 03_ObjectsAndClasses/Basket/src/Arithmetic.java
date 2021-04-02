@@ -28,29 +28,35 @@ public class Arithmetic {
     return result;
   }
   // разность чисел
-  public Integer sun(){
+  public Integer difference(){
     Integer i = a - b;
     return i;
   }
   //произведения чисел
   public Integer works(){
-    Integer i = a + b;
+    Integer i = a * b;
     return i;
   }
   //среднее значение этих чисел
-  public Integer averageValue(){
-    Integer i = a % b;
+  public double average (){
+    double i = (a + b) / 2;
     return i;
   }
 //максимальное из двух чисел
-  public boolean max(){
-    boolean i = a > b;
-    return i;
+  public Integer max(){
+    if(a > b) {
+      return a;
+    } else {
+      return b;
+    }
   }
   // минимальное из двух чисел
-  public boolean min(){
-    boolean i = a < b;
-    return i;
+  public Integer min(){
+    if(a < b) {
+      return a;
+    } else {
+      return b;
+    }
   }
 
 
@@ -58,9 +64,9 @@ public class Arithmetic {
   public static void main(String[] args) {
     Arithmetic arithmetic = new Arithmetic(1,2);
     System.out.println(arithmetic.info());
-    System.out.println(arithmetic.equals(arithmetic.sun()));
+    System.out.println(arithmetic.difference());
     System.out.println(arithmetic.works());
-    System.out.println(arithmetic.averageValue());
+    System.out.println(arithmetic.average());
     System.out.println(arithmetic.max());
     System.out.println(arithmetic.min());
 
@@ -73,8 +79,7 @@ public class Arithmetic {
 
 
 
-
-  }
+}
 
 
 

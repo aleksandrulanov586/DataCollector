@@ -2,7 +2,7 @@ import java.time.Period;
 
 
 public class Basket {
-   public String items = "";
+   public String items = " ";
     private int totalPrice = 0;
     private int limit;
 
