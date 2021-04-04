@@ -52,11 +52,7 @@ public class Basket {
 
   }
 
-  public double add(double weight, int count) {
-    add(weight, count);
 
-    return massaallgoods;
-  }
 
   public void add(String name, int price, int count, double weight) {
     double currentWeight = count * weight;
@@ -65,7 +61,7 @@ public class Basket {
     add(name, price, count);
   }
 
-  //==================================================================================================
+  //================================================================================================
   public void add(String name, int price) {
     add(name, price, 1);
   }
