@@ -21,53 +21,91 @@ public class Elevator {
     this.maxFloor = maxFloor;
 
   }
+  public Elevator(int minFloor, int maxFloor){
+    this.minFloo = minFloo;
+    this.maxFloor = maxFloor;
+  }
 
   public void moveDown() {
 
-    while (currentFloor < 3);{
+    while (currentFloor < 3)
+      ;
+    {
 
       currentFloor--;
       System.out.println("Лифт едит вниз " + currentFloor);
     }
-    if (currentFloor <= 0 );{
+    if (currentFloor <= 0)
+      ;
+    {
       System.out.println("error " + currentFloor);
     }
-    if (currentFloor == 1);{
+    if (currentFloor == 1)
+      ;
+    {
       System.out.println("Вы на первом этаже " + currentFloor);
     }
-    if (currentFloor == 2);{
+    if (currentFloor == 2)
+      ;
+    {
       System.out.println("Вы на второмм этаже " + currentFloor);
     }
 
   }
-      public void moveUp () {
 
-      while (currentFloor < 3);
+  public void moveUp() {
+
+    while (currentFloor < 3)
+      ;
+    {
+      currentFloor++;
+      System.out.println("Лифт едит вверх " + currentFloor);
+      if (currentFloor > 3)
+        ;
+      {
+        System.out.println("error " + currentFloor);
+      }
+      if (currentFloor == 1)
+        ;
+      {
+        System.out.println("Вы на первом этаже " + currentFloor);
+      }
+      if (currentFloor == 2)
+        ;
+      {
+        System.out.println("Вы на второмм этаже " + currentFloor);
+      }
+      if (currentFloor == 3)
+        ;
+      {
+        System.out.println("Вы на третьем этаже " + currentFloor);
+      }
+    }
+
+  }
+
+  public void move(int floor) {
+
+    if (floor > maxFloor && floor < minFloo) {
+      System.out.println("Введенного этажа не существует, никуда не поеду!");
+
+      while (currentFloor < 3)
+        ;
       {
         currentFloor++;
         System.out.println("Лифт едит вверх " + currentFloor);
-        if (currentFloor > 3 );{
-        System.out.println("error " + currentFloor);
-      }
-        if (currentFloor == 1);{
-        System.out.println("Вы на первом этаже " + currentFloor);
-      }
-        if (currentFloor == 2);{
-        System.out.println("Вы на второмм этаже " + currentFloor);
-      }
-        if (currentFloor == 3);{
-        System.out.println("Вы на третьем этаже " + currentFloor);
-      }
+
+        while (currentFloor < 3)
+          ;
+        {
+
+          currentFloor--;
+          System.out.println("Лифт едит вниз " + currentFloor);
+        }
+
+        return floor;
       }
 
     }
-
-    public void move(int floor){
-
-
-    }
-Scanner scanner = new Scanner(System.in);
-
-
-    }
-
+  }
+}
