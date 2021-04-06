@@ -6,7 +6,7 @@ public class Elevator {
 
   public static int currentFloor = 1;
   public int minFloor = 0;
-  public int maxFloor = 3;
+  public int maxFloor = 4;
 
 
 
@@ -17,8 +17,7 @@ public class Elevator {
 
   public void moveDown() {
 
-    while (currentFloor < 3)
-      ;
+
 
 
     if (currentFloor == 1)
@@ -30,6 +29,11 @@ public class Elevator {
       ;
     {
       System.out.println("Вы на второмм этаже " + currentFloor);
+    }
+    if (currentFloor == 3)
+      ;
+    {
+      System.out.println("Вы на третьем этаже " + currentFloor);
     }
 
   }
@@ -59,16 +63,17 @@ public class Elevator {
 
   public void move(int floor) {
 
+
     if (floor > maxFloor && floor < minFloor) {
       System.out.println("Введенного этажа не существует, никуда не поеду!");
 
-      while (currentFloor < 3)
+      while (currentFloor < 4)
         ;
       {
         currentFloor++;
         System.out.println("Лифт едит вверх " + currentFloor);
 
-        while (currentFloor < 3)
+        while (currentFloor > 4)
           ;
         {
 
