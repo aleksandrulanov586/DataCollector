@@ -103,7 +103,7 @@ public class Elevator {
           System.out.println("Лифт едит вниз " + currentFloor);
         }
 
-        return floor;
+        return ;
       }
 
     }

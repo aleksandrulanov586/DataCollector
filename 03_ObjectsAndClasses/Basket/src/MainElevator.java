@@ -4,6 +4,6 @@ public class MainElevator {
 
         Elevator elevator = new Elevator();
         elevator.move( 1);
-       System.out.println(elevator.move(1));
+       System.out.println(elevator);
   }
 }

@@ -13,7 +13,7 @@ public class Main {
 // System.out.println(basket.getTotalPrice());
 
      Printer printer = new Printer();
-     printer.accepForPrinting("Text",2,"Text");
+     printer.append("Text",1,"Text");
       System.out.println(printer.getDocumentsint());
 
 

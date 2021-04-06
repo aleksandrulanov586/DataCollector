@@ -46,19 +46,30 @@ public  int numberOfPages = 0;
     Printer.documentsint = Printer.documentsint + documentsint;
   }
 // принятие на печать 3 метода
-  public  void accepForPrinting(String documentText)
+  public  void append (String documentText)
   {
-    stringQueue = stringQueue + name + documentText + pages ;
+
+    stringQueue = stringQueue + " " + documentText;
+    documents = documents + 1;
+    documentsint = documentsint + 1;
+    pages = pages + 1;
+    pagesInt = pagesInt + 1;
  }
-  public void accepForPrinting(String name,String documentText)
+  public void append (String name,String documentText)
   {
-    stringQueue =  stringQueue + pagesInt;
-
-
+    stringQueue = stringQueue + " " + documentText + " " + name;
+    documents = documents + 1;
+    documentsint = documentsint + 1;
+    pages = pages + 1;
+    pagesInt = pagesInt + 1;
   }
-  public void accepForPrinting(String name, int pages, String documentText)
+  public void append (String name, int pages, String documentText)
   {
-    stringQueue = stringQueue + documentPages;
+    stringQueue = stringQueue + " " + documentText + " " + name;
+    documents = documents + 1;
+    documentsint = documentsint + 1;
+    pages = pages + 1;
+    pagesInt = pagesInt + 1;
   }
 
   //очищающий очередь печати (строку String queue).
