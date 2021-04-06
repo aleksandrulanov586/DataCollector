@@ -11,16 +11,7 @@ public class Elevator {
   public int maxFloor = 3;
 
 
-  public Elevator(int minFloo) {
 
-    this.minFloo = minFloo;
-  }
-
-  public Elevator() {
-
-    this.maxFloor = maxFloor;
-
-  }
   public Elevator(int minFloor, int maxFloor){
     this.minFloo = minFloo;
     this.maxFloor = maxFloor;
@@ -30,16 +21,8 @@ public class Elevator {
 
     while (currentFloor < 3)
       ;
-    {
 
-      currentFloor--;
-      System.out.println("Лифт едит вниз " + currentFloor);
-    }
-    if (currentFloor <= 0)
-      ;
-    {
-      System.out.println("error " + currentFloor);
-    }
+
     if (currentFloor == 1)
       ;
     {
@@ -55,16 +38,8 @@ public class Elevator {
 
   public void moveUp() {
 
-    while (currentFloor < 3)
-      ;
-    {
-      currentFloor++;
-      System.out.println("Лифт едит вверх " + currentFloor);
-      if (currentFloor > 3)
-        ;
-      {
-        System.out.println("error " + currentFloor);
-      }
+
+
       if (currentFloor == 1)
         ;
       {
@@ -82,7 +57,7 @@ public class Elevator {
       }
     }
 
-  }
+
 
   public void move(int floor) {
 
@@ -103,7 +78,7 @@ public class Elevator {
           System.out.println("Лифт едит вниз " + currentFloor);
         }
 
-        return ;
+
       }
 
     }
