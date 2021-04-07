@@ -17,7 +17,8 @@ public class Main {
       printer.append("Text");
      printer.append("Text",1,"Text");
       printer.append("Text","Text");
-      System.out.println(printer.getDocumentsint());
+      printer.print("Распечатаны документы:");
+
 
 
     }

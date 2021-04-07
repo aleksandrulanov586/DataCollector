@@ -16,73 +16,87 @@ public class Elevator {
 
   public void moveDown() {
 
-    if (currentFloor == 1)
+    if (currentFloor < 2)
 
     {
 
       System.out.println("Вы на первом этаже " + currentFloor);
     }
-    if (currentFloor == 2)
+    if (currentFloor < 3)
 
     {
-      currentFloor = currentFloor - 1;
+
       System.out.println("Вы на второмм этаже " + currentFloor);
+
     }
-    if (currentFloor == 3)
+    currentFloor = currentFloor - 1;
+    if (currentFloor < 4)
 
     {
-      currentFloor = currentFloor - 1;
-      System.out.println("Вы на третьем этаже " + currentFloor);
-    }
 
+      System.out.println("Вы на третьем этаже " + currentFloor);
+      currentFloor = currentFloor - 1;
+    }
   }
+
+
+
+
 
   public void moveUp() {
 
-    if (currentFloor == 1)
+    if (currentFloor > 0)
 
     {
-      currentFloor = currentFloor + 1;
+
       System.out.println("Вы на первом этаже " + currentFloor);
+      currentFloor= currentFloor + 1;
     }
-    if (currentFloor == 2)
+
+    if (currentFloor > 1)
 
     {
-      currentFloor = currentFloor + 1;
+
       System.out.println("Вы на второмм этаже " + currentFloor);
+      currentFloor = currentFloor + 1;
     }
-    if (currentFloor == 3)
+
+    if (currentFloor > 2)
 
     {
-      currentFloor = currentFloor + 1;
+
       System.out.println("Вы на третьем этаже " + currentFloor);
+      currentFloor = currentFloor + 1;
+
     }
+
   }
 
 
   public void move(int floor) {
 
-    if (floor < maxFloor && floor > minFloor) {
+    if (floor > maxFloor || floor < minFloor) {
 
       System.out.println("Введенного этажа не существует, никуда не поеду!");
-
+return;
     }
-        while (currentFloor < 3 ) {
+    while (currentFloor != floor )    {
           moveUp();
+          moveDown();
 
 
-          System.out.println("Лифт едит вверх " + currentFloor);
+        //  System.out.println("Лифт едит вверх " + currentFloor);
 
 
         }
-          while (currentFloor > 1)
+       //   while (currentFloor > 1)
 
-          {
-            moveDown();
+        //  {
+        //    moveDown();
 
 
-            System.out.println("Лифт едит вниз " + currentFloor);
-          }
+        //    System.out.println("Лифт едит вниз " + currentFloor);
+        //  }
 
 
         }

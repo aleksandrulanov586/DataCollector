@@ -54,6 +54,7 @@ public  int numberOfPages = 0;
     documentsint = documentsint + 1;
     pages = pages + 1;
     pagesInt = pagesInt + 1;
+    append("", 1, documentText);
  }
   public void append (String name,String documentText)
   {
@@ -62,13 +63,14 @@ public  int numberOfPages = 0;
     documentsint = documentsint + 1;
     pages = pages + 1;
     pagesInt = pagesInt + 1;
+    append(name, 1, documentText);
   }
   public void append (String name, int pages, String documentText)
   {
     stringQueue = stringQueue + " " + documentText + " " + name;
     documents = documents + 1;
     documentsint = documentsint + 1;
-    pages = pages + 1;
+   this.pages = this.pages + 1;
     pagesInt = pagesInt + 1;
   }
 
