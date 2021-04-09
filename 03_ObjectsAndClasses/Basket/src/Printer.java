@@ -49,7 +49,7 @@ public  int numberOfPages = 0;
   public  void append (String documentText)
   {
 
-    stringQueue = stringQueue + " " + documentText;
+    stringQueue = stringQueue + "Text " + documentText;
     documents = documents + 1;
     documentsint = documentsint + 1;
     pages = pages + 1;
@@ -58,7 +58,7 @@ public  int numberOfPages = 0;
  }
   public void append (String name,String documentText)
   {
-    stringQueue = stringQueue + " " + documentText + " " + name;
+    stringQueue = stringQueue + "Text " + documentText + "Text " + name;
     documents = documents + 1;
     documentsint = documentsint + 1;
     pages = pages + 1;
@@ -67,7 +67,7 @@ public  int numberOfPages = 0;
   }
   public void append (String name, int pages, String documentText)
   {
-    stringQueue = stringQueue + " " + documentText + " " + name;
+    stringQueue = stringQueue + "Text " + documentText + "Text" + name;
     documents = documents + 1;
     documentsint = documentsint + 1;
    this.pages = this.pages + 1;
@@ -88,7 +88,7 @@ public  int numberOfPages = 0;
   {
     System.out.println(title);
     if(stringQueue.isEmpty()) {
-      System.out.println("Принтер пустой");
+      System.out.println("Принтер пустой"+ stringQueue);
     } else {
       clear();
     }

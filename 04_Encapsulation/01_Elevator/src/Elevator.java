@@ -16,13 +16,13 @@ public class Elevator {
 
   public void moveDown() {
 
-    if (currentFloor < 2)
+    if (currentFloor == 1)
 
     {
 
       System.out.println("Вы на первом этаже " + currentFloor);
     }
-    if (currentFloor < 3)
+    if (currentFloor == 2)
 
     {
 
@@ -30,7 +30,7 @@ public class Elevator {
 
     }
     currentFloor = currentFloor - 1;
-    if (currentFloor < 4)
+    if (currentFloor == 3)
 
     {
 
@@ -45,28 +45,28 @@ public class Elevator {
 
   public void moveUp() {
 
-    if (currentFloor > 0)
+    if (currentFloor == 1)
+
+    {
+      currentFloor= currentFloor + 1;
+      System.out.println("Вы на первом этаже " );
+
+    }
+
+    if (currentFloor == 2)
 
     {
 
-      System.out.println("Вы на первом этаже " + currentFloor);
+      System.out.println("Вы на второмм этаже " );
       currentFloor= currentFloor + 1;
     }
 
-    if (currentFloor > 1)
+    if (currentFloor == 3)
 
     {
 
-      System.out.println("Вы на второмм этаже " + currentFloor);
-      currentFloor = currentFloor + 1;
-    }
+      System.out.println ("Вы на третьем этаже " );
 
-    if (currentFloor > 2)
-
-    {
-
-      System.out.println("Вы на третьем этаже " + currentFloor);
-      currentFloor = currentFloor + 1;
 
     }
 
@@ -81,7 +81,8 @@ public class Elevator {
 return;
     }
     while (currentFloor != floor )    {
-          moveUp();
+          //moveUp();
+
           moveDown();
 
 
