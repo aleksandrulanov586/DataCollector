@@ -81,9 +81,12 @@ public class Elevator {
 return;
     }
     while (currentFloor != floor )    {
-          //moveUp();
+          if ( floor > currentFloor ){
+            moveUp();}
+            if ( floor < currentFloor){
+              moveDown();
+            }
 
-          moveDown();
 
 
         //  System.out.println("Лифт едит вверх " + currentFloor);
