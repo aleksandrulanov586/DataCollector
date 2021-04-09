@@ -6,7 +6,7 @@ public class Elevator {
 
   public static int currentFloor = 1;
   public int minFloor = 1;
-  public int maxFloor = 3;
+  public int maxFloor = 100;
 
 
   public Elevator(int minFloor, int maxFloor) {
@@ -16,28 +16,12 @@ public class Elevator {
 
   public void moveDown() {
 
-    if (currentFloor == 1)
 
-    {
-
-      System.out.println("Вы на первом этаже " + currentFloor);
+    currentFloor= currentFloor - 1;
+      System.out.println("Вы на " + currentFloor + " этаже");
     }
-    if (currentFloor == 2)
 
-    {
 
-      System.out.println("Вы на второмм этаже " + currentFloor);
-
-    }
-    currentFloor = currentFloor - 1;
-    if (currentFloor == 3)
-
-    {
-
-      System.out.println("Вы на третьем этаже " + currentFloor);
-      currentFloor = currentFloor - 1;
-    }
-  }
 
 
 
@@ -45,30 +29,8 @@ public class Elevator {
 
   public void moveUp() {
 
-    if (currentFloor == 1)
-
-    {
-      currentFloor= currentFloor + 1;
-      System.out.println("Вы на первом этаже " );
-
-    }
-
-    if (currentFloor == 2)
-
-    {
-
-      System.out.println("Вы на второмм этаже " );
-      currentFloor= currentFloor + 1;
-    }
-
-    if (currentFloor == 3)
-
-    {
-
-      System.out.println ("Вы на третьем этаже " );
-
-
-    }
+    currentFloor= currentFloor + 1;
+    System.out.println("Вы на " + currentFloor + " этаже");
 
   }
 
@@ -78,7 +40,7 @@ public class Elevator {
     if (floor > maxFloor || floor < minFloor) {
 
       System.out.println("Введенного этажа не существует, никуда не поеду!");
-return;
+
     }
     while (currentFloor != floor )    {
           if ( floor > currentFloor ){
