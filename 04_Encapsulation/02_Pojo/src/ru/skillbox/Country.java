@@ -4,13 +4,13 @@ public class Country {
   //Название.
   private  String name;
   //Численность населения.
-  private int numberPeople = 100000;
+  private int numberPeople;
   // Площадь в квадратных километрах.
-  private double areaInSquareKilometers = 9518900;
+  private double areaInSquareKilometers ;
   //Название столицы.
   private String capitalName;
   // Наличие выхода к морю.
-  private int landlocked = 2;
+  private int landlocked;
 
   public Country(String name) {
    this.name = name;
