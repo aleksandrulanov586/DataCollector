@@ -74,12 +74,15 @@ public  int numberOfPages = 0;
  }
 
   // метод выводящий всю информацию о добавленных в принтер документах в консоль и очищающий очередь печати после этого.
- public void print(String title)
+ public void print(String title) {
 
-  {
     System.out.println(title);
+   if (documentsint > pagesInt){
+     System.out.println(stringQueue);
+   }
+
     if(stringQueue.isEmpty()) {
-      System.out.println(stringQueue);
+
       System.out.println( "Принтер пустой");
     } else {
       clear();
