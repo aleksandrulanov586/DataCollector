@@ -1,17 +1,20 @@
 package ru.skillbox;
 
 public class Country {
-
-//Название.
+  //Название.
   private  String name;
- //Численность населения.
-  private int numberPeople;
-// Площадь в квадратных километрах.
-  private double AreaInSquareKilometers;
+  //Численность населения.
+  private int numberPeople = 100000;
+  // Площадь в квадратных километрах.
+  private double areaInSquareKilometers = 9518900;
   //Название столицы.
-  private String CapitalName;
+  private String capitalName;
   // Наличие выхода к морю.
- private int Landlocked;
+  private int landlocked = 2;
+
+  public Country(String name) {
+   this.name = name;
+  }
 
   public String getName() {
     return name;
@@ -30,32 +33,32 @@ public class Country {
   }
 
   public double getAreaInSquareKilometers() {
-    return AreaInSquareKilometers;
+    return areaInSquareKilometers;
   }
 
   public void setAreaInSquareKilometers(double areaInSquareKilometers) {
-    AreaInSquareKilometers = areaInSquareKilometers;
+    this.areaInSquareKilometers = areaInSquareKilometers;
   }
 
   public String getCapitalName() {
-    return CapitalName;
+    return capitalName;
   }
 
   public void setCapitalName(String capitalName) {
-    CapitalName = capitalName;
+    this.capitalName = capitalName;
   }
 
   public int getLandlocked() {
-    return Landlocked;
+    return landlocked;
   }
 
   public void setLandlocked(int landlocked) {
-    Landlocked = landlocked;
+    this.landlocked = landlocked;
   }
 
-  public Country(String name) {
-    this.name = name;
-  }
+
+
+
 //==================================================================================================
 
 
