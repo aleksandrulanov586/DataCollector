@@ -4,7 +4,7 @@ public class Dimensions {
   // адрес доставки
   private final String deliveryAddress ;
   // свойство — можно ли переворачивать
-  private final String propertyIsItPossibleToFlip;
+  private final boolean propertyIsItPossibleToFlip;
   //регистрационный номер
   private final String registrationNumber;
   //является ли груз хрупким.
@@ -15,9 +15,8 @@ public class Dimensions {
   private final double weight;
 
 
-  public Dimensions(String deliveryAddress, String propertyIsItPossibleToFlip, String registrationNumber,
-      String isTheCargoFragile, int dimensions,
-      double weight) {
+  public Dimensions(String deliveryAddress, boolean propertyIsItPossibleToFlip, String registrationNumber,
+      String isTheCargoFragile, int dimensions, double weight) {
     this.dimensions = dimensions ;
     this.weight = weight;
     this.deliveryAddress = deliveryAddress;
@@ -30,26 +29,26 @@ public class Dimensions {
 
 
   public Dimensions setDeliveryAddress(String deliveryAddress) {
-    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
 
-  public Dimensions setPropertyIsItPossibleToFlip(String propertyIsItPossibleToFlip) {
-    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+  public Dimensions setPropertyIsItPossibleToFlip(boolean propertyIsItPossibleToFlip) {
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
 
   public Dimensions setRegistrationNumber(String registrationNumber) {
-    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
 
   public Dimensions setIsTheCargoFragile(String isTheCargoFragile) {
-    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
 
   public Dimensions setWeight(double weight) {
-    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
   public Dimensions setDimensions(int dimensions) {
-    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
 
   public int getDimensions() {
@@ -66,7 +65,7 @@ public class Dimensions {
     return deliveryAddress;
   }
 
-  public String getPropertyIsItPossibleToFlip() {
+  public boolean getPropertyIsItPossibleToFlip() {
     return propertyIsItPossibleToFlip;
   }
 
