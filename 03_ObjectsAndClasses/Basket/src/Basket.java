@@ -7,18 +7,19 @@ public class Basket {
   private int totalPrice = 0;
   private int limit;
   // обшая стоимость всех товаров
- public static int totalcost = 0;
- //общее количество всех товаров
- public static int quantitiesAllGoods = 0;
- public double massaallgoods = 0;
+  public static int totalcost = 0;
+  //общее количество всех товаров
+  public static int quantitiesAllGoods = 0;
+  public double massaallgoods = 0;
   public double weight = 0;
   public static int count = 0;
 
   public double getMassaallgoods() {
     return massaallgoods;
   }
+
   public Basket() {
-    addAllCostAllGoods(1,1);
+    addAllCostAllGoods(1, 1);
     increaseCount(1);
     items = "Список товаров:";
     this.limit = 1000000;
@@ -34,10 +35,11 @@ public class Basket {
     this.items = this.items + items;
     this.totalPrice = totalPrice;
   }
-public static void  addAllCostAllGoods(int totalcost, int quantitiesAllGoods){
 
-Basket.totalcost = Basket.totalcost + totalcost;
-  Basket.quantitiesAllGoods = Basket.quantitiesAllGoods + quantitiesAllGoods;
+  public static void addAllCostAllGoods(int totalcost, int quantitiesAllGoods) {
+
+    Basket.totalcost = Basket.totalcost + totalcost;
+    Basket.quantitiesAllGoods = Basket.quantitiesAllGoods + quantitiesAllGoods;
   }
 
   public static int getCount() {
@@ -49,14 +51,13 @@ Basket.totalcost = Basket.totalcost + totalcost;
   }
 //==================================================================================================
 
-  public void add( int price, String name, double weight) {
+  public void add(int price, String name, double weight) {
 
     massaallgoods = massaallgoods + count * weight;
     add(name, price, 1, weight);
 
 
   }
-
 
 
   public void add(String name, int price, int count, double weight) {
