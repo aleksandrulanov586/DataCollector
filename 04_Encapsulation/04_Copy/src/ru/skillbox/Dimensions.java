@@ -2,7 +2,7 @@ package ru.skillbox;
 
 public class Dimensions {
   // адрес доставки
-  private final String deliveryAddress;
+  private final String deliveryAddress ;
   // свойство — можно ли переворачивать
   private final String propertyIsItPossibleToFlip;
   //регистрационный номер
@@ -18,7 +18,7 @@ public class Dimensions {
   public Dimensions(String deliveryAddress, String propertyIsItPossibleToFlip, String registrationNumber,
       String isTheCargoFragile, int dimensions,
       double weight) {
-    this.dimensions = dimensions;
+    this.dimensions = dimensions ;
     this.weight = weight;
     this.deliveryAddress = deliveryAddress;
     this.propertyIsItPossibleToFlip = propertyIsItPossibleToFlip;
