@@ -15,9 +15,9 @@ public class Dimensions {
   private final double weight;
 
 
-  public Dimensions(int dimensions, double weight, String deliveryAddress,
-      String propertyIsItPossibleToFlip, String registrationNumber,
-      String isTheCargoFragile) {
+  public Dimensions(String deliveryAddress, String propertyIsItPossibleToFlip, String registrationNumber,
+      String isTheCargoFragile, int dimensions,
+      double weight) {
     this.dimensions = dimensions;
     this.weight = weight;
     this.deliveryAddress = deliveryAddress;
@@ -25,6 +25,8 @@ public class Dimensions {
     this.registrationNumber = registrationNumber;
     this.isTheCargoFragile = isTheCargoFragile;
   }
+
+
 
 
   public Dimensions setDeliveryAddress(String deliveryAddress) {
@@ -46,14 +48,15 @@ public class Dimensions {
   public Dimensions setWeight(double weight) {
     return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
   }
+  public Dimensions setDimensions(int dimensions) {
+    return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions);
+  }
 
   public int getDimensions() {
     return dimensions;
   }
 
-  public void setDimensions(int dimensions) {
-    this.dimensions = dimensions;
-  }
+
 
   public double getWeight() {
     return weight;
