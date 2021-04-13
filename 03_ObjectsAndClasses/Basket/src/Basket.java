@@ -6,18 +6,19 @@ public class Basket {
   public String items = " ";
   private int totalPrice = 0;
   private int limit;
-
+  // обшая стоимость всех товаров
+ public static int totalcost = 0;
+ //общее количество всех товаров
+ public static int quantitiesAllGoods = 0;
+ public double massaallgoods = 0;
+  public double weight = 0;
+  public static int count = 0;
 
   public double getMassaallgoods() {
     return massaallgoods;
   }
-
-  public double massaallgoods = 0;
-  public double weight = 0;
-
-  public static int count = 0;
-
   public Basket() {
+    addAllCostAllGoods(1,1);
     increaseCount(1);
     items = "Список товаров:";
     this.limit = 1000000;
@@ -33,7 +34,11 @@ public class Basket {
     this.items = this.items + items;
     this.totalPrice = totalPrice;
   }
+public static void  addAllCostAllGoods(int totalcost, int quantitiesAllGoods){
 
+Basket.totalcost = Basket.totalcost + totalcost;
+  Basket.quantitiesAllGoods = Basket.quantitiesAllGoods + quantitiesAllGoods;
+  }
 
   public static int getCount() {
     return count;

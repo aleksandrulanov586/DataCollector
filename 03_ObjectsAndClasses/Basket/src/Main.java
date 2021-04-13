@@ -5,19 +5,19 @@ public class Main {
   //      System.out.println(arithmetic.info());
 //==================================================================================================
 
-//Basket basket = new Basket();
-///      basket.add("Кефир", 60);
-//      basket.add("Бетон", 100, 2);
-//      basket.add("Бетон", 100, 2, 200.0);
+Basket basket = new Basket();
+      basket.add("Кефир", 60);
+     basket.add("Бетон", 100, 2);
+     basket.add("Бетон", 100, 2, 200.0);
+int a = basket.getTotalPrice() / basket.items;
+ System.out.println(basket.getTotalPrice());
+//==================================================================================================
+   //  Printer printer = new Printer();
 
-// System.out.println(basket.getTotalPrice());
-
-     Printer printer = new Printer();
-
-      printer.append("Text");
-     printer.append("Text",1,"Text");
-      printer.append("Text","Text");
-      printer.print("Распечатаны документы:");
+   //   printer.append("Text");
+   //  printer.append("Text",1,"Text");
+   //   printer.append("Text","Text");
+   //   printer.print("Распечатаны документы:");
 
 
 

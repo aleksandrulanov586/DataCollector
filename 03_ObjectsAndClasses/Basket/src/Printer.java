@@ -77,14 +77,13 @@ public  int numberOfPages = 0;
  public void print(String title) {
 
     System.out.println(title);
-   if (documentsint > pagesInt){
-     System.out.println(stringQueue);
-   }
+
 
     if(stringQueue.isEmpty()) {
 
       System.out.println( "Принтер пустой");
     } else {
+      System.out.println(stringQueue);
       clear();
     }
 
