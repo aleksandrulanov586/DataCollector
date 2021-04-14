@@ -19,7 +19,7 @@ public class Basket {
   }
 
   public Basket() {
-    addAllCostAllGoods(1, 1);
+
     increaseCount(1);
     items = "Список товаров:";
     this.limit = 1000000;
@@ -31,9 +31,12 @@ public class Basket {
   }
 
   public Basket(String items, int totalPrice) {
+
     this();
+
     this.items = this.items + items;
     this.totalPrice = totalPrice;
+    addAllCostAllGoods(1, 1);
   }
 
   public static void addAllCostAllGoods(int totalcost, int quantitiesAllGoods) {
@@ -68,6 +71,16 @@ public class Basket {
   }
 
   //================================================================================================
+  public void add ( int totalPrice, int count, String name){
+    int w = totalcost + totalPrice * count;
+    int e = quantitiesAllGoods * count;
+  }
+
+  public static int getAverageCost(){
+    int q = (totalcost / quantitiesAllGoods )/0;
+    return  q;
+  }
+
   public void add(String name, int price) {
     add(name, price, 1);
   }

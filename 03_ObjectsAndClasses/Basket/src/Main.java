@@ -11,7 +11,8 @@ public class Main {
     basket.add("Кефир", 60);
     basket.add("Бетон", 100, 2);
     basket.add("Бетон", 100, 2, 200.0);
-    int a = basket.getTotalPrice() / basket.items;
+    basket.add(5,5,"колбаса");
+    System.out.println(basket.getAverageCost());
     System.out.println(basket.getTotalPrice());
 //==================================================================================================
     //  Printer printer = new Printer();
