@@ -27,8 +27,20 @@ public class ArithmeticCalculator {
   }
 
 
-  public void calculate (){
+  public double calculate (Operation operation){
+
+    if (operation == Operation.ADD){
+     double q = a * b;
+    }
+    if (operation == Operation.MULTIPLY){
+      double w = a - b;
+    }
+    if (operation == Operation.SUBTRACT){
+      double e = a + b;
+    }
 
 
+    return calculate(operation);
   }
+
 }
