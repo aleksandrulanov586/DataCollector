@@ -78,11 +78,11 @@ public class Basket {
 
   public static int getAverageCost(){
     if (quantitiesAllGoods == 0){
-
+      return 0;
     }
-  //  int q = (totalcost / quantitiesAllGoods );
-    return 0;
-   // return  q;
+   int q = (totalcost / quantitiesAllGoods );
+
+    return  q;
   }
 
   public void add(String name, int price) {

@@ -4,11 +4,15 @@ package ru.skillbox;
 
 public class Main {
 
+
+
     public static void main(String[] args) {
-        Dimensions copy = new Dimensions(" text",true,"text","text",10,10);
-Dimensions copycopy = new Dimensions(copy.getDeliveryAddress(), copy.getPropertyIsItPossibleToFlip(),
-    copy.getRegistrationNumber(), copy.getIsTheCargoFragile(), copy.getDimensions(),
-    copy.getWeight());
+        Dimensions copy = new Dimensions(copy.setDeliveryAddress("t"), copy.se);
+
+
+Dimensions copycopy = new Dimensions(copy);
+
+
 
 System.out.println(copy);
 System.out.println(copycopy);

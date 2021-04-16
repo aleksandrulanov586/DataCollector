@@ -27,7 +27,6 @@ public class Dimensions {
 
 
 
-
   public Dimensions setDeliveryAddress(String deliveryAddress) {
     return new Dimensions (deliveryAddress, propertyIsItPossibleToFlip,registrationNumber,isTheCargoFragile,dimensions, weight);
   }
