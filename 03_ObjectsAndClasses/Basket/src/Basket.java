@@ -77,8 +77,12 @@ public class Basket {
   }
 
   public static int getAverageCost(){
-    int q = (totalcost / quantitiesAllGoods )/0;
-    return  q;
+    if (quantitiesAllGoods == 0){
+
+    }
+  //  int q = (totalcost / quantitiesAllGoods );
+    return 0;
+   // return  q;
   }
 
   public void add(String name, int price) {
@@ -101,6 +105,7 @@ public class Basket {
     items = items + "\n" + name + " - " +
         count + " шт. - " + price;
     totalPrice = totalPrice + count * price;
+    quantitiesAllGoods++;
   }
 
   public void clear() {
