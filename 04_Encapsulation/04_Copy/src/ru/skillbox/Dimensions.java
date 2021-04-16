@@ -25,6 +25,12 @@ public class Dimensions {
     this.isTheCargoFragile = isTheCargoFragile;
   }
 
+  public Dimensions(Dimensions dimensions) {
+    this().
+
+
+
+  }
 
 
   public Dimensions setDeliveryAddress(String deliveryAddress) {
