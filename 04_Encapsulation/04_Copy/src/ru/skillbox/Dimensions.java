@@ -26,7 +26,7 @@ public class Dimensions {
   }
 
   public Dimensions(Dimensions dimensions) {
-    this().
+    this(Dimensions == dimensions);
 
 
 

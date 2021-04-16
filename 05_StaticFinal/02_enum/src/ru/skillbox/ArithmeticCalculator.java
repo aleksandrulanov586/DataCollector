@@ -30,18 +30,17 @@ public class ArithmeticCalculator {
   public int calculate (Operation operation) {
 
     if (operation == Operation.ADD) {
-
+      return a + b;
     }
 
+    if (operation == Operation.MULTIPLY){
+         return a * b;
+      }
+    if (operation == Operation.SUBTRACT){
+        return a - b;
+     }
 
-    //  if (operation == Operation.MULTIPLY){
-    //     result w = a - b;
-    //  }
-    //  if (operation == Operation.SUBTRACT){
-    //     double e = a + b;
-    //   }
-
-    return a + b;
+    return 0;
   }
 
 
