@@ -17,7 +17,7 @@ Dimensions dimensions = new Dimensions(copy);
 
 
 System.out.println(copy);
-System.out.println();
+System.out.println(dimensions);
 
 
             //copy.getWeight(),

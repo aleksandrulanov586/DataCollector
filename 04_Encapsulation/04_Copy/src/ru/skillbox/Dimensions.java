@@ -26,7 +26,7 @@ public class Dimensions {
   }
 
   public Dimensions(Dimensions dimensions) {
-    this(Dimensions == dimensions);
+    this(dimensions.getDeliveryAddress(), dimensions.getPropertyIsItPossibleToFlip(),dimensions.getRegistrationNumber(),dimensions.getIsTheCargoFragile(),dimensions.getDimensions(),dimensions.getWeight());
 
 
 
