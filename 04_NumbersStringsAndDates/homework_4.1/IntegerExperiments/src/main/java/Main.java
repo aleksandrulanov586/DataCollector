@@ -38,27 +38,37 @@ public class Main {
     //   Character.valueOf(x).compareTo(Character.valueOf(y));
 
     // приобразую number - Integer в String
+ if (number != 0){
+   int a = (7 + 8 ) + (4 + 3);
 
-    String integerString = number.toString();
+   return a;
+ }
+
+
+  //  String integerString = number.toString();
+
     //System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
 
   //  String getNumericValue = number.toString();
-  //  System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
+    //  System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
 
 
-    for (int i = 0; i < integerString.length(); i++);
-    for (int i = 0; i < integerString.length(); i++);
-    for (int i = 0; i < integerString.length(); i++);
-    int char1 = integerString.charAt(0);
+ //   for (int i = 0; i < integerString.length(); i++);
+//    for (int i = 0; i < integerString.length(); i++);
+ //   for (int i = 0; i < integerString.length(); i++);
+ //   int char1 = integerString.charAt(0);
+ //   int char3 = integerString.charAt(0);
+ //   int sum = char1;
 
-    int char2 = integerString.charAt(0);
+  //  int char2 = integerString.charAt(0);
    // int sum = char2;
-    int char3 = integerString.charAt(0);
+
+
   //  int sum = char3;
-    int sum = char1;
+ //   int sum = char1;
      // for (int q = 0; q > 7; Character.getNumericValue(q++))
      //   for (int w = 0; w > 22; Character.getNumericValue(w++))
-    {
+
 
     //  System.out.println(Character.getNumericValue(sum));
     //  System.out.println(Character.getNumericValue(q));
@@ -73,13 +83,12 @@ public class Main {
       //     Character char4 = integerString.charAt(3);
       // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
 
-    }
-
-    return sum;
+    return 0;
   }
 
 
 }
+
 
 //   String integerString = Integer.toString(number);
 //   System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
