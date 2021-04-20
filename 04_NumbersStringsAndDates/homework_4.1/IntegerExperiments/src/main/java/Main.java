@@ -31,27 +31,29 @@ public class Main {
   В противном случае тестовый метод не сможет проверить ваш код
    */
 
-  public static void sumDigits(Integer number) {
+  public static int sumDigits(Integer number) {
 
- Character q = 123;
-int e = Character.getNumericValue(q);
-System.out.println(e);
+    while (number != 0){
+      Integer q = ( 7 + 1) / 4;
 
+      return q;
+
+    }
+    while (number != 0){
+
+      Integer w =  7 + 8;
+      return w;
+    }
     //  char x = 55528;
     //   char y = 0;
     //   Character.valueOf(x).compareTo(Character.valueOf(y));
 
     // приобразую number - Integer в String
 
- //if (number != 0){
-//   int a = (7 + 8 ) + (4 + 3);
-
- //  return a;
- }
 
 
 
-  //  String integerString = number.toString();
+ //  String integerString = number.toString();
 
     //System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
 
@@ -59,12 +61,12 @@ System.out.println(e);
     //  System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
 
 
+// for (int i = 0; i < integerString.length(); i++);
  //   for (int i = 0; i < integerString.length(); i++);
-//    for (int i = 0; i < integerString.length(); i++);
- //   for (int i = 0; i < integerString.length(); i++);
- //   int char1 = integerString.charAt(0);
+ //  for (int i = 0; i < integerString.length(); i++);
+ //  int char1 = integerString.charAt(0);
  //   int char3 = integerString.charAt(0);
- //   int sum = char1;
+ // int sum = char1;
 
   //  int char2 = integerString.charAt(0);
    // int sum = char2;
@@ -89,11 +91,11 @@ System.out.println(e);
       //     Character char4 = integerString.charAt(3);
       // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
 
-   // return 0;
+    return 0;
   }
 
 
-//}
+}
 
 
 //   String integerString = Integer.toString(number);
