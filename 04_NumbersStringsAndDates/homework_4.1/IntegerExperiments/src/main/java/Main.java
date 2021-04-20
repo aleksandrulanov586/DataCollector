@@ -31,18 +31,24 @@ public class Main {
   В противном случае тестовый метод не сможет проверить ваш код
    */
 
-  public static int sumDigits(Integer number) {
+  public static void sumDigits(Integer number) {
+
+ Character q = 123;
+int e = Character.getNumericValue(q);
+System.out.println(e);
 
     //  char x = 55528;
     //   char y = 0;
     //   Character.valueOf(x).compareTo(Character.valueOf(y));
 
     // приобразую number - Integer в String
- if (number != 0){
-   int a = (7 + 8 ) + (4 + 3);
 
-   return a;
+ //if (number != 0){
+//   int a = (7 + 8 ) + (4 + 3);
+
+ //  return a;
  }
+
 
 
   //  String integerString = number.toString();
@@ -83,11 +89,11 @@ public class Main {
       //     Character char4 = integerString.charAt(3);
       // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
 
-    return 0;
+   // return 0;
   }
 
 
-}
+//}
 
 
 //   String integerString = Integer.toString(number);
