@@ -1,6 +1,10 @@
 package ru.skillbox;
 
 public class Storage {
-  private final HardDiskType;
+  private final  HardDiskType hardDiskType;
 
-}
+  public Storage(HardDiskType hardDiskType) {
+    this.hardDiskType = hardDiskType;
+  }
+
+

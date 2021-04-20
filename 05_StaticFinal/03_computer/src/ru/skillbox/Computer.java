@@ -1,10 +1,13 @@
 package ru.skillbox;
 
 public class Computer {
+
   private String name;
   //производитель
   private String vendor;
 private double totalWiight = 0;
+
+private Keyboard keyboard;
 
   public double getTotalWiight() {
     return totalWiight;
@@ -45,6 +48,8 @@ private double totalWiight = 0;
     this.vendor = vendor;
     this.storage = storage;
   }
+Keyboard keyboar = new Keyboard(20,true, keyboard.getKeyboardType());
+
 
   public double  Calculationmass(){
 
