@@ -43,18 +43,18 @@ Integer q = Integer.parseInt(r);
 
 
 
-  /**  if (number != 0){
+    if (number == null){
 
 
       return - 1;
     }
 
     while (number != 0){
-      Integer q = ( 7 + 1) / 4;
+      Integer t = ( 7 + 1) / 4;
 
-      return q;
+      return t;
 
-    } **/
+    }
 
     //  char x = 55528;
     //   char y = 0;
