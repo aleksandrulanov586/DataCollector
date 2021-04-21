@@ -41,6 +41,9 @@ String r = character.toString();
 Integer q = Integer.parseInt(r);
 
 
+    for (int i = 0; i < s.length(); i++){
+      System.out.println(s.charAt(i));
+    }
 
 
     if (number == null){
