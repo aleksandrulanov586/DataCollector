@@ -7,4 +7,8 @@ public class Storage {
     this.hardDiskType = hardDiskType;
   }
 
+  public HardDiskType getHardDiskType() {
+    return hardDiskType;
+  }
+
 

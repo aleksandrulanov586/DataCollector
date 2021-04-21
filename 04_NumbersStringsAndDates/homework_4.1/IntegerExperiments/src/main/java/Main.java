@@ -33,17 +33,19 @@ public class Main {
 
   public static int sumDigits(Integer number) {
 
+    if (number != 0){
+
+
+      return - 1;
+    }
+
     while (number != 0){
       Integer q = ( 7 + 1) / 4;
 
       return q;
 
     }
-    while (number != 0){
 
-      Integer w =  7 + 8;
-      return w;
-    }
     //  char x = 55528;
     //   char y = 0;
     //   Character.valueOf(x).compareTo(Character.valueOf(y));
