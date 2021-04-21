@@ -33,7 +33,17 @@ public class Main {
 
   public static int sumDigits(Integer number) {
 
-    if (number != 0){
+
+String s = number.toString();
+Character character = s.charAt(2);
+System.out.println(character);
+String r = character.toString();
+Integer q = Integer.parseInt(r);
+
+
+
+
+  /**  if (number != 0){
 
 
       return - 1;
@@ -44,7 +54,7 @@ public class Main {
 
       return q;
 
-    }
+    } **/
 
     //  char x = 55528;
     //   char y = 0;
