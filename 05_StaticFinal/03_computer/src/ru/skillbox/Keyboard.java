@@ -22,5 +22,12 @@ public class Keyboard {
     this.weight = weight;
     this.hasBackLight = hasBackLight;
     this.keyboardType = keyboardType;
+
+
+    //обьём памяти
+    MEMORYSIZE,
+        //
+        WEIGHT,
+
   }
 }
