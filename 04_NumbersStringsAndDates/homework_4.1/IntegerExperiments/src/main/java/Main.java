@@ -32,32 +32,37 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
-
-
-String s = number.toString();
-Character character = s.charAt(2);
-System.out.println(character);
-String r = character.toString();
-Integer q = Integer.parseInt(r);
-
-
-    for (int i = 0; i < s.length(); i++){
-      System.out.println(s.charAt(i));
-    }
-
-
     if (number == null){
 
 
       return - 1;
     }
+String s = number.toString();
+//Character character = s.charAt(2);
+//System.out.println(character);
+//String r = character.toString();
+//Integer q = Integer.parseInt(r);
+
+int sum;
+    for (int i = 0; i < s.length(); i++){
+     // System.out.println(s.charAt(i));
+    }
+    for (int i = 0; i < s.charAt(0); i++){
+    }
+    for (int i = 0; i < Integer.parseInt(s); i++){
+    }
+
+
+    return sum;
+
+  /**
 
     while (number != 0){
       Integer t = ( 7 + 1) / 4;
 
       return t;
 
-    }
+    } **/
 
     //  char x = 55528;
     //   char y = 0;
@@ -106,7 +111,7 @@ Integer q = Integer.parseInt(r);
       //     Character char4 = integerString.charAt(3);
       // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
 
-    return 0;
+
   }
 
 
