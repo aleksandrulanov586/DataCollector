@@ -24,10 +24,7 @@ public class Keyboard {
     this.keyboardType = keyboardType;
 
 
-    //обьём памяти
-    MEMORYSIZE,
-        //
-        WEIGHT,
+
 
   }
 }

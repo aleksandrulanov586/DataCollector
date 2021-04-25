@@ -9,15 +9,18 @@ public class Computer {
 private Screen screen;
 private Processor processor;
 private Keyboard keyboard;
+private OperationalMemory operationalMemory;
+private double totalweight = 0;
 
   public Computer(Storage storage, String name, String vendor, Screen screen,
-      Processor processor, Keyboard keyboard) {
+      Processor processor, Keyboard keyboard, OperationalMemory operationalMemory) {
     this.storage = storage;
     this.name = name;
     this.vendor = vendor;
     this.screen = screen;
     this.processor = processor;
     this.keyboard = keyboard;
+    this.operationalMemory = operationalMemory;
   }
 
   public Storage getStorage() {
@@ -44,16 +47,22 @@ private Keyboard keyboard;
     return keyboard;
   }
 
-  public double  Calculationmass(){
-
-    
-
-return
+  public OperationalMemory getOperationalMemory() {
+    return operationalMemory;
   }
-public String toString (){
+
+  public double  Calculationmass(){
+double q = 0;
+    q = totalweight * getOperationalMemory().getWeight() * getScreen().getWeight() * screen
+        .getWeight() * processor.getWeight() * getStorage().getWeight();
+
+return q;
+  }
+public String toString (String information){
 
 
-    return
+
+    return information;
 }
 
 
