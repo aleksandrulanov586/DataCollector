@@ -44,12 +44,8 @@ String s = number.toString();
 //Integer q = Integer.parseInt(r);
 
 int sum;
-    for (int i = 0; i < s.length(); i++){
-     // System.out.println(s.charAt(i));
-    }
-    for (int i = 0; i < s.charAt(0); i++){
-    }
-    for (int i = 0; i < Integer.parseInt(s); i++){
+    for (int i = 0; i < s.length(); i++) {
+      String digit = String.valueOf(s.charAt(i));
     }
 
 
