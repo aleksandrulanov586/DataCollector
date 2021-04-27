@@ -43,11 +43,12 @@ String s = number.toString();
 //String r = character.toString();
 //Integer q = Integer.parseInt(r);
 
-int sum;
+
 
    for (int i = 0; i < s.length(); i++) {
       String digit = String.valueOf(s.charAt(i));
-      System.out.println(digit);
+      Integer sum = Integer.parseInt(digit);
+
     }
 
 
