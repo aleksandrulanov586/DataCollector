@@ -9,11 +9,11 @@ public class Main {
         Processor processor = new Processor(10,2000,"text",80);
         OperationalMemory operationalMemoryDDR = new OperationalMemory (OperationalMemoryType.DDR,10,10);
 
-        Computer computer = new Computer(storageHdd," Text"," text",screenVa,processor,ansiKeyboard,operationalMemoryDDR);
+        Computer computer = new Computer(storageHdd,"Text"," text",screenVa,processor,ansiKeyboard,operationalMemoryDDR);
         Computer computer1 = new Computer(storageHdd," Text"," text",screenVa,processor,ansiKeyboard,operationalMemoryDDR);
         Computer computer2 = new Computer(storageHdd," Text"," text",screenVa,processor,ansiKeyboard,operationalMemoryDDR);
 
-System.out.println(computer.Calculationmass());
+
 
     }
 }

@@ -12,6 +12,7 @@ private Keyboard keyboard;
 private OperationalMemory operationalMemory;
 private double totalweight = 0;
 
+
   public Computer(Storage storage, String name, String vendor, Screen screen,
       Processor processor, Keyboard keyboard, OperationalMemory operationalMemory) {
     this.storage = storage;
@@ -52,14 +53,15 @@ private double totalweight = 0;
   }
 
   public double  Calculationmass(){
-double q = 0;
-    q = totalweight * getOperationalMemory().getWeight() * getScreen().getWeight() * screen
-        .getWeight() * processor.getWeight() * getStorage().getWeight();
 
-return q;
+    totalweight = totalweight + screen.getWeight() + storage.getWeight() + processor.getWeight() + keyboard.getWeight() + operationalMemory.getWeight();
+
+return totalweight ;
   }
-public String toString (String information){
+public String toString (){
 
+
+ String  information = storage + name + vendor + screen + processor + keyboard + operationalMemory;
 
 
     return information;
