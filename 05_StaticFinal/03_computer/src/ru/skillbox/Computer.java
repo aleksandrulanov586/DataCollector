@@ -60,11 +60,16 @@ return totalweight ;
   }
 public String toString (){
 
-
- String  information = storage + name + vendor + screen + processor + keyboard + operationalMemory;
-
-
-    return information;
+    return "OperationalMemory = {" +
+        "operationalMemoryType=" + operationalMemory.getOperationalMemoryType() +
+        ", volume=" + operationalMemory.getVolume() +
+        ", weight=" + operationalMemory.getWeight() +
+        "} " + "\n" +
+        " Storage = {" + "HardDiskType=" + storage.getHardDiskType()  +
+        ", memorysize=" + storage.getMemorysize() + ", weight=" + storage.getWeight() + "}" + "\n" +
+        " Screen = {" + "screenType=" + screen.getScreenType() + ", diagonal=" + screen.getDiagonal() + ", weight" + screen.getWeight() + "} " + "\n" +
+        " Processor = {" + "frequency=" + processor.getFrequency() + ", numbercores=" + processor.getNumbercores() + ", manufacturer=" + processor.getManufacturer() + ", weight=" + processor.getWeight() + "}" + "\n" +
+        " Keyboard = {" + "KeyboardType=" + keyboard.getKeyboardType() + ", hasBackLigh=" + keyboard.isHasBackLight() + ", weight" + keyboard.getWeight() + "}";
 }
 
 

@@ -55,10 +55,7 @@ String s = number.toString();
    for (int i = 0; i < s.length(); i++) {
       String digit = String.valueOf(s.charAt(i));
       Integer sum = Integer.parseInt(digit);
-if (sum > 0){
-  int t = 7 + 8 ;
-  return  t;
-}
+
 
     }
 
