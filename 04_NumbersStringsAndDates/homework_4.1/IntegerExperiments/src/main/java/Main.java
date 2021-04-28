@@ -40,6 +40,8 @@ String s = number.toString();
    for (int i = 0; i < s.length(); i++) {
       String digit = String.valueOf(s.charAt(i));
       sum = sum + Integer.parseInt(digit);
+
+
    }
    return sum;
   }
