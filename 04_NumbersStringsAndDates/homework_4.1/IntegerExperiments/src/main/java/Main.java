@@ -32,105 +32,20 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
-   /** while (number != 0){
-      Integer t = ( 7 + 1) / 4;
-
-      return t;
-
-    }**/
-
     if (number == null){
-
-
       return - 1;
     }
 String s = number.toString();
-//Character character = s.charAt(2);
-//System.out.println(character);
-//String r = character.toString();
-//Integer q = Integer.parseInt(r);
-
-
-
+    int sum = 0;
    for (int i = 0; i < s.length(); i++) {
       String digit = String.valueOf(s.charAt(i));
-      Integer sum = Integer.parseInt(digit);
-
-
-    }
-
-
-    return 0;
-
-
-
-
-
-    //  char x = 55528;
-    //   char y = 0;
-    //   Character.valueOf(x).compareTo(Character.valueOf(y));
-
-    // приобразую number - Integer в String
-
-
-
-
- //  String integerString = number.toString();
-
-    //System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
-
-  //  String getNumericValue = number.toString();
-    //  System.out.printf("значение %s - %s%n", getNumericValue, getNumericValue.getClass());
-
-
-// for (int i = 0; i < integerString.length(); i++);
- //   for (int i = 0; i < integerString.length(); i++);
- //  for (int i = 0; i < integerString.length(); i++);
- //  int char1 = integerString.charAt(0);
- //   int char3 = integerString.charAt(0);
- // int sum = char1;
-
-  //  int char2 = integerString.charAt(0);
-   // int sum = char2;
-
-
-  //  int sum = char3;
- //   int sum = char1;
-     // for (int q = 0; q > 7; Character.getNumericValue(q++))
-     //   for (int w = 0; w > 22; Character.getNumericValue(w++))
-
-
-    //  System.out.println(Character.getNumericValue(sum));
-    //  System.out.println(Character.getNumericValue(q));
-    //  System.out.println(Character.getNumericValue(w));
-
-   //   int char1 = Character.getNumericValue(number);
-    //  int sum = char1;
-
-      //    Character char1 = integerString.charAt(0);
-      //    Character char2 = integerString.charAt(1);
-      //     Character char3 = integerString.charAt(2);
-      //     Character char4 = integerString.charAt(3);
-      // тут по логике приобразованный индекс в инт должен был сложится и готовый результат вернуть
-
-
+      sum = sum + Integer.parseInt(digit);
+   }
+   return sum;
   }
-
-
 }
 
 
-//   String integerString = Integer.toString(number);
-//   System.out.printf("значение %s - %s%n", integerString, integerString.getClass());
-
-// String i = Integer.toString(number);
-
-//   int i1 = Character.getNumericValue(chars[5]);
-//   int i2 = Character.getNumericValue(chars[3]);
-//   int i3 = Character.getNumericValue(chars[4]);
-//   int i4 = Character.getNumericValue(chars[9]);
-
-//   int sum = i1 + i2 + i3 + i4;
 
   
 
