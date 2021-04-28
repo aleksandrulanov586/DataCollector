@@ -32,6 +32,13 @@ public class Main {
    */
 
   public static int sumDigits(Integer number) {
+   /** while (number != 0){
+      Integer t = ( 7 + 1) / 4;
+
+      return t;
+
+    }**/
+
     if (number == null){
 
 
@@ -48,20 +55,19 @@ String s = number.toString();
    for (int i = 0; i < s.length(); i++) {
       String digit = String.valueOf(s.charAt(i));
       Integer sum = Integer.parseInt(digit);
+if (sum > 0){
+  int t = 7 + 8 ;
+  return  t;
+}
 
     }
 
 
     return 0;
 
-  /**
 
-    while (number != 0){
-      Integer t = ( 7 + 1) / 4;
 
-      return t;
 
-    } **/
 
     //  char x = 55528;
     //   char y = 0;
