@@ -3,8 +3,8 @@ public class Test {
   public static void main(String[] args) {
     System.out.println("1) INT = " + Integer.MAX_VALUE);
     System.out.println("2) INT = " + Integer.MIN_VALUE);
-    System.out.println("3) Doubl = " + Double.MAX_VALUE);
-    System.out.println( "4) Doubl = " + Double.MIN_NORMAL);
+    System.out.println("3) Doubl = " +  - Double.MAX_VALUE);
+    System.out.println( "4) Doubl = " +  Double.MAX_VALUE);
     System.out.println("5) Doubl = " + Double.NEGATIVE_INFINITY);
     System.out.println( "6) Doubl = " + Double.MIN_EXPONENT);
     System.out.println("7) Byte = " + Byte.MAX_VALUE);
