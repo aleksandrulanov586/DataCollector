@@ -1,12 +1,10 @@
 public class GeometryCalculator {
     // метод должен использовать абсолютное значение radius
     public static double getCircleSquare(double radius) {
-        double radis = 3;
+        double radis = 0 ;
         double area = Math.PI * (radis * radis);
-        System.out.println("Площадь круга равна: " + area);
-        double circumference= Math.PI * 2*radis;
-        System.out.println("Длины окружности равна: " + circumference) ;
-        return 0;
+
+        return area;
     }
 
     // метод должен использовать абсолютное значение radius
