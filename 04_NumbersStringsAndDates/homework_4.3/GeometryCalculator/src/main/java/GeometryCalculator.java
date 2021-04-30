@@ -1,14 +1,15 @@
 public class GeometryCalculator {
     // метод должен использовать абсолютное значение radius
     public static double getCircleSquare(double radius) {
-        double radis = 0 ;
-        double area = Math.PI * (radis * radis);
+        //double radis = 0 ;
+        double area = Math.PI * (radius * radius);
 
         return area;
     }
 
     // метод должен использовать абсолютное значение radius
     public static double getSphereVolume(double radius) {
+
         return 0;
     }
 
