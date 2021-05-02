@@ -16,19 +16,7 @@ public class Main {
 
     Integer sum = parsText3 + parsText4 + parsText5;
     System.out.println(sum);
-  /**  int text500 = text.indexOf(("5000"));
-    int text2500 = text.lastIndexOf("5000");
-    int text30000 = text.indexOf(("30000"));
-    int text7563 = text.indexOf(("7563"));
-   // int sum =  text500 + text30000 + text7563;
- //  String sum = String.valueOf(text500 + text30000 + text7563);
-  //  Integer q = Integer.parseInt(sum);
-  //  System.out.println(text30000);
-//System.out.println(text7563+ "\n" + text500 + "\n" + text30000);
- //   System.out.println(textTrim);
-  //  System.out.println(text3);**/
- //   System.out.println(text3 + "\n" +  text4 + "\n" + text5);
-    System.out.println(sum);
+
 
 
   }
