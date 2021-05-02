@@ -10,14 +10,16 @@ public class GeometryCalculator {
     // метод должен использовать абсолютное значение radius
     public static double getSphereVolume(double radius) {
         //Площадь треугольника по основанию и высоте
-double area  = radius / radius * Math.PI;
-        return area;
+        return  (4 / 3 ) * Math.PI * radius * radius * radius ;
+
     }
 
     public static boolean isTrianglePossible(double a, double b, double c) {
-        if (a + b >= c) {
-            if (c + b >= a)
-                if (a + c >= b);
+        if (a + b > c) {
+            if (c + b > a)
+                if (a + c > b) {
+                    return true;
+                }
         }
         return false;
     }
@@ -26,8 +28,8 @@ double area  = radius / radius * Math.PI;
     // методом isTrianglePossible, если невозможен вернуть -1.0
     public static double getTriangleSquare(double a, double b, double c) {
 //double halfMeter = 0;
-        double halfMeter = (a + b + c) / 2;
-        double area = halfMeter * (halfMeter - a - b - c);
+        double r = (a + b + c) / 2;
+        double area = r * (r - a) - (r - b) - (r- c);
 
 
         return -1.0;
