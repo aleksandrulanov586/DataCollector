@@ -14,24 +14,20 @@ public class Main {
       //TODO:напишите ваш код тут, результат вывести в консоль.
       //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
 
+      int startSpace = input.indexOf(' ');
+      int endSpace = input.lastIndexOf(' ');
 
-      int space = 0;
+
+    int spacesCount = 0;
       for (char e : input.toCharArray()) {
         if (e == ' ') {
-          space++;
+          spacesCount++;
+        }
+        if (spacesCount == 2){
+          System.out.println(startSpace + endSpace);
         }
 
       }
-
-
-      int i;
-      do {
-        i = input.indexOf(0);
-        if (i != -1) {
-          input = input.substring(0, i) ;
-        }
-      } while (i != -1);
-
 
 
 
