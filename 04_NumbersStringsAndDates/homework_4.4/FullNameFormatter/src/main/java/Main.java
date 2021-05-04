@@ -13,23 +13,23 @@ public class Main {
 
       //TODO:напишите ваш код тут, результат вывести в консоль.
       //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
-      int f = input.indexOf(" ");
-      int q = input.lastIndexOf(" ");
 
-for (char e : input.toCharArray()) {
-  if ( input.equals(" "));{
-    System.out.println(input + "\n");
-  }
 
-}
+      int space = 0;
+      for (char e : input.toCharArray()) {
+        if (e == ' ') {
+          space++;
+        }
+
+      }
 
       do {
         System.out.println("Введите ФИО:");
-        System.out.println("Вы ввели" + input );
+        System.out.println("Вы ввели: " + input);
 
 
-      }while (input.equals("ФИО"));
-     break;
+      } while (input.equals("ФИО"));
+      break;
 
 
     }
