@@ -10,7 +10,8 @@ public class GeometryCalculator {
     // метод должен использовать абсолютное значение radius
     public static double getSphereVolume(double radius) {
         //Площадь треугольника по основанию и высоте
-        return  (4 / 3 ) * Math.PI * radius * radius * radius ;
+
+        return  (4.0 / 3.0 ) * Math.PI * radius * radius * radius ;
 
     }
 
@@ -29,8 +30,8 @@ public class GeometryCalculator {
     public static double getTriangleSquare(double a, double b, double c) {
 //double halfMeter = 0;
         double r = (a + b + c) / 2;
-        double area = r * (r - a) - (r - b) - (r- c);
-
+        double area = r * (r - a) * (r - b) * (r - c);
+double root = Math.sqrt(area);
 
         return -1.0;
 
