@@ -23,13 +23,16 @@ public class Main {
 
       }
 
+
+      int i;
       do {
-        System.out.println("Введите ФИО:");
-        System.out.println("Вы ввели: " + input);
+        i = input.indexOf(0);
+        if (i != -1) {
+          input = input.substring(0, i) ;
+        }
+      } while (i != -1);
 
 
-      } while (input.equals("ФИО"));
-      break;
 
 
     }
