@@ -14,6 +14,7 @@ public class Main {
       //TODO:напишите ваш код тут, результат вывести в консоль.
       //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
 
+
       int startSpace = input.indexOf(' ');
       int endSpace = input.lastIndexOf(' ');
 
@@ -24,7 +25,7 @@ public class Main {
           spacesCount++;
         }
         if (spacesCount == 2){
-          System.out.println(startSpace + endSpace);
+
         }
 
       }
