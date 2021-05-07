@@ -26,39 +26,25 @@ public class Main {
 
     int maxContainer = 12;
     int maxBox = 27;
+
     int numberBox = maxBox + (int) (Math.random() * maxContainer);
     int numberContainer = maxBox + (int) (Math.random() * maxContainer);
     int numberTruck = maxBox + (int) (Math.random() * maxContainer);
     int sum = box + truck + container;
 
+    int boxCount = Integer.parseInt(boxes);
 
+    for (int boxNumber = 1; boxNumber < boxCount; boxNumber++) {
+      System.out.println("Ящик:" + box + "\n" + "Ящик:" + boxNumber);
 
+      if (boxCount != 0) {
+        box++;
 
-    do {
+      }
+      continue;
 
-      System.out.println(
-          "Грузовик:" + truck + "\n" + "Контейнер:" + container + "\n" + "Ящик:" + box + "\n"
-              + "Ящик:" + boxes);
-
-    } while (box != 0);
-
-    if (box == 0) {
-      box = box + 1;
 
     }
-    if (box == 1) {
-      truck = truck + 1;
-      container = container + 1;
-    }
-
-    if (box > 27) {
-      container++;
-    }
-
-    if (container > 12) {
-      truck++;
-    }
-    System.out.println("Необходимо:" + "\n" + "Грузовиков:" + truck + "\n" + "Контейнеров" + container);
 
 
   }
