@@ -24,14 +24,17 @@ public class Main {
         if (e == ' ') {
           spacesCount++;
         }
-        if (spacesCount != 2){
-          System.out.println("Неверный формат");
-
+        if (spacesCount != 2) {
+          System.out.println("Неверный формат имени");
+          System.out.println("Пробелов: " + spacesCount);
+          continue;
         }
 
       }
 for (char q : input.toCharArray()){
- // if (q )
+  if (startSpace == 1 ){
+
+  }
 }
 
 
