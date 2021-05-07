@@ -23,12 +23,16 @@ public class Main {
     int truck = 0;
     int container = 0;
     int box = 0;
+
     int maxContainer = 12;
     int maxBox = 27;
     int numberBox = maxBox + (int) (Math.random() * maxContainer);
     int numberContainer = maxBox + (int) (Math.random() * maxContainer);
     int numberTruck = maxBox + (int) (Math.random() * maxContainer);
     int sum = box + truck + container;
+
+
+
 
     do {
 
@@ -54,8 +58,7 @@ public class Main {
     if (container > 12) {
       truck++;
     }
-    System.out
-        .println("Необходимо:" + "\n" + "Грузовиков:" + truck + "\n" + "Контейнеров" + container);
+    System.out.println("Необходимо:" + "\n" + "Грузовиков:" + truck + "\n" + "Контейнеров" + container);
 
 
   }

@@ -24,12 +24,15 @@ public class Main {
         if (e == ' ') {
           spacesCount++;
         }
-        if (spacesCount == 2){
+        if (spacesCount != 2){
+          System.out.println("Неверный формат");
 
         }
 
       }
-
+for (char q : input.toCharArray()){
+ // if (q )
+}
 
 
     }
