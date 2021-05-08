@@ -37,14 +37,11 @@ public class Main {
     for (int boxNumber = 1; boxNumber <= boxCount; boxNumber++) {
       System.out.println("Ящик:" + boxNumber);
 
-      if (boxCount >= 1) {
-       container = + 1;
+      if (boxNumber % maxBox == 1) {
+       container  += 1;
         System.out.println("Контейнер:" + container);
       }
-      if (boxCount >= 1) {
-        truck = + 1;
-        System.out.println("Грузовик:" + truck);
-      }
+
 
 
 
