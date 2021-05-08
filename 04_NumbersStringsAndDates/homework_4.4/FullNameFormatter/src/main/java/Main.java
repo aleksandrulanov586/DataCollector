@@ -28,12 +28,12 @@ public class Main {
         System.out.println("Пробелов: " + spacesCount);
         continue;
       }
-      String sabSpace = input.substring(startSpace);
-      String sabSpace2 = input.substring(endSpace);
-      String sabSpace3 = input.substring(startSpace, endSpace);
-      System.out.println("Имя: " + sabSpace);
-      System.out.println("Фамилия: " + sabSpace3);
-      System.out.println("Отчество: " + sabSpace2);
+      String name = input.substring(startSpace);
+      String patronymic = input.substring(endSpace);
+      String surname = input.substring(startSpace, endSpace);
+      System.out.println("Имя: " + name);
+      System.out.println("Фамилия: " + surname);
+      System.out.println("Отчество: " + patronymic);
 
 
     }
