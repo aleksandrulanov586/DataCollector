@@ -28,7 +28,7 @@ public class Main {
         System.out.println("Пробелов: " + spacesCount);
         continue;
       }
-      String name = input.substring(startSpace);
+      String name = input.substring(0,startSpace);
       String patronymic = input.substring(endSpace);
       String surname = input.substring(startSpace, endSpace);
       System.out.println("Имя: " + name);
