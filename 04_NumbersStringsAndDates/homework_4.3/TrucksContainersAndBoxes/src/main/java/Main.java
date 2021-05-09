@@ -35,18 +35,18 @@ public class Main {
     int boxCount = Integer.parseInt(boxes);
 
     for (int boxNumber = 1; boxNumber <= boxCount; boxNumber++) {
-      System.out.println("Ящик:" + boxNumber);
-
-      if (boxNumber % maxBox == 1) {
+      if ( boxNumber % (maxBox * maxContainer)  == 1 ) {
+        truck += 1;
+        System.out.println("Грузовик:" + truck);
+      }
+      if (boxNumber % 27 == 1) {
        container  += 1;
         System.out.println("Контейнер:" + container);
       }
-
-
-
-
-      }
-
+      System.out.println("Ящик:" + boxNumber);
+      continue;
+    }
+    System.out.println("Необходимо:" + "\n" + "Грузовиков:"  + truck + "\n" + "Контейнеров:" + container );
 
 
     }

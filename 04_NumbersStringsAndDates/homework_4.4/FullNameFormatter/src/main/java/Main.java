@@ -17,6 +17,7 @@ public class Main {
       int startSpace = input.indexOf(' ');
       int endSpace = input.lastIndexOf(' ');
 
+
       int spacesCount = 0;
       for (char e : input.toCharArray()) {
         if (e == ' ') {
@@ -28,6 +29,7 @@ public class Main {
         System.out.println("Пробелов: " + spacesCount);
         continue;
       }
+
       String name = input.substring(0,startSpace);
       String patronymic = input.substring(endSpace);
       String surname = input.substring(startSpace, endSpace);
