@@ -25,14 +25,17 @@ public class Main {
         }
       }
       if (spacesCount != 2) {
-        System.out.println("Неверный формат имени");
-        System.out.println("Пробелов: " + spacesCount);
+        System.out.println("Введенная строка не является ФИО");
         continue;
       }
 
-      String name = input.substring(0,startSpace);
-      String patronymic = input.substring(endSpace);
-      String surname = input.substring(startSpace, endSpace);
+
+
+      String name = input.trim().substring(0,startSpace);
+      String patronymic = input.trim().substring(endSpace);
+      String surname = input.trim().substring(startSpace, endSpace);
+
+
       System.out.println("Имя: " + name);
       System.out.println("Фамилия: " + surname);
       System.out.println("Отчество: " + patronymic);
