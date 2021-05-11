@@ -17,7 +17,6 @@ public class Main {
       int startSpace = input.indexOf(' ');
       int endSpace = input.lastIndexOf(' ');
 
-
       int spacesCount = 0;
       for (char e : input.toCharArray()) {
         if (e == ' ') {
@@ -28,16 +27,24 @@ public class Main {
         System.out.println("Введенная строка не является ФИО");
         continue;
       }
+      int count = 0;
 
+      for (Character b = 0; b < input.length(); b++) {
+        if (Character.isDigit(input.charAt(b))) {
+          count++;
+        }
+      }
+      if (count > 0) {
+        System.out.println("Введенная строка не является ФИО");
+        break;
+      }
 
-
-      String name = input.substring(0,startSpace);
+      String name = input.substring(0, startSpace);
       String patronymic = input.substring(endSpace);
       String surname = input.substring(startSpace, endSpace);
 
-
-      System.out.println("Имя: " + name.trim());
-      System.out.println("Фамилия: " + surname.trim());
+      System.out.println("Фамилия: " + name.trim());
+      System.out.println("Имя: " + surname.trim());
       System.out.println("Отчество: " + patronymic.trim());
 
 
