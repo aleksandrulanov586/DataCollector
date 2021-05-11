@@ -31,14 +31,14 @@ public class Main {
 
 
 
-      String name = input.trim().substring(0,startSpace);
-      String patronymic = input.trim().substring(endSpace);
-      String surname = input.trim().substring(startSpace, endSpace);
+      String name = input.substring(0,startSpace);
+      String patronymic = input.substring(endSpace);
+      String surname = input.substring(startSpace, endSpace);
 
 
-      System.out.println("Имя: " + name);
-      System.out.println("Фамилия: " + surname);
-      System.out.println("Отчество: " + patronymic);
+      System.out.println("Имя: " + name.trim());
+      System.out.println("Фамилия: " + surname.trim());
+      System.out.println("Отчество: " + patronymic.trim());
 
 
     }
