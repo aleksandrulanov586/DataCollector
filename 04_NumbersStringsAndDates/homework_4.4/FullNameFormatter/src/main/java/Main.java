@@ -27,14 +27,16 @@ public class Main {
         System.out.println("Введенная строка не является ФИО");
         continue;
       }
-      int count = 0;
 
+      boolean hasDigit = false;
       for (Character b = 0; b < input.length(); b++) {
         if (Character.isDigit(input.charAt(b))) {
-          count++;
+          hasDigit = true;
+          break;
+
         }
       }
-      if (count > 0) {
+      if (hasDigit) {
         System.out.println("Введенная строка не является ФИО");
         break;
       }
