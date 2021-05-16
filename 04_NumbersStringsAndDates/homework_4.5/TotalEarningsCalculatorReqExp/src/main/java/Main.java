@@ -4,29 +4,27 @@ import java.util.regex.Pattern;
 public class Main {
 
   public static void main(String[] args) {
-    String text = "Вася заработао 5000 рублей, Петя - 7563 рубля, а Маша - 30000 рублей";
+
+    int text = calculateSalarySum(
+        "Вася заработао 5000 рублей, Петя - 7563 рубля, а Маша - 30000 рублей");
+
+  }
+
+  public static int calculateSalarySum(String text) {
+    //TODO: реализуйте метод
     String digitsRegex = "\\d+";
 
     Pattern pattern = Pattern.compile(digitsRegex);
     Matcher matcher = pattern.matcher(text);
 
+    int sum = 0;
     while (matcher.find()) {
-      String match = matcher.group();
-      System.out.println(match);
+      sum += Integer.parseInt(matcher.group());
     }
-Integer vasy = Integer.parseInt(match);
+    System.out.println("Сумма " + sum);
 
+    return -1;
 
-
-  }
-
-  public static int calculateSalarySum(String text){
-    //TODO: реализуйте метод
-
-
-
-
-   return -1;
   }
 
 }
