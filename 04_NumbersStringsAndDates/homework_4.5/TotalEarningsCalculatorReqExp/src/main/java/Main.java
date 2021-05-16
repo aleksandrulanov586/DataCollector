@@ -20,8 +20,18 @@ public class Main {
     int sum = 0;
     while (matcher.find()) {
       sum += Integer.parseInt(matcher.group());
+
     }
+
     System.out.println("Сумма " + sum);
+    if (sum != 0) {
+      return sum;
+
+    }
+    if (sum == 0) {
+      return 0;
+
+    }
 
     return -1;
 

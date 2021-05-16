@@ -7,7 +7,7 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     String userInputText = scanner.nextLine();
 
-    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***");
+    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***" );
 
     System.out.println(nonSecretText);
 
