@@ -38,7 +38,7 @@ public class Main {
     System.out.println(pruningSecondStartParenthesis + placeholder + pruningSecondEndParenthesis);
 
     if (indexStartParenthesis != 0 ){
-       return  pruningStartParenthesis + placeholder +  pruningEndParenthesis ;
+       return  pruningSecondStartParenthesis + placeholder + pruningSecondEndParenthesis ;
     }
 
 
