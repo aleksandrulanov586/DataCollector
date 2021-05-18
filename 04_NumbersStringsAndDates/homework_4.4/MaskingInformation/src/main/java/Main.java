@@ -7,9 +7,9 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     String userInputText = scanner.nextLine();
 
-    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***" );
+    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***"   );
 
-    System.out.println(nonSecretText);
+    System.out.println(nonSecretText );
 
 
   }
@@ -30,10 +30,17 @@ public class Main {
 
     String pruningSecondStartParenthesis = text.substring(0, indexSecondStartParenthesis);
     String pruningSecondEndParenthesis = text.substring(indexSecondEndParenthesis + 1);
+
     String pruningStartParenthesis = text.substring(0, indexStartParenthesis);
     String pruningEndParenthesis = text.substring(indexEndParenthesis + 1);
+
     System.out.println(pruningStartParenthesis + placeholder + pruningEndParenthesis);
     System.out.println(pruningSecondStartParenthesis + placeholder + pruningSecondEndParenthesis);
+
+    if (indexStartParenthesis != 0 ){
+       return  pruningStartParenthesis + placeholder +  pruningEndParenthesis ;
+    }
+
 
     return text;
   }
