@@ -8,8 +8,9 @@ public class Main {
     String userInputText = scanner.nextLine();
 
     String nonSecretText = searchAndReplaceDiamonds(userInputText, "***"   );
+    String nonSecretText2 = searchAndReplaceDiamonds(userInputText, "***"   );
 
-    System.out.println(nonSecretText );
+    System.out.println(nonSecretText + nonSecretText2 );
 
 
   }
@@ -38,8 +39,19 @@ public class Main {
     System.out.println(pruningSecondStartParenthesis + placeholder + pruningSecondEndParenthesis);
 
     if (indexStartParenthesis != 0 ){
-       return  pruningSecondStartParenthesis + placeholder + pruningSecondEndParenthesis ;
+       return  pruningStartParenthesis + placeholder + pruningEndParenthesis ;
     }
+
+while (true){
+ text += placeholder ;
+  text += pruningSecondStartParenthesis + pruningSecondEndParenthesis ;
+  text  += pruningStartParenthesis + pruningEndParenthesis;
+
+if ( false  ){
+  break;
+}
+
+}
 
 
     return text;
