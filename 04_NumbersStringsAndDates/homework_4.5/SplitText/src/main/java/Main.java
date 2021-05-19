@@ -24,6 +24,12 @@ public class Main {
 
   public static String splitTextIntoWords(String text) {
     //TODO реализуйте метод
+    String nonLettersRegex = "\\W";
+    String cleanText = text.replaceAll(nonLettersRegex, " ");
+    String searchNumbers = "\\d";
+    String deletingNumbers = text.replaceAll(searchNumbers, " ");
+    String searchForLost = "\\p{Punct}";
+    String removeСommas = text.replaceAll(searchForLost, " ");
 
     String[] words = text.split("\\s+");
 
@@ -31,11 +37,14 @@ public class Main {
 
       text += word + System.lineSeparator();
 
-
+      text += cleanText + deletingNumbers + removeСommas;
+      continue;
     }
-    if (text.equals(text)) {
-      return text;
 
+    System.out.println(text.trim());
+
+    if (true) {
+      return text;
     }
 
     return "";
