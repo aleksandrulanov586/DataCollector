@@ -7,10 +7,10 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
     String userInputText = scanner.nextLine();
 
-    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***"   );
-    String nonSecretText2 = searchAndReplaceDiamonds(userInputText, "***"   );
+    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***");
+    String nonSecretText2 = searchAndReplaceDiamonds(userInputText, "***");
 
-    System.out.println(nonSecretText + nonSecretText2 );
+    System.out.println(nonSecretText + nonSecretText2);
 
 
   }
@@ -18,43 +18,26 @@ public class Main {
   public static String searchAndReplaceDiamonds(String text, String placeholder) {
     // TODO: реализовать метод, если в строке нет <> - вернуть строку без изменений
 
-    int indexStartParenthesis = text.indexOf("<");
-    int indexEndParenthesis = text.indexOf(">");
-    if (indexEndParenthesis < 0 || indexStartParenthesis < 0) {
-      return text;
-    }
-    int indexSecondStartParenthesis = text.lastIndexOf(">");
-    int indexSecondEndParenthesis = text.lastIndexOf("<");
-    if (indexSecondStartParenthesis < 0 || indexSecondEndParenthesis < 0) {
-      return text;
-    }
+    String result = text;
 
-    String pruningSecondStartParenthesis = text.substring(0, indexSecondStartParenthesis);
-    String pruningSecondEndParenthesis = text.substring(indexSecondEndParenthesis + 1);
+    while (true) {
 
-    String pruningStartParenthesis = text.substring(0, indexStartParenthesis);
-    String pruningEndParenthesis = text.substring(indexEndParenthesis + 1);
+      int indexStartParenthesis = result.indexOf("<");
+      int indexEndParenthesis = result.indexOf(">");
 
-    System.out.println(pruningStartParenthesis + placeholder + pruningEndParenthesis);
-    System.out.println(pruningSecondStartParenthesis + placeholder + pruningSecondEndParenthesis);
+      if (indexEndParenthesis < 0 || indexStartParenthesis < 0) {
+        return result;
+      }
 
-    if (indexStartParenthesis != 0 ){
-       return  pruningStartParenthesis + placeholder + pruningEndParenthesis ;
+      String pruningStartParenthesis = result.substring(0, indexStartParenthesis);
+      String pruningEndParenthesis = result.substring(indexEndParenthesis + 1);
+
+      result = pruningStartParenthesis + placeholder + pruningEndParenthesis;
     }
 
-while (true){
- text += placeholder ;
-  text += pruningSecondStartParenthesis + pruningSecondEndParenthesis ;
-  text  += pruningStartParenthesis + pruningEndParenthesis;
 
-if ( false  ){
-  break;
-}
-
-}
-
-
-    return text;
   }
 
+
 }
+
