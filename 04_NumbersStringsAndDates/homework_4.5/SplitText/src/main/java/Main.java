@@ -24,30 +24,28 @@ public class Main {
 
   public static String splitTextIntoWords(String text) {
     //TODO реализуйте метод
-    String nonLettersRegex = "\\W";
-    String cleanText = text.replaceAll(nonLettersRegex, " ");
     String searchNumbers = "\\d";
     String deletingNumbers = text.replaceAll(searchNumbers, " ");
-    String searchForLost = "\\p{Punct}";
-    String removeСommas = text.replaceAll(searchForLost, " ");
+
+    String nonLettersRegex = "\\W";
+    String cleanText = deletingNumbers.replaceAll(nonLettersRegex, " ");
+
+    String searchForLost = "[,.\\-;]";
+    String removeСommas = cleanText.replaceAll(searchForLost, " ");
+    String removeСommasw = removeСommas.replaceAll(searchForLost, " ");
 
     String[] words = text.split("\\s+");
 
+    String result = "";
+
     for (String word : words) {
 
-      text += word + System.lineSeparator();
+      result += word + System.lineSeparator();
 
-      text += cleanText + deletingNumbers + removeСommas;
-      continue;
+
     }
 
-    System.out.println(text.trim());
-
-    if (true) {
-      return text;
-    }
-
-    return "";
+    return result.trim();
   }
 
 }
