@@ -30,13 +30,13 @@ public class Main {
     String removeСommas = deletingNumbers.replaceAll(searchForLost, " ");
     String removeСommasw = removeСommas.replaceAll(searchForLost, " ");
 
-    String[] words = text.split("\\s+");
+    String[] words = removeСommas.split("\\s+");
 
     String result = "";
 
     for (String word : words) {
 
-      result += word + System.lineSeparator();
+     result += word +  System.lineSeparator();
 
 
     }
