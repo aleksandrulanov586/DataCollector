@@ -15,22 +15,13 @@ public class Main {
       //TODO:напишите ваш код тут, результат вывести в консоль.
       //При невалидном ФИО вывести в консоль: Введенная строка не является ФИО
 
-      Pattern.matches(".*\\p{InCyrillic}.*", input);
-      Pattern p = Pattern.compile("[А-Яа-я]+\\s+[А-Яа-я]+\\s+[А-Яа-я]+");
-      boolean isFullname = p.matcher(input).matches();
+      //Pattern p = Pattern.compile("[А-Яа-я]+\\s+[А-Яа-я]+\\s+[А-Яа-я]+");
+     // boolean isFullname = p.matcher(input).matches();
 
-      int amountCyrillic = 0;
-      for (int i = 0; i < input.length(); i++) {
-        if (Character.UnicodeBlock.of(input.charAt(i)).equals(Character.UnicodeBlock.CYRILLIC)) {
-          amountCyrillic++;
-        }
-      }
-      if (amountCyrillic == 0) {
-        System.out.println(" Введенная строка не является ФИО");
-        continue;
-      }
 
-      if (input.matches("([А-Я][а-я]+(-[А-Я][а-я]+)?\\s){2}[А-Я][а-я]+(\\s[а-я]+)?")) {
+
+
+      if (input.matches("[А-Яа-я]+\\s+[А-Яа-я]+\\s+[А-Яа-я]+")) {
         int spaceIndex = input.indexOf(' ');
         int spaceIndex2 = input.lastIndexOf(' ');
         System.out.println("Фамилия: " + (input.substring(0, spaceIndex)) + input.trim());
