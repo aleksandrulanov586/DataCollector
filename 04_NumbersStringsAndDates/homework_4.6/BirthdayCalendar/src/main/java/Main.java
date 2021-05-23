@@ -1,5 +1,8 @@
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class Main {
 
@@ -18,20 +21,28 @@ public class Main {
         //TODO реализуйте метод для построения строки в следующем виде
         //0 - 31.12.1990 - Mon
         //1 - 31.12.1991 - Tue
-     Date d = new Date();
-      SimpleDateFormat format1;
-      SimpleDateFormat format2;
-      format1 = new SimpleDateFormat(
-          "dd.MM.yyyy hh:mm");
-      format2 = new SimpleDateFormat(
-          "День dd Месяц MM Год yyyy Время hh:mm");
-      System.out.println(
-          format1.format(d)  // 25.02.2013 09:03
-      );
-      System.out.println(
-          format2.format(d)
-          // День 25 Месяц 02 Год 2013 Время 09:03
-      );
-        return "";
+
+      StringBuilder builder = new StringBuilder();
+      SimpleDateFormat format = new SimpleDateFormat("0 - dd.hh.yyyy - EE", Locale.ENGLISH);
+      Calendar calendar = new GregorianCalendar(year, month, day, 0, 0, 0);
+      Calendar calendar2 = new GregorianCalendar();
+      month--;
+      if (month == -1) {
+        month = 0;
+      }
+      System.out.println(calendar.getTime());
+      System.out.println(calendar2.getTime());
+      if (calendar2.getTimeInMillis() == calendar.getTimeInMillis()) {
+        builder.append(format.format(calendar.getTime())).append("\n");
+        return builder.toString();
+      }
+
+
+      for (int i = 0; calendar.getTimeInMillis() <= calendar2.getTimeInMillis(); i++) {
+        builder.append(format.format(calendar.getTime())).append("\n");
+        calendar.add(Calendar.YEAR, 1);
+      }
+      return builder.toString();
     }
-}
+    }
+
