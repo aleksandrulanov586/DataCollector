@@ -26,12 +26,8 @@ public class Main {
     //TODO реализуйте метод
     String searchNumbers = "\\d";
     String deletingNumbers = text.replaceAll(searchNumbers, " ");
-
-    String nonLettersRegex = "\\W";
-    String cleanText = deletingNumbers.replaceAll(nonLettersRegex, " ");
-
     String searchForLost = "[,.\\-;]";
-    String removeСommas = cleanText.replaceAll(searchForLost, " ");
+    String removeСommas = deletingNumbers.replaceAll(searchForLost, " ");
     String removeСommasw = removeСommas.replaceAll(searchForLost, " ");
 
     String[] words = text.split("\\s+");
