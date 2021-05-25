@@ -23,13 +23,14 @@ public class Main {
         //1 - 31.12.1991 - Tue
 
       StringBuilder builder = new StringBuilder();
-      SimpleDateFormat format = new SimpleDateFormat("0 - dd.hh.yyyy - EE", Locale.ENGLISH);
+      SimpleDateFormat format = new SimpleDateFormat("0 - dd.MM.yyyy - EE", Locale.ENGLISH);
       Calendar calendar = new GregorianCalendar(year, month, day, 0, 0, 0);
       Calendar calendar2 = new GregorianCalendar();
-      month--;
-      if (month == -1) {
-        month = 0;
+
+      if (month != 0) {
+        month--;
       }
+
       System.out.println(calendar.getTime());
       System.out.println(calendar2.getTime());
       if (calendar2.getTimeInMillis() == calendar.getTimeInMillis()) {
