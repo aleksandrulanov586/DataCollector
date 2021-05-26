@@ -21,29 +21,27 @@ public class Main {
         //TODO реализуйте метод для построения строки в следующем виде
         //0 - 31.12.1990 - Mon
         //1 - 31.12.1991 - Tue
+      month--;
 
-      StringBuilder builder = new StringBuilder();
-      SimpleDateFormat format = new SimpleDateFormat("0 - dd.MM.yyyy - EE", Locale.ENGLISH);
-      Calendar calendar = new GregorianCalendar(year, month, day, 0, 0, 0);
-      Calendar calendar2 = new GregorianCalendar();
+      SimpleDateFormat format = new SimpleDateFormat( "  dd.MM.yyyy - EE", Locale.ENGLISH);
+      Calendar birthday = new GregorianCalendar(year, month, day, 0, 0, 0);
+      Calendar today = new GregorianCalendar();
 
-      if (month != 0) {
-        month--;
+
+
+      System.out.println(birthday.getTime());
+      System.out.println(today.getTime());
+      if (today.getTimeInMillis() == birthday.getTimeInMillis()) {
+      birthday.after(today) ;
+        return birthday.toString();
       }
 
-      System.out.println(calendar.getTime());
-      System.out.println(calendar2.getTime());
-      if (calendar2.getTimeInMillis() == calendar.getTimeInMillis()) {
-        builder.append(format.format(calendar.getTime())).append("\n");
-        return builder.toString();
-      }
 
-
-      for (int i = 0; calendar.getTimeInMillis() <= calendar2.getTimeInMillis(); i++) {
-        builder.append(format.format(calendar.getTime())).append("\n");
-        calendar.add(Calendar.YEAR, 1);
+      for (int i = 0; birthday.getTimeInMillis() <= today.getTimeInMillis(); i++) {
+        birthday.after(today) ;
+        birthday.add(Calendar.YEAR, 1);
       }
-      return builder.toString();
+      return birthday.toString();
     }
     }
 
