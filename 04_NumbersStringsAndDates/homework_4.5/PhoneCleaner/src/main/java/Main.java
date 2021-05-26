@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
@@ -12,8 +13,19 @@ public class Main {
         break;
       }
       //TODO:напишите ваш код тут, результат вывести в консоль.
-      Pattern p = Pattern.compile("/\\D/g, ''");
-      boolean isFullname = p.matcher(input).matches();
+      Pattern p = Pattern.compile("( +7 | 8 ) - (909|905) -\\d{3} - \\d{2} - \\d \\d");
+
+      Matcher matcher = p.matcher(input);
+      while (matcher.find()){
+        System.out.println(matcher);
+      }
+
+
+
+
+      }
+
+
 
 
 
@@ -21,4 +33,4 @@ public class Main {
     }
   }
 
-}
+
