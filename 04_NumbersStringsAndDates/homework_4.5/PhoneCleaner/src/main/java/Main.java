@@ -15,15 +15,15 @@ public class Main {
       //TODO:напишите ваш код тут, результат вывести в консоль.
       Pattern p = Pattern.compile("( +7 | 8 ) - (909|905) -\\d{3} - \\d{2} - \\d \\d");
 
-      Matcher matcher = p.matcher(input);
-      while (matcher.find()){
-        System.out.println(matcher);
-      }
+      boolean phoneNumber = p.matcher(input).matches();
+      if (phoneNumber){
+        String searchСharacters = "\\D+";
+        String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-
-
-
-      }
+        System.out.println(deletingСharacters);
+      }else {
+        System.out.println("Неверный формат номера"); }
+    }
 
 
 
