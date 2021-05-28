@@ -6,42 +6,41 @@ import java.util.Locale;
 
 public class Main {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        int day = 31;
-        int month = 12;
-        int year = 1990;
+    int day = 31;
+    int month = 12;
+    int year = 1990;
 
-        System.out.println(collectBirthdays(year, month, day));
+    System.out.println(collectBirthdays(year, month, day));
 
-    }
+  }
 
-    public static String collectBirthdays(int year, int month, int day) {
+  public static String collectBirthdays(int year, int month, int day) {
 
-        //TODO реализуйте метод для построения строки в следующем виде
-        //0 - 31.12.1990 - Mon
-        //1 - 31.12.1991 - Tue
-      month--;
+    //TODO реализуйте метод для построения строки в следующем виде
+    //0 - 31.12.1990 - Mon
+    //1 - 31.12.1991 - Tue
+    month--;
+    StringBuilder builder = new StringBuilder();
+    SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy - EE", Locale.ENGLISH);
+    Calendar birthday = new GregorianCalendar(year, month, day, 0, 0, 0);
+    Calendar today = new GregorianCalendar();
 
-      SimpleDateFormat format = new SimpleDateFormat( "  dd.MM.yyyy - EE", Locale.ENGLISH);
-      Calendar birthday = new GregorianCalendar(year, month, day, 0, 0, 0);
-      Calendar today = new GregorianCalendar();
-
-
-
-      System.out.println(birthday.getTime());
-      System.out.println(today.getTime());
-      if (today.getTimeInMillis() == birthday.getTimeInMillis()) {
-      birthday.after(today) ;
-        return birthday.toString();
-      }
-
-
-      for (int i = 0; birthday.getTimeInMillis() <= today.getTimeInMillis(); i++) {
-        birthday.after(today) ;
-        birthday.add(Calendar.YEAR, 1);
-      }
+    System.out.println(birthday.getTime());
+    System.out.println(today.getTime());
+    if (today.getTimeInMillis() == birthday.getTimeInMillis()) {
+      birthday.after(today);
+      builder.append(format.format(birthday.getTime())).append("\n");
       return birthday.toString();
     }
+
+    for (int i = 0; birthday.getTimeInMillis() <= today.getTimeInMillis(); i++) {
+      builder.append(i).append(format.format(birthday.getTime())).append("\n");
+      birthday.after(today);
+      birthday.add(Calendar.YEAR, 1);
     }
+    return birthday.toString();
+  }
+}
 
