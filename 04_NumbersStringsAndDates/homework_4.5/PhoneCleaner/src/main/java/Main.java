@@ -13,24 +13,20 @@ public class Main {
         break;
       }
       //TODO:напишите ваш код тут, результат вывести в консоль.
-      Pattern p = Pattern.compile("( +7 | 8 ) - (909|905) -\\d{3} - \\d{2} - \\d \\d");
+      Pattern p = Pattern.compile("\\d");
 
-      boolean phoneNumber = p.matcher(input).matches();
-      if (phoneNumber){
-        String searchСharacters = "\\D+";
-        String deletingСharacters = input.replaceAll(searchСharacters, "");
+      //  boolean phoneNumber = p.matcher(input).matches();
 
+      String searchСharacters = "\\D+";
+      String deletingСharacters = input.replaceAll(searchСharacters, "");
+
+      if (deletingСharacters.length() != 11) {
         System.out.println(deletingСharacters);
-      }else {
-        System.out.println("Неверный формат номера"); }
-    }
 
-
-
-
-
-
+      } else {
+        System.out.println("Неверный формат номера");
+      }
     }
   }
-
+}
 
