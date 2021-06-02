@@ -18,14 +18,15 @@ public class Main {
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-      if (deletingСharacters.length() != 11) {
-        System.out.println("Неверный формат номера");
-
-      }
       if (deletingСharacters.length() != 7 || deletingСharacters.length() != 8 )  {
         System.out.println("Неверный формат номера");
 
       }
+      if (deletingСharacters.length() != 11) {
+        System.out.println("Неверный формат номера");
+
+      }
+
 
 
 

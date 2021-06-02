@@ -27,17 +27,9 @@ public class Main {
     Calendar birthday = new GregorianCalendar(year, month, day, 0, 0, 0);
     Calendar today = new GregorianCalendar();
 
-    System.out.println(birthday.getTime());
-    System.out.println(today.getTime());
-    if (today.getTimeInMillis() == birthday.getTimeInMillis()) {
-      birthday.after(today);
-
-      return birthday.toString();
-    }
     String result = "";
-    for (int i = 0; birthday.getTimeInMillis() <= today.getTimeInMillis(); i++) {
-      result = result +  i + " " + format.format(birthday.getTime()) + "\n";
-      birthday.after(today);
+    for (int i = 0; today.after(birthday); i++) {
+      result = result + i + " " + format.format(birthday.getTime()) + "\n";
       birthday.add(Calendar.YEAR, 1);
     }
     return result;
