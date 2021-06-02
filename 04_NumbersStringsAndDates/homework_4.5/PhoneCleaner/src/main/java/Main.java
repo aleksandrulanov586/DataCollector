@@ -18,15 +18,28 @@ public class Main {
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-      if (deletingСharacters.length() != 7 || deletingСharacters.length() != 8 )  {
+      if (deletingСharacters.length() > 10 || deletingСharacters.length() < 11 )  {
         System.out.println("Неверный формат номера");
-
+       return;
       }
       if (deletingСharacters.length() != 11) {
         System.out.println("Неверный формат номера");
+return;
+      }
+
+      if (deletingСharacters.length() == 10) {
+
+        System.out.println("7" + deletingСharacters );
+        return;
+      }
+
+
 
       }
 
+
+
+    //  result = pruningStartParenthesis + placeholder + pruningEndParenthesis;
 
 
 
