@@ -13,19 +13,22 @@ public class Main {
         break;
       }
       //TODO:напишите ваш код тут, результат вывести в консоль.
-      Pattern p = Pattern.compile("\\d");
 
-      //  boolean phoneNumber = p.matcher(input).matches();
 
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-      if (deletingСharacters.length() != 12) {
-        System.out.println(deletingСharacters);
-
-      } else {
+      if (deletingСharacters.length() != 11) {
         System.out.println("Неверный формат номера");
+
       }
+      if (deletingСharacters.length() != 7 || deletingСharacters.length() != 8 )  {
+        System.out.println("Неверный формат номера");
+
+      }
+
+
+
     }
   }
 }
