@@ -22,8 +22,8 @@ public class Main {
     //0 - 31.12.1990 - Mon
     //1 - 31.12.1991 - Tue
     month--;
-    StringBuilder builder = new StringBuilder();
-    SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy - EE", Locale.ENGLISH);
+
+    SimpleDateFormat format = new SimpleDateFormat("- dd.MM.yyyy - EE", Locale.ENGLISH);
     Calendar birthday = new GregorianCalendar(year, month, day, 0, 0, 0);
     Calendar today = new GregorianCalendar();
 
@@ -31,16 +31,17 @@ public class Main {
     System.out.println(today.getTime());
     if (today.getTimeInMillis() == birthday.getTimeInMillis()) {
       birthday.after(today);
-      builder.append(format.format(birthday.getTime())).append("\n");
+
       return birthday.toString();
     }
-
+    String result = "";
     for (int i = 0; birthday.getTimeInMillis() <= today.getTimeInMillis(); i++) {
-      builder.append(i).append(format.format(birthday.getTime())).append("\n");
+      result = result +  i + " " + format.format(birthday.getTime()) + "\n";
       birthday.after(today);
       birthday.add(Calendar.YEAR, 1);
     }
-    return birthday.toString();
+    return result;
+
   }
 }
 

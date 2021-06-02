@@ -20,7 +20,7 @@ public class Main {
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-      if (deletingСharacters.length() != 11) {
+      if (deletingСharacters.length() != 12) {
         System.out.println(deletingСharacters);
 
       } else {
