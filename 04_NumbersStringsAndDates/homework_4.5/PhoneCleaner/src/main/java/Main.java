@@ -17,15 +17,13 @@ public class Main {
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-      //Вариант 1
-      /** StringBuffer sb = new StringBuffer(deletingСharacters);
-      sb.insert(0, "7");
-      System.out.println(sb); **/
+
       //Вариант 2
       char aChar = deletingСharacters.charAt(0);
       int digitSearch = deletingСharacters.indexOf("8");
       if (aChar != digitSearch) {
-
+        System.out.println("Неверный формат номера");
+        return;
       }
 
       if (deletingСharacters.length() > 11 || deletingСharacters.length() < 10 )  {
