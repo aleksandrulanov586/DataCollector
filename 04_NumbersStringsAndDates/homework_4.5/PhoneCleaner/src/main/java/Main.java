@@ -18,7 +18,7 @@ public class Main {
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
 
-      //Вариант 2
+
       char aChar = deletingСharacters.charAt(0);
       int digitSearch = deletingСharacters.indexOf("8");
       if (aChar != digitSearch) {
@@ -30,8 +30,7 @@ public class Main {
         System.out.println("Неверный формат номера");
         return;
       }
-
-
+     
       if (deletingСharacters.length() == 10) {
 
         System.out.println("7" + deletingСharacters);
