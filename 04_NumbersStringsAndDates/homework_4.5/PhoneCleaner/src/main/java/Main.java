@@ -14,36 +14,38 @@ public class Main {
       }
       //TODO:напишите ваш код тут, результат вывести в консоль.
 
-
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
-      if (deletingСharacters.length() > 10 || deletingСharacters.length() < 11 )  {
-        System.out.println("Неверный формат номера");
-       return;
-      }
-      if (deletingСharacters.length() != 11) {
-        System.out.println("Неверный формат номера");
-return;
+      //Вариант 1
+      /** StringBuffer sb = new StringBuffer(deletingСharacters);
+      sb.insert(0, "7");
+      System.out.println(sb); **/
+      //Вариант 2
+      char aChar = deletingСharacters.charAt(0);
+      int digitSearch = deletingСharacters.indexOf("8");
+      if (aChar != digitSearch) {
+
       }
 
-      if (deletingСharacters.length() == 10) {
-
-        System.out.println("7" + deletingСharacters );
+      if (deletingСharacters.length() > 11 || deletingСharacters.length() < 10 )  {
+        System.out.println("Неверный формат номера");
         return;
       }
 
 
+      if (deletingСharacters.length() == 10) {
 
+        System.out.println("7" + deletingСharacters);
+        return;
       }
 
 
-
-    //  result = pruningStartParenthesis + placeholder + pruningEndParenthesis;
-
-
-
     }
+
+
+
   }
 }
+
 
