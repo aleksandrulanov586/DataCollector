@@ -19,7 +19,7 @@ public class Main {
         // TODO: реализовать метод, если в строке нет <> - вернуть строку без изменений
 
 
-      String textWithDiscount = text.replaceAll("\\(.+\\)", text);
+      String textWithDiscount = text.replaceAll("\\(.+\\)", "***");
      // String result = "";
 
         while (true) {
