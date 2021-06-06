@@ -18,24 +18,23 @@ public class Main {
     public static String searchAndReplaceDiamonds(String text, String placeholder) {
         // TODO: реализовать метод, если в строке нет <> - вернуть строку без изменений
 
-        Pattern pattern = Pattern.compile("//.*");
-        Matcher matcher = pattern.matcher(text);
 
-        String result = matcher;
+      String textWithDiscount = text.replaceAll("\\(.+\\)", text);
+     // String result = "";
 
         while (true) {
 
-           int indexStartParenthesis = result.indexOf("<");
-           int indexEndParenthesis = result.indexOf(">");
+           int indexStartParenthesis = textWithDiscount.indexOf("<");
+           int indexEndParenthesis = textWithDiscount.indexOf(">");
 
             if (indexEndParenthesis < 0 || indexStartParenthesis < 0) {
-                return result;
+                return text;
             }
 
-            String pruningStartParenthesis = result.substring(0, indexStartParenthesis);
-            String pruningEndParenthesis = result.substring(indexEndParenthesis + 1);
+            String pruningStartParenthesis = textWithDiscount.substring(0, indexStartParenthesis);
+            String pruningEndParenthesis = textWithDiscount.substring(indexEndParenthesis + 1);
 
-            result = pruningStartParenthesis + placeholder + pruningEndParenthesis;
+            textWithDiscount = pruningStartParenthesis + placeholder + pruningEndParenthesis;
         }
     }
 }
