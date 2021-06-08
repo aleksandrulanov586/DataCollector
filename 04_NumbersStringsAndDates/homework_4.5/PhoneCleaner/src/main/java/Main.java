@@ -18,19 +18,23 @@ public class Main {
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
       char aChar = deletingСharacters.charAt(0);
-      if (aChar != '8' && aChar != '7' ) {
+      if (aChar == '8') {
+        System.out.println('7' + deletingСharacters.substring(1));
+      } else if (aChar == '7') {
+        System.out.println(deletingСharacters);
+      } else {
         System.out.println("Неверный формат номера");
-
       }
 
       if (deletingСharacters.length() > 11 || deletingСharacters.length() < 10) {
         System.out.println("Неверный формат номера");
-
+        return;
       }
 
       if (deletingСharacters.length() == 10) {
 
         System.out.println("7" + deletingСharacters);
+        return;
 
       }
 
