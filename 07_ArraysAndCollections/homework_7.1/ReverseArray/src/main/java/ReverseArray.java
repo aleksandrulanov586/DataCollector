@@ -5,7 +5,12 @@ public class ReverseArray {
 
 
 
-        return new StringBuilder(strings).reverse().toString();;
+
+        String[] words = strings.split(" ");
+        for (String word : words) {
+            System.out.println(word);
+        }
+return strings;
     }
 
 
