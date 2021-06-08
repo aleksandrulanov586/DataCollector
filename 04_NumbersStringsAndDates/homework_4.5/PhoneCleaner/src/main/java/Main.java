@@ -24,6 +24,7 @@ public class Main {
         System.out.println(deletingСharacters);
       } else {
         System.out.println("Неверный формат номера");
+        return;
       }
 
       if (deletingСharacters.length() > 11 || deletingСharacters.length() < 10) {
