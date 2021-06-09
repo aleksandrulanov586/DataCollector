@@ -1,23 +1,38 @@
 public class Hospital {
 
-    public static float[] generatePatientsTemperatures(int patientsCount) {
+  public static float[] generatePatientsTemperatures(int patientsCount) {
 
-        //TODO: напишите метод генерации массива температур пациентов
+    //TODO: напишите метод генерации массива температур пациентов
 
-        return new float[0];
+    if (patientsCount > 0) {
+      double temperature = Math.random() * 1 * 100;
+
+      temperature = temperature + patientsCount;
     }
 
-    public static String getReport(float[] temperatureData) {
+    return new float[0];
+  }
+
+  public static String getReport(float[] temperatureData) {
         /*
         TODO: Напишите код, который выводит среднюю температуру по больнице,количество здоровых пациентов,
             а также температуры всех пациентов.
         */
+    generatePatientsTemperatures(5);
 
-        String report =
-                "Температуры пациентов: " + 0 +
-                        "\nСредняя температура: " + 0 +
-                        "\nКоличество здоровых: " + 0;
-
-        return report;
+    double averageTemperature = 0;
+    if (temperatureData.length > 0) {
+      double sum = 0;
+      for (int j = 0; j < temperatureData.length; j++) {
+        sum += temperatureData[j];
+      }
+      averageTemperature = sum / temperatureData.length;
     }
+    String report =
+        "Температуры пациентов: " + 0 +
+            "\nСредняя температура: " + 0 +
+            "\nКоличество здоровых: " + 0;
+
+    return report;
+  }
 }
