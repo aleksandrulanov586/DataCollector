@@ -17,6 +17,17 @@ public class Main {
       String searchСharacters = "\\D+";
       String deletingСharacters = input.replaceAll(searchСharacters, "");
 
+      if (deletingСharacters.length() > 11 || deletingСharacters.length() < 10) {
+        System.out.println("Неверный формат номера");
+        return;
+      }
+      if (deletingСharacters.length() == 10) {
+
+        System.out.println("7" + deletingСharacters);
+        return;
+
+      }
+
       char aChar = deletingСharacters.charAt(0);
       if (aChar == '8') {
         System.out.println('7' + deletingСharacters.substring(1));
@@ -25,18 +36,6 @@ public class Main {
       } else {
         System.out.println("Неверный формат номера");
         return;
-      }
-
-      if (deletingСharacters.length() > 11 || deletingСharacters.length() < 10) {
-        System.out.println("Неверный формат номера");
-        return;
-      }
-
-      if (deletingСharacters.length() == 10) {
-
-        System.out.println("7" + deletingСharacters);
-        return;
-
       }
 
 
