@@ -18,15 +18,19 @@ public class Main {
     public static String searchAndReplaceDiamonds(String text, String placeholder) {
       // TODO: реализовать метод, если в строке нет <> - вернуть строку без изменений
 
-      String textWithDiscount = text.replaceAll("\\(.+\\)", "<>");
+      String textWithDiscount = text.replaceAll("\\<.+\\>", placeholder);
+
        String result = "";
 
-       if (true){
+       while (true){
+
            result = result + textWithDiscount;
+         return result;
        }
 
 
-return result;
+
+
     }
 
     }
