@@ -4,33 +4,29 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String userInputText = scanner.nextLine();
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    String userInputText = scanner.nextLine();
 
-        String nonSecretText = searchAndReplaceDiamonds(userInputText, "***");
+    String nonSecretText = searchAndReplaceDiamonds(userInputText, "***");
+
+    System.out.println(nonSecretText);
+  }
 
 
-        System.out.println(nonSecretText);
+  public static String searchAndReplaceDiamonds(String text, String placeholder) {
+    String regex = "<.+?>";
+
+    Pattern pattern = Pattern.compile(regex);
+
+    while (true) {
+      Matcher matcher = pattern.matcher(text);
+      if (!matcher.find()) {
+        break;
+      }
+      text = text.replaceFirst(regex, placeholder);
     }
+    return text;
+  }
 
-
-    public static String searchAndReplaceDiamonds(String text, String placeholder) {
-      // TODO: реализовать метод, если в строке нет <> - вернуть строку без изменений
-
-      String textWithDiscount = text.replaceAll("\\<.+\\>", placeholder);
-
-       String result = "";
-
-       while (true){
-
-           result = result + textWithDiscount;
-         return result;
-       }
-
-
-
-
-    }
-
-    }
+}
