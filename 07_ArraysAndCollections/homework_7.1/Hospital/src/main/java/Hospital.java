@@ -3,12 +3,8 @@ public class Hospital {
   public static float[] generatePatientsTemperatures(int patientsCount) {
 
     //TODO: напишите метод генерации массива температур пациентов
-     float[] cout = new float[4];
-     cout[0] = 12;
-    cout[1] = 50;
-    cout[2] = 100;
-    cout[3] = 60;
-    cout[4] = 30;
+     float[] cout = {100,60,66,4};
+
 
 
 
