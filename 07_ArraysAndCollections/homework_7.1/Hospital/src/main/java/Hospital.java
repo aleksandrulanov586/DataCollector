@@ -3,12 +3,17 @@ public class Hospital {
   public static float[] generatePatientsTemperatures(int patientsCount) {
 
     //TODO: напишите метод генерации массива температур пациентов
-     float[] cout = {100,60,66,4};
+     float[] cout = new float[0] ;
+     cout[0] = 6;
+
+     while (true){
+       double random = (int)(Math.random()*((1-6)+1))+1;
+       return new float[0];
+     }
 
 
 
 
-    return new float[0];
   }
 
   public static String getReport(float[] temperatureData) {
