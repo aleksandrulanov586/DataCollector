@@ -17,8 +17,8 @@ for (int i = 0; i < size; i++ ){
 
 
     for (int j = 0; j < size; j++ ){
-       System.out.println(cross[symbol]);
-
+       System.out.println(i);
+      System.out.println(j);
     }
 }
 
