@@ -3,15 +3,15 @@ public class Hospital {
   public static float[] generatePatientsTemperatures(int patientsCount) {
 
     //TODO: напишите метод генерации массива температур пациентов
-     float[] cout = new float[0] ;
-     cout[0] = 6;
+    float[] patientsTemperatures = new float[patientsCount];
 
-     while (true){
-       double random = (int)(Math.random()*((1-6)+1))+1;
-       return new float[0];
+
+     for (int i = 0; i < patientsTemperatures.length; i++){
+       double random = (int)(Math.random()*((36+2)+1))+1;
+
      }
 
-
+    return patientsTemperatures;
 
 
   }
@@ -21,6 +21,7 @@ public class Hospital {
         TODO: Напишите код, который выводит среднюю температуру по больнице,количество здоровых пациентов,
             а также температуры всех пациентов.
         */
+    float[] averageTemperature = new float[temperatureData];
     generatePatientsTemperatures(5);
 
     double averageTemperature = 0;
