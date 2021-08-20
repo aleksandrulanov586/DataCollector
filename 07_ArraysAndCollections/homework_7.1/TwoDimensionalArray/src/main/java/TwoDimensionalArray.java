@@ -10,13 +10,18 @@ public class TwoDimensionalArray {
         // [X,  , X]
         // [ , X,  ]
         // [X,  , X]
-size = 5;
+size = 3;
 char[][] cross = new char[size][size];
 
 for (int i = 0; i < size; i++ ){
 
+  if (i != 3){
+   cross[symbol];
+
+  }
 
     for (int j = 0; j < size; j++ ){
+
        System.out.println(i);
       System.out.println(j);
     }
