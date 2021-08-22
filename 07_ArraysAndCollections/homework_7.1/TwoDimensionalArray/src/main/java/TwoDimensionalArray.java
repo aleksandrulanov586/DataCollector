@@ -16,7 +16,7 @@ char[][] cross = new char[size][size];
 
 for (int i = 0; i < size; i++ ){
 
-if (true){
+if (size == 3){
   cross[0][0] = symbol;
   cross[0][1] = ' ';
   cross[0][2] = symbol;
@@ -27,7 +27,7 @@ if (true){
   cross[2][1] = ' ';
   cross[2][2] = symbol;
 }
-  if (true){
+  if (size == 1){
     cross[0][0] = symbol;
 
   }
