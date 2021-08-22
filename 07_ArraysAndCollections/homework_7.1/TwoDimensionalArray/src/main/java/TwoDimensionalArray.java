@@ -1,8 +1,9 @@
 public class TwoDimensionalArray {
     public static char symbol = 'X';
+  private static char[][] cross;
 
 
-    public static char[][] getTwoDimensionalArray(int size) {
+  public static char[][] getTwoDimensionalArray(int size) {
 
 
         //TODO: Написать метод, который создаст двумерный массив char заданного размера.
@@ -10,25 +11,43 @@ public class TwoDimensionalArray {
         // [X,  , X]
         // [ , X,  ]
         // [X,  , X]
-size = 3;
+size = 1;
 char[][] cross = new char[size][size];
 
 for (int i = 0; i < size; i++ ){
 
-  if (i != 3){
-   cross[symbol];
+if (true){
+  cross[0][0] = symbol;
+  cross[0][1] = ' ';
+  cross[0][2] = symbol;
+  cross[1][0] = ' ';
+  cross[1][1] = symbol;
+  cross[1][2] = ' ';
+  cross[2][0] = symbol;
+  cross[2][1] = ' ';
+  cross[2][2] = symbol;
+}
+  if (true){
+    cross[0][0] = symbol;
 
   }
 
+
+
     for (int j = 0; j < size; j++ ){
 
-       System.out.println(i);
-      System.out.println(j);
+      cross[i][j] = symbol;
+
+
+
+
+     //  System.out.println(i);
+     // System.out.println(j);
     }
 }
 
-
-        return new char[0][0];
+    return cross;
+       // return new char[0][0];
 
     }
 }
