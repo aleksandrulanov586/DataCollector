@@ -33,8 +33,8 @@ public class Hospital {
       double sum = 0;
       for (int j = 0; j < temperatureData.length; j++) {
         sum += temperatureData[j];
-        if(  ){
-
+        if( PatientTemperature > 36.6 || PatientTemperature  < 42.0 ){
+          HealthyPatients++;
         }
       }
 
