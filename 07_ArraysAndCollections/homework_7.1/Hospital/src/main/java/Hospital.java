@@ -8,7 +8,7 @@ public class Hospital {
 
      for (int i = 0; i < patientsTemperatures.length; i++){
        float randomTemperatures = (float) (Math.random()*((20.6+10.5)+3.1))+3+1+1+10;
-
+       patientsTemperatures[patientsCount] = randomTemperatures;
      }
 
     return patientsTemperatures ;
@@ -21,24 +21,19 @@ public class Hospital {
         TODO: Напишите код, который выводит среднюю температуру по больнице,количество здоровых пациентов,
             а также температуры всех пациентов.
         */
-    generatePatientsTemperatures(5);
-    int HealthyPatients = 0;
-    double AverageTemperature = 0.0;
-    double  PatientTemperature = 0.0 ;
+
+    int healthyPatients = 0;
+    double averageTemperature = 0.0;
+    double  patientTemperature = 0.0 ;
 
 
 
-
-    if (temperatureData.length > 0) {
-      double sum = 0;
-      for (int j = 0; j < temperatureData.length; j++) {
-        sum += temperatureData[j];
-        if( PatientTemperature > 36.6 || PatientTemperature  < 42.0 ){
-          HealthyPatients++;
+        if( patientTemperature > 36.6 || patientTemperature  < 36.9 ){
+          healthyPatients++;
         }
-      }
 
-    }
+
+
     String report =
         "Температуры пациентов: " + 0 +
             "\nСредняя температура: " + 0 +
