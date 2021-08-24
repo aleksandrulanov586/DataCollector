@@ -36,8 +36,12 @@ if (size == 3){
 
     for (int j = 0; j < size; j++ ){
 
-      cross[i][j] = symbol;
-
+      if (i == j ){
+        cross[i][j] = symbol;
+      }
+      if (i != j){
+        cross[i][j] = ' ';
+      }
 
 
 
@@ -47,7 +51,7 @@ if (size == 3){
 }
 
     return cross;
-       // return new char[0][0];
+
 
     }
 }
