@@ -8,7 +8,8 @@ public class Hospital {
 
      for (int i = 0; i < patientsTemperatures.length; i++){
        float randomTemperatures = (float) (Math.random()*((20.6+10.5)+3.1))+3+1+1+10;
-       patientsTemperatures[patientsCount] = randomTemperatures;
+       patientsTemperatures[i] = randomTemperatures;
+         getReport(patientsTemperatures);
      }
 
     return patientsTemperatures ;
@@ -23,21 +24,28 @@ public class Hospital {
         */
 
     int healthyPatients = 0;
-    double averageTemperature = 0.0;
-    double  patientTemperature = 0.0 ;
+      float averageTemperature = 0;
+    float patientTemperature = 0;
+
+      for (int i = 0; i < temperatureData.length; i++){
+          if( patientTemperature > 36.6 || patientTemperature  < 36.9 ){
+              healthyPatients++;
+          }
+          if( true ){
+              temperatureData + temperatureData / temperatureData ;
+
+          }
+          temperatureData[i] = patientTemperature;
+      }
 
 
-
-        if( patientTemperature > 36.6 || patientTemperature  < 36.9 ){
-          healthyPatients++;
-        }
 
 
 
     String report =
-        "Температуры пациентов: " + 0 +
-            "\nСредняя температура: " + 0 +
-            "\nКоличество здоровых: " + 0;
+        "Температуры пациентов: " + patientTemperature +
+            "\nСредняя температура: " + averageTemperature +
+            "\nКоличество здоровых: " + healthyPatients;
 
     return report;
   }
