@@ -9,7 +9,7 @@ public class Hospital {
         for (int i = 0; i < patientsTemperatures.length; i++) {
             float randomTemperatures = (float) (Math.random() * ((20.6 + 10.5) + 3.1)) + 3 + 1 + 1 + 10;
             patientsTemperatures[i] = randomTemperatures;
-            getReport(patientsTemperatures);
+
         }
 
         return patientsTemperatures;
@@ -31,10 +31,7 @@ public class Hospital {
             if (patientTemperature > 36.6 || patientTemperature < 36.9) {
                 healthyPatients++;
             }
-            if (true) {
-                temperatureData + temperatureData / temperatureData;
 
-            }
             temperatureData[i] = patientTemperature;
         }
 
