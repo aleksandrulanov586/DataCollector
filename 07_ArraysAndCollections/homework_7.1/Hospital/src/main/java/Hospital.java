@@ -5,10 +5,11 @@ public class Hospital {
         //TODO: напишите метод генерации массива температур пациентов
         float[] patientsTemperatures = new float[patientsCount];
 
-
+        float minTemperature = 32F;
+        float maxTemperature = 40F;
         for (int i = 0; i < patientsTemperatures.length; i++) {
-            float randomTemperatures = (float) (Math.random() * ((20.6 + 10.5) + 3.1)) + 3 + 1 + 1 + 10;
-            patientsTemperatures[i] = randomTemperatures;
+            float random = (float)  (minTemperature + Math.random() * (maxTemperature - minTemperature));
+            patientsTemperatures[i] = random;
 
         }
 
@@ -25,29 +26,21 @@ public class Hospital {
 
         int healthyPatients = 0;
         float averageTemperature = 0;
-        String patientTemperature = "";
+        String patientTemperature = " ";
 
         for (int i = 0; i < temperatureData.length; i++) {
-            for (float a : temperatureData){
-                averageTemperature += a;
 
-            }
-            if (healthyPatients > 0 ){
-    System.out.println(patientTemperature);
-
-}
+            patientTemperature += i + " ";
+            averageTemperature += i;
 
 
-            if (patientTemperature > 36.6 || patientTemperature < 36.9) {
-                healthyPatients++;
-            }
 
 
         }
 
 
         String report =
-                "Температуры пациентов: " + patientTemperature +
+                "Температуры пациентов: " + patientTemperature+
                         "\nСредняя температура: " + averageTemperature +
                         "\nКоличество здоровых: " + healthyPatients;
 
