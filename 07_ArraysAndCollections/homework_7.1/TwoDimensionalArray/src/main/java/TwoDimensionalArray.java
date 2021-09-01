@@ -17,24 +17,8 @@ char[][] cross = new char[size][size];
 for (int i = 0; i < size; i++ ){
   for (int j = 0; j < size; j++ ) {
 
-              if (j == 0 && i >= 0  ) {
-                  cross[i][j] = symbol;
-
-              }
-      if (j == i) {
-          cross[j][i] = symbol;
-
-      }
-
-      if (i != j) {
-          cross[i][j] = ' ';
-      }
-
-
-
-              //  System.out.println(i);
-              // System.out.println(j);
-          }
+      cross[i][j] = i + j == size - 1 || i == j ? symbol : ' ';
+  }
       }
 
 
