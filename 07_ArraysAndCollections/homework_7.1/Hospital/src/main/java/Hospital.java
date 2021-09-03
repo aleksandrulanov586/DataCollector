@@ -8,7 +8,7 @@ public class Hospital {
         float minTemperature = 32F;
         float maxTemperature = 40F;
         for (int i = 0; i < patientsTemperatures.length; i++) {
-            float random = (float)  (minTemperature + Math.random() * (maxTemperature - minTemperature));
+            float random = (float) (minTemperature + Math.random() * (maxTemperature - minTemperature));
             patientsTemperatures[i] = random;
 
         }
@@ -26,21 +26,22 @@ public class Hospital {
 
         int healthyPatients = 0;
         float averageTemperature = 0;
-        String patientTemperature = " ";
-
+        String patientTemperature = "";
+        for (float a : temperatureData){
+            patientTemperature += a + " ";
+            if (patientTemperature > 36.6 && patientTemperature < 36.9) {
+                healthyPatients++;
+            }
+        }
         for (int i = 0; i < temperatureData.length; i++) {
 
-            patientTemperature += i + " ";
             averageTemperature += i;
-
-
-
 
         }
 
 
         String report =
-                "Температуры пациентов: " + patientTemperature+
+                "Температуры пациентов: " + patientTemperature +
                         "\nСредняя температура: " + averageTemperature +
                         "\nКоличество здоровых: " + healthyPatients;
 
