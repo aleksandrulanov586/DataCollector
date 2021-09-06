@@ -26,16 +26,18 @@ public class Hospital {
 
         int healthyPatients = 0;
         float averageTemperature = 0;
+
         String patientTemperature = "";
-        for (float a : temperatureData){
-            patientTemperature += a + " ";
-            if (patientTemperature > 36.6 && patientTemperature < 36.9) {
+
+        for (float currentTemperature : temperatureData) {
+            if (currentTemperature > 36.6 && currentTemperature < 36.9) {
                 healthyPatients++;
             }
-        }
-        for (int i = 0; i < temperatureData.length; i++) {
+            patientTemperature += currentTemperature + " ";
+            for (int i = 0; i < temperatureData.length; ++i) {
+                currentTemperature += temperatureData[i];
+            }
 
-            averageTemperature += i;
 
         }
 
