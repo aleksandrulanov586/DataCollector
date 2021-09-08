@@ -4,10 +4,11 @@ public class TodoList {
 
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
-        todo = "";
-        if (todo != ""){
-            add(todo);
-        }
+
+        todo = "One";
+        todo = "Two";
+        todo = "Three";
+
     }
 
     public void add(int index, String todo) {
