@@ -45,10 +45,14 @@ public class Hospital {
             averageTemperature = averageTemperature + temperatureData[i];
 
         }
-        float temperature = averageTemperature / temperatureData.length;
+        float temperature =  averageTemperature / temperatureData.length;
+        float t = temperature * 100 ;
+        int i = (int) t;
+        float temperaturePatient = (float) i /100;
+
         String report =
                 "Температуры пациентов: " + patientTemperature +
-                        "\nСредняя температура: " + temperature +
+                        "\nСредняя температура: " + temperaturePatient +
                         "\nКоличество здоровых: " + healthyPatients;
 
         return report;

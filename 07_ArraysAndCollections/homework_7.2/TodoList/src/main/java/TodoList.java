@@ -1,17 +1,19 @@
 import java.util.ArrayList;
 
 public class TodoList {
-
+    ArrayList<String> todoList = new ArrayList<>();
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
 
-        todo = "One";
-        todo = "Two";
-        todo = "Three";
+
+
 
     }
 
     public void add(int index, String todo) {
+
+
+
         // TODO: добавьте дело на указаный индекс,
         //  проверьте возможность добавления
 
@@ -19,6 +21,7 @@ public class TodoList {
     }
 
     public void edit(String todo, int index) {
+
         // TODO: заменить дело на index переданным todo индекс,
         //  проверьте возможность изменения
     }
@@ -30,7 +33,7 @@ public class TodoList {
 
     public ArrayList<String> getTodos() {
         // TODO: вернуть список дел
-        return new ArrayList<>();
+        return todoList;
     }
 
 }
