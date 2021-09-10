@@ -2,16 +2,14 @@ import java.util.ArrayList;
 
 public class TodoList {
     ArrayList<String> todoList = new ArrayList<>();
+
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
-
-
 
 
     }
 
     public void add(int index, String todo) {
-
 
 
         // TODO: добавьте дело на указаный индекс,
@@ -36,4 +34,7 @@ public class TodoList {
         return todoList;
     }
 
+    public void printTodos() {
+        // напишите код которые печатает каждую строку todos
+    }
 }
