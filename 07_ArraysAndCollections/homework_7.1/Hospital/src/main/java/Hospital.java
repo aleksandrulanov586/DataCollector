@@ -50,7 +50,7 @@ public class Hospital {
         float temperaturePatient = (float) i / 100;
 
         String report =
-                "Температуры пациентов: " + patientTemperature +
+                "Температуры пациентов: " + patientTemperature.trim() +
                         "\nСредняя температура: " + temperaturePatient +
                         "\nКоличество здоровых: " + healthyPatients;
 
