@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static final String WRONG_EMAIL_ANSWER = "Неверный формат email";
@@ -19,15 +21,20 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+        EmailList email = new EmailList();
+
         while (true) {
             String input = scanner.nextLine();
-            if (input.equals("0")) {
-                break;
+            Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
+            Matcher matcher = pattern.matcher(input);
+            if (input.equals(matcher)) {
+
+                email.add(input);
+
             }
-            
+
             //TODO: write code here
-            
+
         }
     }
 }

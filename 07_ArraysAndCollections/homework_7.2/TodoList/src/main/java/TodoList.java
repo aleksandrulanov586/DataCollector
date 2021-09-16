@@ -35,6 +35,10 @@ public class TodoList {
     }
 
     public void printTodos() {
+        for (int i = 0; i  < todoList.size(); i++ ){
+
+            System.out.println(todoList.get(i));
+        }
         // напишите код которые печатает каждую строку todos
     }
 }
