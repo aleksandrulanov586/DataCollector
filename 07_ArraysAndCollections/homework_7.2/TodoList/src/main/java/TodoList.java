@@ -1,12 +1,15 @@
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TodoList {
     ArrayList<String> todoList = new ArrayList<>();
 
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
-
-
+        Pattern pattern = Pattern.compile("ADD\\s+.+");
+        Matcher matcher = pattern.matcher(todo);
+        todo.split("ADD");
     }
 
     public void add(int index, String todo) {
@@ -35,7 +38,7 @@ public class TodoList {
     }
 
     public void printTodos() {
-        for (int i = 0; i  < todoList.size(); i++ ){
+        for (int i = 0; i < todoList.size(); i++) {
 
             System.out.println(todoList.get(i));
         }
