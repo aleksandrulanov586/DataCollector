@@ -6,14 +6,15 @@ public class Transport {
     boolean isEngineStarted = false;
 
 
-    public Transport(boolean isPassenger, double weight, int wheelsCount) {
+    public Transport(boolean isPassenger, double weight, int wheelsCount, double maxSpeed) {
         this.isPassenger = isPassenger;
         this.weight = weight;
         this.wheelsCount = wheelsCount;
+        this.maxSpeed = maxSpeed;
     }
 
     public void startEngine() {
-        if (weight > 0 && wheelsCount == 4) {
+        if (weight > 0 && wheelsCount == 4 || maxSpeed <= 200.0 ) {
             isEngineStarted = true;
             System.out.println("Двигатель заведён");
         } else {

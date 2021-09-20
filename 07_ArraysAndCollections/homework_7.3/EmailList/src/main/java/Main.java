@@ -31,7 +31,12 @@ public class Main {
 
                 email.add(input);
 
+
             }
+
+               email.text(input);
+
+
 
             //TODO: write code here
 
