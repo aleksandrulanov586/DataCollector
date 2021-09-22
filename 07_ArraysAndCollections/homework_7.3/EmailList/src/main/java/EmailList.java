@@ -6,16 +6,17 @@ import java.util.regex.Pattern;
 
 public class EmailList {
     ArrayList<String> emaillist = new ArrayList<>();
-    public String text (String text) {
+
+    public String set(String text) {
 
         while (true) {
 
             Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
             Matcher matcher = pattern.matcher(text);
             if (text.equals(matcher)) {
-               break;
+                break;
 
-            }else {
+            } else {
                 System.out.println("Строка не соответствует");
             }
 
