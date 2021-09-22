@@ -2,7 +2,7 @@ public class Transport {
     boolean isPassenger;
     double weight;
     int wheelsCount;
-    double maxSpeed = 200.0;
+    double maxSpeed = 200;
     boolean isEngineStarted = false;
 
 
@@ -25,8 +25,8 @@ public class Transport {
 
     }
 
-    public double shortestTimeToTravel(int distance) {
+    public double shortestTimeToTravel(double distance) {
 
-        return;
+        return distance / maxSpeed ;
     }
 }
