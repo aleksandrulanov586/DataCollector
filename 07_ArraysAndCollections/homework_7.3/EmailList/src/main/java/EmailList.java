@@ -13,7 +13,7 @@ public class EmailList {
 
             Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
             Matcher matcher = pattern.matcher(text);
-            if (text.equals(matcher)) {
+            if (matcher.matches()) {
                 break;
 
             } else {
