@@ -7,26 +7,21 @@ import java.util.regex.Pattern;
 public class EmailList {
     ArrayList<String> emaillist = new ArrayList<>();
 
-    public String set(String text) {
 
+    public void add(String email) {
+        // TODO: валидный формат email добавляется
         while (true) {
 
             Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
-            Matcher matcher = pattern.matcher(text);
+            Matcher matcher = pattern.matcher(email);
             if (matcher.matches()) {
-                break;
+                emaillist.add(email);
 
             } else {
                 System.out.println("Строка не соответствует");
             }
 
         }
-        return text;
-    }
-
-    public void add(String email) {
-        // TODO: валидный формат email добавляется
-
     }
 
     public List<String> getSortedEmails() {
