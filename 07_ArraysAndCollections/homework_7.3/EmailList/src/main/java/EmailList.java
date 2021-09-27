@@ -16,9 +16,8 @@ public class EmailList {
             Matcher matcher = pattern.matcher(email);
             if (matcher.matches()) {
                 emaillist.add(email);
-
-            } else {
-                System.out.println("Строка не соответствует");
+                System.out.println("Вы ввели эл.адрес");
+                break;
             }
 
         }
