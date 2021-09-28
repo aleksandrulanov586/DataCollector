@@ -21,21 +21,15 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        EmailList email = new EmailList();
+        EmailList emails = new EmailList();
 
         while (true) {
             String input = scanner.nextLine();
-            Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
-            Matcher matcher = pattern.matcher(input);
-            if (input.equals(matcher)) {
-
-                email.add(input);
-
-
+            if (input.equals("LIST")) {
+                System.out.println(input);
+            } else {
+                emails.add(input);
             }
-
-               email.text(input);
-
 
 
             //TODO: write code here

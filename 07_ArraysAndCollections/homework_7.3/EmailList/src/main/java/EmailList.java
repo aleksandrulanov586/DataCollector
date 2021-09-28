@@ -10,15 +10,14 @@ public class EmailList {
 
     public void add(String email) {
         // TODO: валидный формат email добавляется
-        while (true) {
 
-            Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
-            Matcher matcher = pattern.matcher(email);
-            if (matcher.matches()) {
-                emaillist.add(email);
-                System.out.println("Вы ввели эл.адрес");
-                break;
-            }
+
+        Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
+        Matcher matcher = pattern.matcher(email);
+        if (matcher.matches()) {
+            emaillist.add(email);
+            System.out.println("Вы ввели эл.адрес");
+
 
         }
     }
