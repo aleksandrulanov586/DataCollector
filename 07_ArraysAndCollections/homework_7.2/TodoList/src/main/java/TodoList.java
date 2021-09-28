@@ -7,10 +7,15 @@ public class TodoList {
 
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
-        String text = "";
+        String text = " ";
         Pattern pattern = Pattern.compile("ADD\\s+.+");
         Matcher matcher = pattern.matcher(todo);
-        todo.split("ADD");
+        todo.split(text);
+        if(matcher.matches()){
+            todoList.add(todo);
+        }
+
+
     }
 
     public void add(int index, String todo) {

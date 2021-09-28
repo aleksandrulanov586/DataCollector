@@ -9,6 +9,7 @@ public class Main {
         todoList.add("work");
         todoList.add(1, "java");
         todoList.printTodos();
+System.out.println(todoList);
 
 
         // TODO: написать консольное приложение для работы со списком дел todoList
