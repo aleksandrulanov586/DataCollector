@@ -17,14 +17,20 @@ public class EmailList {
         if (matcher.matches()) {
             emaillist.add(email);
             System.out.println("Вы ввели эл.адрес");
-
-
+        } else {
+            System.out.println("Неверный формат email");
         }
     }
 
     public List<String> getSortedEmails() {
         // TODO: возвращается список электронных адресов в алфавитном порядке
-        return Collections.emptyList();
-    }
+        Pattern pattern = Pattern.compile("^\\w[LIST]");
+        Matcher matcher = pattern.matcher();
+        if (input.equals("LIST")) {
+            System.out.println(input);
+        } else {
+            emails.add(input);
+            return Collections.emptyList();
+        }
 
-}
+    }
