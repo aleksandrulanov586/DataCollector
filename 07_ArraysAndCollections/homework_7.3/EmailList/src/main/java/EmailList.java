@@ -24,13 +24,8 @@ public class EmailList {
 
     public List<String> getSortedEmails() {
         // TODO: возвращается список электронных адресов в алфавитном порядке
-        Pattern pattern = Pattern.compile("^\\w[LIST]");
-        Matcher matcher = pattern.matcher();
-        if (input.equals("LIST")) {
-            System.out.println(input);
-        } else {
-            emails.add(input);
-            return Collections.emptyList();
-        }
 
+        return emaillist;
     }
+
+}

@@ -3,7 +3,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
-    public static final String WRONG_EMAIL_ANSWER = "Неверный формат email";
+
     
     /* TODO:
         Пример вывода списка Email, после ввода команды LIST в консоль:
@@ -26,7 +26,7 @@ public class Main {
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("LIST")) {
-                System.out.println(input);
+                System.out.println(emails.getSortedEmails());
             } else {
                 emails.add(input);
             }
