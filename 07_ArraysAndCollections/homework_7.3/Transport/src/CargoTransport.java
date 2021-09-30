@@ -1,6 +1,6 @@
 public class CargoTransport extends Transport {
-    public CargoTransport(boolean isPassenger, double weight, int wheelsCount, double maxSpeed) {
-        super(isPassenger, weight, 6, 90);
+    public CargoTransport(double weight) {
+        super(true, 200, 6, 90);
     }
 
 }
