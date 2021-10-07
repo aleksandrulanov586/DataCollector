@@ -1,7 +1,10 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class PhoneBook {
+    HashMap<Integer, String> hashMap = new HashMap<>();
 
     public void addContact(String phone, String name) {
         // проверьте корректность формата имени и телефона
@@ -17,7 +20,7 @@ public class PhoneBook {
     public Set<String> getPhonesByName(String name) {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найден - вернуть пустой TreeSet
-        return new TreeSet<>();
+        return new hashMap;
     }
 
     public Set<String> getAllContacts() {
