@@ -15,10 +15,13 @@ public class EmailList {
 
         Pattern pattern = Pattern.compile("\\w[\\w\\-.]*@\\w[\\w\\-.]*\\.\\w{2,}");
         Matcher matcher = pattern.matcher(email);
+
+        email = email.toLowerCase();
         if (matcher.matches()) {
-             email.toLowerCase();
+
             emaillist.add(email);
             System.out.println("Вы ввели эл.адрес");
+
         } else {
             System.out.println("Неверный формат email");
         }

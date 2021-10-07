@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    
+
     /* TODO:
         Пример вывода списка Email, после ввода команды LIST в консоль:
         test@test.com
@@ -18,11 +18,9 @@ public class Main {
         Пример вывода сообщения об ошибке при неверном формате Email:
         "Неверный формат email"
     */
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         EmailList emails = new EmailList();
-
         while (true) {
             String input = scanner.nextLine();
             if (input.equals("LIST")) {
