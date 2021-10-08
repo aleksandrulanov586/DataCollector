@@ -14,20 +14,18 @@ public class Main {
         } else {
             todoList.add(input);
         }
-        if (input.equals("EDIT")) {
+        if (input.equals("EDITE")) {
             System.out.println(todoList.getTodos());
         } else {
-            todoList.edit(input, input);
+            todoList.edit();
         }
         if (input.equals("DELET")) {
             System.out.println(todoList.getTodos());
         } else {
-            todoList.edit(input);
+            todoList.delete(input);
         }
         if (input.equals("LIST")) {
             System.out.println(todoList.getTodos());
-        } else {
-            todoList.edit(input);
         }
 
         todoList.add("work");
