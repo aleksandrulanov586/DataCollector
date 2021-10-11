@@ -11,7 +11,8 @@ public class Main {
             if (input.equals("LIST")) {
                 System.out.println(phoneBook.getAllContacts());
             } else {
-                phoneBook.addContact(input);
+                phoneBook.addContact(input);//
             }
+        }
     }
 }
