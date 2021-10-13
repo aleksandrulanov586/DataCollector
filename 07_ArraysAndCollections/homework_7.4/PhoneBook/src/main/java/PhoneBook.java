@@ -6,12 +6,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PhoneBook {
-    HashMap<String, String> hashMap = new HashMap<>(); //Я не понял мы должны создавать hasMap? или TreeSet должны создать?
+    HashMap<String, String> hashMap = new HashMap<>();
+    TreeSet<String> treeSet = new TreeSet<>();
 
     public void addContact(String phone, String name) {
-        Pattern pattern = Pattern.compile("\\w[^LIST,EXIT]\\d{11}"); // написал вот такую регулярку получается
-        Matcher matcher = pattern.matcher(phone, name); // Почему тут matcher принемает только один аргумент?
-        if (matcher.matches()) { //Я еще добавил этот код> Дайте свой комментарий
+        Pattern pattern = Pattern.compile("\\w[^LIST,EXIT]\\d{11}");
+        Matcher matcher = pattern.matcher(phone, name);
+        if (matcher.matches()) {
             hashMap.put(phone, name);
         } else {
             System.out.println("Неверный формат ввода");
@@ -29,13 +30,13 @@ public class PhoneBook {
     public Set<String> getPhonesByName(String name) {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найден - вернуть пустой TreeSet
-        return new HashMap<String, String>();// как тут мне вернуть HashMap ?
+        return treeSet;
     }
 
     public Set<String> getAllContacts() {
         // формат одного контакта "Имя - Телефон"
         // если контактов нет в телефонной книге - вернуть пустой TreeSet
-        return new TreeSet<>(); // как тут мне вернуть HashMap ?
+        return hashMap;
     }
 
 }
