@@ -6,19 +6,27 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PhoneBook {
+    public String NAME = "\\w+";
+    public String PHONE_NUMBER = "\\d{11}";
+    public String CHECKING_THE_NUMBER = "\\w[^LIST,EXIT]\\d{11}";
+    public String PRINT_THE_LIST = "LIST";
     HashMap<String, String> hashMap = new HashMap<>();
-    TreeSet<String> treeSet = new TreeSet<>();
+
 
     public void addContact(String phone, String name) {
-        Pattern pattern = Pattern.compile("\\w[^LIST,EXIT]\\d{11}");
-        Matcher matcher = pattern.matcher(phone, name);
-        if (matcher.matches()) {
-            hashMap.put(phone, name);
+
+        if (name.equals(NAME)) {
+            System.out.println("Введите номер телефона для абонента" + name);
         } else {
             System.out.println("Неверный формат ввода");
         }
-        // проверьте корректность формата имени и телефона
-        // если такой номер уже есть в списке, то перезаписать имя абонента
+        if (name.equals(PHONE_NUMBER)) {
+            hashMap.put(phone, name);
+        } else {
+            System.out.println("Контакт сохранен!");
+            // проверьте корректность формата имени и телефона
+            // если такой номер уже есть в списке, то перезаписать имя абонента
+        }
     }
 
     public String getNameByPhone(String phone) {
@@ -30,13 +38,13 @@ public class PhoneBook {
     public Set<String> getPhonesByName(String name) {
         // формат одного контакта "Имя - Телефон"
         // если контакт не найден - вернуть пустой TreeSet
-        return treeSet;
+        return new Set<String>;
     }
 
     public Set<String> getAllContacts() {
         // формат одного контакта "Имя - Телефон"
         // если контактов нет в телефонной книге - вернуть пустой TreeSet
-        return hashMap;
+        return new TreeSet;
     }
 
 }
