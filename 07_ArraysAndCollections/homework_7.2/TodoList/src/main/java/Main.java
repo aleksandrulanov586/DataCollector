@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     private static TodoList todoList = new TodoList();
@@ -8,8 +10,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         input.split(input);
-
-        if (input.equals("ADD")) {
+        Pattern pattern = Pattern.compile("ADD\\s+\\d+\\s+.+\\w+");
+        Matcher adding = pattern.matcher(input);
+        if (adding.matches()) {
             System.out.println(todoList.getTodos());
         } else {
             todoList.add(input);
@@ -17,7 +20,7 @@ public class Main {
         if (input.equals("EDITE")) {
             System.out.println(todoList.getTodos());
         } else {
-            todoList.edit();
+            todoList.edit(input, input);
         }
         if (input.equals("DELET")) {
             System.out.println(todoList.getTodos());

@@ -3,10 +3,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TodoList {
-    final static String ADDING_TO_END = "ADD\\s+\\D+\\s+";
-    final static String ADDING_TO_INDEX = "ADD\\s+.+";  // Сделал конастанты с регулярками  Я вот подумал написать вот такую регулярку как вы считаете она будет эффективной?"\\D[ADD]\\s+.+";
-    final static String REPLACE_WITH_INDEX = "EDIT\\s+\\d+\\s+.+";
-    final static String DELETING_BY_INDEX = "DELETE\\s+\\d+";
+    public String ADDING_TO_END = "ADD\\s+\\d+\\s+.+\\w+";
+    public String ADDING_BY_INDEX = "ADD\\s+.+";
+    public String REPLACE_WITH_INDEX = "EDIT\\s+\\d+\\s+\\w+";
+    public String DELETING_BY_INDEX = "DELETE\\s+\\d+";
     ArrayList<String> todoList = new ArrayList<>();
 
     public void add(String todo) {
@@ -16,14 +16,15 @@ public class TodoList {
         Matcher matcher = pattern.matcher(todo);
 
         if (matcher.matches()) {
+            todo.split("ADD");
             todoList.add(todo);
         }
-
+        System.out.println("Добавлено дело" + todo);
 
     }
 
     public void add(int index, String todo) {
-        Pattern pattern = Pattern.compile(ADDING_TO_INDEX);
+        Pattern pattern = Pattern.compile(ADDING_BY_INDEX);
         Matcher matcher = pattern.matcher(todo);
         if (matcher.matches()) {
             todoList.add(index, todo);
@@ -35,15 +36,25 @@ public class TodoList {
     }
 
     public void edit(String todo, int index) {
-
+        Pattern pattern = Pattern.compile(REPLACE_WITH_INDEX);
+        Matcher matcher = pattern.matcher(todo);
+        if (matcher.matches()) {
+            todoList.add(index, todo);
+        }
         // TODO: заменить дело на index переданным todo индекс,
         //  проверьте возможность изменения
     }
 
     public void delete(int index) {
+
+
+        if (index < todoList.size()) {
+            todoList.remove(index);
+        }
         // TODO: удалить дело находящееся по переданному индексу,
         //  проверьте возможность удаления дела
-    }// Какой код мне написать в этих методах не пойму? то есть там должна быть провека? И как в целом мне написать кода который бы по запросу удалял бы по нужному индексу?
+
+    }
 
     public ArrayList<String> getTodos() {
         // TODO: вернуть список дел
