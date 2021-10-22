@@ -10,24 +10,29 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         input.split(input);
-        Pattern pattern = Pattern.compile("ADD\\s+\\d+\\s+.+\\w+");
-        Matcher adding = pattern.matcher(input);
-        if (adding.matches()) {
-            System.out.println(todoList.getTodos());
-        } else {
+        Pattern addpattern = Pattern.compile(todoList.ADDING_TO_END);
+        Matcher addingEnd = addpattern.matcher(input);
+        Pattern patternByIndex = Pattern.compile(todoList.ADDING_BY_INDEX);
+        Matcher addingByIndex = patternByIndex.matcher(input);
+        Pattern patternDelete = Pattern.compile(todoList.DELETING_BY_INDEX);
+        Matcher delete = patternDelete.matcher(input);
+        Pattern patternList = Pattern.compile(todoList.TEAM_LIST);
+        Matcher list = patternList.matcher(input);
+        Pattern patternEdit = Pattern.compile(todoList.REPLACE_WITH_INDEX);
+        Matcher edit = patternEdit.matcher(input);
+        if (addingEnd.matches()) {
             todoList.add(input);
         }
-        if (input.equals("EDITE")) {
-            System.out.println(todoList.getTodos());
-        } else {
+        if (addingByIndex.matches()) {
+            todoList.add(input, input);
+        }
+        if (edit.matches()) {
             todoList.edit(input, input);
         }
-        if (input.equals("DELET")) {
-            System.out.println(todoList.getTodos());
-        } else {
+        if (delete.matches()) {
             todoList.delete(input);
         }
-        if (input.equals("LIST")) {
+        if (list.matches()) {
             System.out.println(todoList.getTodos());
         }
 

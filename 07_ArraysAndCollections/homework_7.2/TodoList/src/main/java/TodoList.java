@@ -7,6 +7,8 @@ public class TodoList {
     public String ADDING_BY_INDEX = "ADD\\s+.+";
     public String REPLACE_WITH_INDEX = "EDIT\\s+\\d+\\s+\\w+";
     public String DELETING_BY_INDEX = "DELETE\\s+\\d+";
+    public String TEAM_LIST = "LIST";
+
     ArrayList<String> todoList = new ArrayList<>();
 
     public void add(String todo) {
@@ -27,6 +29,7 @@ public class TodoList {
         Pattern pattern = Pattern.compile(ADDING_BY_INDEX);
         Matcher matcher = pattern.matcher(todo);
         if (matcher.matches()) {
+            todo.split("ADD");
             todoList.add(index, todo);
         }
         // TODO: добавьте дело на указаный индекс,
@@ -39,6 +42,7 @@ public class TodoList {
         Pattern pattern = Pattern.compile(REPLACE_WITH_INDEX);
         Matcher matcher = pattern.matcher(todo);
         if (matcher.matches()) {
+            todo.split("EDIT");
             todoList.add(index, todo);
         }
         // TODO: заменить дело на index переданным todo индекс,
