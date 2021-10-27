@@ -3,6 +3,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Main {
+    public static String DELETING_BY_INDEX = "DELETE\\s+\\d+";
+    public static String TEAM_LIST = "LIST";
+    public static String SPLIT_INT = "\\d+";
     private static TodoList todoList = new TodoList();
 
     public static void main(String[] args) {
@@ -10,29 +13,24 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         input.split(input);
-        Pattern addpattern = Pattern.compile(todoList.ADDING_TO_END);
-        Matcher addingEnd = addpattern.matcher(input);
-        Pattern patternByIndex = Pattern.compile(todoList.ADDING_BY_INDEX);
-        Matcher addingByIndex = patternByIndex.matcher(input);
-        Pattern patternDelete = Pattern.compile(todoList.DELETING_BY_INDEX);
-        Matcher delete = patternDelete.matcher(input);
-        Pattern patternList = Pattern.compile(todoList.TEAM_LIST);
-        Matcher list = patternList.matcher(input);
-        Pattern patternEdit = Pattern.compile(todoList.REPLACE_WITH_INDEX);
-        Matcher edit = patternEdit.matcher(input);
-        if (addingEnd.matches()) {
+        String[] a = input.split(SPLIT_INT);
+        int w = Integer.parseInt(a);
+
+        if (input.matches(todoList.ADDING)) {
             todoList.add(input);
         }
-        if (addingByIndex.matches()) {
+        if (input.matches(todoList.ADDING_BY_INDEX)) {
+
             todoList.add(input, input);
         }
-        if (edit.matches()) {
+        if (input.matches(todoList.REPLACE_WITH_INDEX)) {
             todoList.edit(input, input);
+
         }
-        if (delete.matches()) {
+        if (input.matches(DELETING_BY_INDEX)) {
             todoList.delete(input);
         }
-        if (list.matches()) {
+        if (input.matches(TEAM_LIST)) {
             System.out.println(todoList.getTodos());
         }
 
