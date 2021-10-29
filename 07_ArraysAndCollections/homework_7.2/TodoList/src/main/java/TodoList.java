@@ -3,8 +3,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class TodoList {
-    public String ADDING = "ADD\\s+\\d+\\s+.+\\w+";
-    public String ADDING_BY_INDEX = "ADD\\s+.+";
+    public String ADDING_BY_INDEX = "ADD\\s+\\d+\\s+.+";
+    public String ADDING_TO_END = "ADD\\s+.+";
     public String REPLACE_WITH_INDEX = "EDIT\\s+\\d+\\s+\\w+";
 
 
@@ -13,7 +13,7 @@ public class TodoList {
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
 
-        Pattern pattern = Pattern.compile(ADDING);
+        Pattern pattern = Pattern.compile(ADDING_TO_END);
         Matcher matcher = pattern.matcher(todo);
 
         if (matcher.matches()) {

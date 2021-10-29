@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static String DELETING_BY_INDEX = "DELETE\\s+\\d+";
     public static String TEAM_LIST = "LIST";
-    public static String SPLIT_INT = "\\d+";
+
     private static TodoList todoList = new TodoList();
 
     public static void main(String[] args) {
@@ -13,22 +13,23 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         input.split(input);
-        String[] a = input.split(SPLIT_INT);
-        int w = Integer.parseInt(a);
+        String[] a = input.split(" ", 3);
+        String q = a[1];
+        int parsInput = Integer.parseInt(q);
 
-        if (input.matches(todoList.ADDING)) {
+        if (input.matches(todoList.ADDING_TO_END)) {
             todoList.add(input);
         }
         if (input.matches(todoList.ADDING_BY_INDEX)) {
 
-            todoList.add(input, input);
+            todoList.add(parsInput, input);
         }
         if (input.matches(todoList.REPLACE_WITH_INDEX)) {
-            todoList.edit(input, input);
+            todoList.edit(input, parsInput);
 
         }
         if (input.matches(DELETING_BY_INDEX)) {
-            todoList.delete(input);
+            todoList.delete(parsInput);
         }
         if (input.matches(TEAM_LIST)) {
             System.out.println(todoList.getTodos());
