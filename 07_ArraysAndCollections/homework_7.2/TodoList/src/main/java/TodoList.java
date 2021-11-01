@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class TodoList {
     public String ADDING_BY_INDEX = "ADD\\s+\\d+\\s+.+";
     public String ADDING_TO_END = "ADD\\s+.+";
-    public String REPLACE_WITH_INDEX = "EDIT\\s+\\d+\\s+\\w+";
+    public String REPLACE_WITH_INDEX = "EDIT\\s+\\d+\\s+";
 
 
     ArrayList<String> todoList = new ArrayList<>();
@@ -13,21 +13,17 @@ public class TodoList {
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
 
-        Pattern pattern = Pattern.compile(ADDING_TO_END);
-        Matcher matcher = pattern.matcher(todo);
 
-        if (matcher.matches()) {
-            todo.split("ADD");
-            todoList.add(todo);
-        }
+        todo.split("ADD");
+        todoList.add(todo);
+
         System.out.println("Добавлено дело" + todo);
 
     }
 
     public void add(int index, String todo) {
-        Pattern pattern = Pattern.compile(ADDING_BY_INDEX);
-        Matcher matcher = pattern.matcher(todo);
-        if (matcher.matches()) {
+
+        if (todo.matches(ADDING_BY_INDEX)) {
             todo.split("ADD");
             todoList.add(index, todo);
         }
@@ -38,9 +34,8 @@ public class TodoList {
     }
 
     public void edit(String todo, int index) {
-        Pattern pattern = Pattern.compile(REPLACE_WITH_INDEX);
-        Matcher matcher = pattern.matcher(todo);
-        if (matcher.matches()) {
+
+        if (todo.matches(REPLACE_WITH_INDEX)) {
             todo.split("EDIT");
             todoList.add(index, todo);
         }

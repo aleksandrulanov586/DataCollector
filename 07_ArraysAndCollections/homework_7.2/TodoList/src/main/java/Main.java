@@ -13,22 +13,28 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         input.split(input);
-        String[] a = input.split(" ", 3);
-        String q = a[1];
-        int parsInput = Integer.parseInt(q);
+
 
         if (input.matches(todoList.ADDING_TO_END)) {
             todoList.add(input);
         }
         if (input.matches(todoList.ADDING_BY_INDEX)) {
-
+            String[] index = input.split(" ", 2);
+            String indexText = index[1];
+            int parsInput = Integer.parseInt(indexText);
             todoList.add(parsInput, input);
         }
         if (input.matches(todoList.REPLACE_WITH_INDEX)) {
+            String[] index = input.split(" ", 2);
+            String indexText = index[1];
+            int parsInput = Integer.parseInt(indexText);
             todoList.edit(input, parsInput);
 
         }
         if (input.matches(DELETING_BY_INDEX)) {
+            String[] index = input.split(" ", 2);
+            String indexText = index[1];
+            int parsInput = Integer.parseInt(indexText);
             todoList.delete(parsInput);
         }
         if (input.matches(TEAM_LIST)) {
