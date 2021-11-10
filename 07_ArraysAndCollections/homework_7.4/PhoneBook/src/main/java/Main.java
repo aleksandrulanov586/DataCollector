@@ -14,7 +14,7 @@ public class Main {
 
         while (true) {
             String input = scanner.nextLine();
-            if (input.matches((input.matches(phoneBook.NAME) && input.matches(phoneBook.PHONE_NUMBER)) {
+            if (input.matches((input.matches(phoneBook.NAME) && input.matches(phoneBook.PHONE_NUMBER)))) {
                 phoneBook.addContact(input, input);
             }
 

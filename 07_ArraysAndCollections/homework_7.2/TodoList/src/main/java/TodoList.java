@@ -22,9 +22,12 @@ public class TodoList {
 
     public void add(int index, String todo) {
 
+
         if (todo.matches(ADDING_BY_INDEX)) {
 
             todoList.add(index, todo);
+        } else {
+            todoList.add(todo);
         }
         // TODO: добавьте дело на указаный индекс,
         //  проверьте возможность добавления

@@ -26,15 +26,15 @@ public class Main {
                 int parsInput = Integer.parseInt(indexText);
 
 
-                String textСase = componentTeam[2];
-                todoList.add(parsInput, textСase);
+                String textCase = componentTeam[2];
+                todoList.add(parsInput, textCase);
             }
             if (input.matches(todoList.REPLACE_WITH_INDEX)) {
                 String[] componentTeam = input.split(" ", 3);
                 String indexText = componentTeam[1];
                 int parsInput = Integer.parseInt(indexText);
-                String textСaseEdit = componentTeam[2];
-                todoList.edit(textСaseEdit, parsInput);
+                String textCaseEdit = componentTeam[2];
+                todoList.edit(textCaseEdit, parsInput);
 
             }
             if (input.matches(DELETING_BY_INDEX)) {
