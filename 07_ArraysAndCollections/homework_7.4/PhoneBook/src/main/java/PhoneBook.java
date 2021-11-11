@@ -28,27 +28,16 @@ public class PhoneBook {
     }
 
     public String getNameByPhone(String phone) {
-
-        for (Map.Entry<String, String> entry : hashMap.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            if (phone.equals(entry.getValue())) {
-                return "";
-            }
-            if (phone.equals(entry.getKey())) {
-                return null;
-            }
-
-        }
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
-        return "";
+        return hashMap.get(phone);
     }
 
     public Set<String> getPhonesByName(String name) {
         TreeSet<String> treeSet = new TreeSet<>();
+        Map<String, String> hashMap2 = new HashMap<>();
 
-        for (Map.Entry<String, String> entry : hashMap.entrySet()) {
+        for (Map.Entry<String, String> entry : hashMap2.entrySet()) {
             String value = entry.getValue();
             if (name.equals(entry.getValue())) {
                 String e = "";
