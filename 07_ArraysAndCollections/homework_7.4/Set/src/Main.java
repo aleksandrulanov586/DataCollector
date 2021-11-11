@@ -14,9 +14,9 @@ public class Main {
             if (input.matches(classCollections.TEXT)) {
                 classCollections.add(input);
             }
-            if (input.matches(PRINT_THE_LIST)) {
-                classCollections.list();
-            }
+            //if (input.matches(PRINT_THE_LIST)) {
+             //   classCollections.list();
+            //}
         }
 
     }

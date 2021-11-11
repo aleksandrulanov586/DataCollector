@@ -18,10 +18,10 @@ public class SetCollections {
 
     }
 
-    public void list() {
-        for (String w : collectionText)
-            System.out.println(w);
+    // public void list() {
+    //    for (String w : collectionText)
+    //        System.out.println(w);
 
 
-    }
+  //  }
 }
