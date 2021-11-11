@@ -38,7 +38,7 @@ public class TodoList {
 
         if (todo.matches(REPLACE_WITH_INDEX)) {
 
-            todoList.add(index, todo);
+            todoList.set(index, todo);
         }
         // TODO: заменить дело на index переданным todo индекс,
         //  проверьте возможность изменения

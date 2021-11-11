@@ -30,7 +30,7 @@ public class Main {
                 todoList.add(parsInput, textCase);
             }
             if (input.matches(todoList.REPLACE_WITH_INDEX)) {
-                String[] componentTeam = input.split(" ", 3);
+                String[] componentTeam = input.split(" ", 2);
                 String indexText = componentTeam[1];
                 int parsInput = Integer.parseInt(indexText);
                 String textCaseEdit = componentTeam[2];
