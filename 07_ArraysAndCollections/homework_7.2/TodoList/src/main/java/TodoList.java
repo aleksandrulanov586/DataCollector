@@ -36,7 +36,7 @@ public class TodoList {
 
     public void edit(String todo, int index) {
 
-        if (todo.matches(REPLACE_WITH_INDEX)) {
+        if (index < todoList.size()) {
 
             todoList.set(index, todo);
         }
