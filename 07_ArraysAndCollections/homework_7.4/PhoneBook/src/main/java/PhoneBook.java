@@ -28,6 +28,7 @@ public class PhoneBook {
     }
 
     public String getNameByPhone(String phone) {
+
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
         return hashMap.get(phone);
