@@ -9,21 +9,22 @@ public class SetCollections {
 
 
     public void add(String text) {
-
-            if (text.matches(TEXT)) {
-                collectionText.add(text);
-                System.out.println("Текст добавлен");
-            }
-            if (collectionText.(text)) {
-                System.out.println("Такой текст уже есть!");
-
-
+        boolean w = collectionText.add(text);
+        if (w != false) {
+            collectionText.add(text);
+            System.out.println("Текcт добавлен!");
+        } else {
+            System.out.println("Такой текст уже есть!");
         }
+
+
     }
-    // public void list() {
-    //    for (String w : collectionText)
-    //        System.out.println(w);
 
 
-  //  }
+    public void list() {
+        for (String w : collectionText)
+            System.out.println(w);
+
+
+    }
 }
