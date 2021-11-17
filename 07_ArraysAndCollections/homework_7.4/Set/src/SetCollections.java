@@ -10,7 +10,7 @@ public class SetCollections {
 
     public void add(String text) {
         boolean w = collectionText.add(text);
-        if (w != false) {
+        if (w ) {
             collectionText.add(text);
             System.out.println("Текcт добавлен!");
         } else {

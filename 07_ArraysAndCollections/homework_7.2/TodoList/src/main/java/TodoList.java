@@ -23,12 +23,13 @@ public class TodoList {
     public void add(int index, String todo) {
 
 
-        if (todo.matches(ADDING_BY_INDEX)) {
+        if (index < todoList.size()) {
 
             todoList.add(index, todo);
         } else {
             todoList.add(todo);
         }
+
         // TODO: добавьте дело на указаный индекс,
         //  проверьте возможность добавления
 
@@ -40,6 +41,7 @@ public class TodoList {
 
             todoList.set(index, todo);
         }
+
         // TODO: заменить дело на index переданным todo индекс,
         //  проверьте возможность изменения
     }
