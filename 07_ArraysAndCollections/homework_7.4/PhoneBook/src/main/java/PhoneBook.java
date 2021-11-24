@@ -28,11 +28,11 @@ public class PhoneBook {
     }
 
     public String getNameByPhone(String phone) {
-        String phoneRefund = hashMap.get(phone);
+        String gettingName = hashMap.get(phone);
 
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
-        return phoneRefund == null ? "" : phoneRefund;
+        return gettingName == null ? "" : gettingName;
     }
 
     public Set<String> getPhonesByName(String name) {
@@ -57,9 +57,10 @@ public class PhoneBook {
         TreeSet<String> treeSet = new TreeSet<>();
 
         for (Map.Entry<String, String> entry : hashMap.entrySet()) {
-            for (Map.Entry<String, String> treeentry : hashMap.entrySet()) {
-
-            }
+            String value = entry.getValue();
+            String key = entry.getKey();
+            String combiningStrings = value + key;
+            treeSet.add(combiningStrings);
             // формат одного контакта "Имя - Телефон"
             // если контактов нет в телефонной книге - вернуть пустой TreeSet
 
