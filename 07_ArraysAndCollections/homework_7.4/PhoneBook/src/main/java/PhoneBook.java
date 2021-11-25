@@ -32,7 +32,7 @@ public class PhoneBook {
 
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
-        return gettingName == null ? "" : gettingName;
+        return gettingName == null ? "" : phone;
     }
 
     public Set<String> getPhonesByName(String name) {

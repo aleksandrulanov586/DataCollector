@@ -36,9 +36,6 @@ public class Main {
                     phoneBook.addContact(input, input);
                 }
 
-                if (input.matches(phoneBook.PHONES_BY_NAME)) {
-                    phoneBook.getPhonesByName(input);
-                }
 
                 if (input.matches(PRINT_THE_LIST)) {
                     System.out.println(phoneBook.hashMap);
