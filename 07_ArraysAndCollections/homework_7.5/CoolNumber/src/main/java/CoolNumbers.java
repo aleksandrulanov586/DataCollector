@@ -1,7 +1,4 @@
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 public class CoolNumbers {
 
@@ -17,7 +14,7 @@ public class CoolNumbers {
                 double GeneratingLetters2 = letters.length() * Math.random();
                 for (int e = 0; e < letters.length(); e++) {
                     double GeneratingLetters3 = letters.length() * Math.random();
-                    for (int r = 0; r < numbers.length(); r++) {
+                    for (int numder = 1; numder < 20000; numder++) {
                         int GeneratingNumber = (int) (numbers.length() * Math.random());
                         for (int t = 0; t < numbers.length(); t++) {
                             int GeneratingRegion = (int) (numbers.length() * Math.random());
@@ -32,6 +29,10 @@ public class CoolNumbers {
     }
 
     public static boolean bruteForceSearchInList(List<String> list, String number) {
+        List<String> arrayList = new ArrayList();
+        for (String text : arrayList) {
+            System.out.println(text);
+        }
         return false;
     }
 
