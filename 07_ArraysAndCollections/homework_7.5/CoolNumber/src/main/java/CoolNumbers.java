@@ -1,26 +1,26 @@
 import java.util.*;
 
 public class CoolNumbers {
-    public static List<String> list = new LinkedList<>();
-    String LETTERS = "АВЕКМНОРСТУХ";
-    String NUMBER = "0123456789";
+    public static ArrayList<String> list = new ArrayList<>();
+   public static String LETTERS = "АВЕКМНОРСТУХ";
+   public static String NUMBER = "0123456789";
 
 
     public static List<String> generateCoolNumbers() {
-ArrayList<String> arrayList = new ArrayList<>();
+
 
         // String NumbersLetters = letters + numbers;
-        for (int q = 0; q < 3000; q++) {
+        for (int generatingLetters = 0; LETTERS.length() < 3000; generatingLetters++) {
+            list.add(String.valueOf(generatingLetters));
 
-            // double GeneratingLetters1 = letters.length() * Math.random();
-            for (int w = 0; w < 3000; w++) {
-                double GeneratingLetters2 = 3000 * Math.random();
-                for (int e = 0; e < 3000; e++) {
-                    double GeneratingLetters3 = 3000 * Math.random();
-                    for (int numder = 1; numder < 30000; numder++) {
-                        //  int generatingNumbers = Integer.parseInt(numbers);
-                        for (int GeneratingRegion = 1; GeneratingRegion < 199; GeneratingRegion++) {
-
+            for (int generatingLetters2 = 0; LETTERS.length()  < 3000; generatingLetters2 ++) {
+                list.add(String.valueOf(generatingLetters2));
+                for (int generatingLetters3  = 0; LETTERS.length() < 3000; generatingLetters3++) {
+                    list.add(String.valueOf(generatingLetters3));
+                    for (int numder = 1; NUMBER.length() < 30000; numder++) {
+                        list.add(String.valueOf(numder));
+                        for (int generatingRegion = 1; LETTERS.length() < 199; generatingRegion++) {
+                            list.add(String.valueOf(generatingRegion));
                         }
                     }
                 }
