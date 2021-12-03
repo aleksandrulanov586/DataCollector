@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class PhoneBook {
 
-    public String NAME = "\\w+";
+    public String NAME = "\\w+\\[а-яё]";
 
     public String PHONE_NUMBER = "\\d{11}";
     public static String PHONES_BY_NAME = "\\w+\\s+.+\\s+\\d{11}";
@@ -14,25 +14,25 @@ public class PhoneBook {
 
     public void addContact(String phone, String name) {
 
-        if (name.matches(NAME) && phone.matches(PHONE_NUMBER)) {
-
-            hashMap.put(phone, name);
+        if (name.matches(NAME) ) {
+            System.out.println("Ведите номер телефона!");
+        }else if (phone.matches(PHONE_NUMBER))
+        {  hashMap.put(phone, name);}
             System.out.println("Контакт сохранен!");
-        } else {
-            System.out.println("Неверный формат ввода");
-        }
+        }else{
+        System.out.println("Неверный формат!");
+    }
 
         // проверьте корректность формата имени и телефона
         // если такой номер уже есть в списке, то перезаписать имя абонента
 
-    }
 
     public String getNameByPhone(String phone) {
         String gettingName = hashMap.get(phone);
-        String result = gettingName + " - " + phone;
+
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
-        return gettingName == null ? "" : result;
+       return gettingName == null ? "" : gettingName  + " - " + phone;
     }
 
     public Set<String> getPhonesByName(String name) {
@@ -59,6 +59,6 @@ public class PhoneBook {
 
 // формат одного контакта "Имя - Телефон"
         // если контактов нет в телефонной книге - вернуть пустой TreeSet
-        return hashMap != null ? hashMap : treeSet;
+       return  treeSet;
     }
 }

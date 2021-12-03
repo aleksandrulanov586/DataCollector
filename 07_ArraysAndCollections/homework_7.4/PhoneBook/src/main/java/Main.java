@@ -15,30 +15,29 @@ public class Main {
 
         while (true) {
             String input = scanner.nextLine();
-            if (input.matches(phoneBook.NAME)) {
-                Set<String> phones = phoneBook.getPhonesByName(input);
 
+            if (input.matches(phoneBook.PHONE_NUMBER)) {
+                Set<String> phones = phoneBook.getPhonesByName(input);
                 if (phones.isEmpty()) {
-                    System.out.println("Введите номер телефона");
+                    System.out.println(phoneBook);
                     String phone = scanner.nextLine();
-                    phoneBook.addContact(phone, phone);
+
                     // записываете номер и имя в тел книгу
                 } else {
-                    System.out.println(phoneBook);
+                    phoneBook.addContact(input, input);
                     // печатайте полученный список
-                }
-
-                if (input.matches(phoneBook.PHONE_NUMBER)) {
-
-                    String[] componentTeam = input.split(phoneBook.PHONE_NUMBER, 1);
-                    String indexText = componentTeam[1];
-                    phoneBook.getNameByPhone(indexText);
+                }else{  if (phones.isEmpty()){
+                    System.out.println(phoneBook);
+                }else{
                     phoneBook.addContact(input, input);
                 }
 
 
-                if (input.matches(PRINT_THE_LIST)) {
+
+
+                if (input.equals("LIST")) {
                     System.out.println(phoneBook.hashMap);
+                    continue;
                 }
                 if (input.matches(PRINT_THE_EXIT)) {
                     return;
