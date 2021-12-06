@@ -4,27 +4,24 @@ import java.util.regex.Pattern;
 
 public class PhoneBook {
 
-    public String NAME = "\\w+\\[а-яё]";
+    public String NAME = "[А-яё]";
 
     public String PHONE_NUMBER = "\\d{11}";
     public static String PHONES_BY_NAME = "\\w+\\s+.+\\s+\\d{11}";
-    // public static String GET_NAME_BY_PHONE = "\\w+\\s+.+\\s+\\d{11}";
+
     Map<String, String> hashMap = new HashMap<>();
 
 
     public void addContact(String phone, String name) {
 
-        if (name.matches(NAME) ) {
-            System.out.println("Ведите номер телефона!");
-        }else if (phone.matches(PHONE_NUMBER))
-        {  hashMap.put(phone, name);}
+        if (name.matches(NAME) && (phone.matches(PHONE_NUMBER))) {
             System.out.println("Контакт сохранен!");
-        }else{
-        System.out.println("Неверный формат!");
+        } else {
+            System.out.println("Неверный формат!");
+        }
     }
-
-        // проверьте корректность формата имени и телефона
-        // если такой номер уже есть в списке, то перезаписать имя абонента
+    // проверьте корректность формата имени и телефона
+    // если такой номер уже есть в списке, то перезаписать имя абонента
 
 
     public String getNameByPhone(String phone) {
@@ -32,7 +29,7 @@ public class PhoneBook {
 
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
-       return gettingName == null ? "" : gettingName  + " - " + phone;
+        return gettingName == null ? "" : gettingName + " - " + phone;
     }
 
     public Set<String> getPhonesByName(String name) {
@@ -59,6 +56,6 @@ public class PhoneBook {
 
 // формат одного контакта "Имя - Телефон"
         // если контактов нет в телефонной книге - вернуть пустой TreeSet
-       return  treeSet;
+        return treeSet;
     }
 }

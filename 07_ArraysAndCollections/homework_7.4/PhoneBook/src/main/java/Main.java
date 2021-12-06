@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static String PRINT_THE_LIST = "LIST";
+    // public static String PRINT_THE_LIST = "LIST";
     public static String PRINT_THE_EXIT = "EXIT";
 
 
@@ -16,34 +16,37 @@ public class Main {
         while (true) {
             String input = scanner.nextLine();
 
+
             if (input.matches(phoneBook.PHONE_NUMBER)) {
                 Set<String> phones = phoneBook.getPhonesByName(input);
                 if (phones.isEmpty()) {
                     System.out.println(phoneBook);
-                    String phone = scanner.nextLine();
+
 
                     // записываете номер и имя в тел книгу
                 } else {
-                    phoneBook.addContact(input, input);
+
+                    System.out.println("ВВедите имя!");
+
                     // печатайте полученный список
-                }else{  if (phones.isEmpty()){
-                    System.out.println(phoneBook);
+
                 }else{
-                    phoneBook.addContact(input, input);
+
+                    if (phones.isEmpty()) {
+                        System.out.println(phoneBook);
+                    } else {
+                        phoneBook.addContact(input, input);
+                    }
                 }
-
-
-
-
-                if (input.equals("LIST")) {
-                    System.out.println(phoneBook.hashMap);
-                    continue;
-                }
-                if (input.matches(PRINT_THE_EXIT)) {
-                    return;
-                }
-
             }
+            if (input.equals("LIST")) {
+                System.out.println(phoneBook.hashMap);
+                continue;
+            }
+            if (input.matches(PRINT_THE_EXIT)) {
+                return;
+            }
+
         }
     }
 }
