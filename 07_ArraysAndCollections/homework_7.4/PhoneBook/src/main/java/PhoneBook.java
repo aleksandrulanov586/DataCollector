@@ -4,17 +4,19 @@ import java.util.regex.Pattern;
 
 public class PhoneBook {
 
-    public String NAME = "[А-яё]";
+    public String NAME = "[а-яА-Я]";
 
     public String PHONE_NUMBER = "\\d{11}";
-    public static String PHONES_BY_NAME = "\\w+\\s+.+\\s+\\d{11}";
+
 
     Map<String, String> hashMap = new HashMap<>();
 
 
     public void addContact(String phone, String name) {
 
-        if (name.matches(NAME) && (phone.matches(PHONE_NUMBER))) {
+
+
+        if (phone.matches(PHONE_NUMBER) && (name.matches(NAME))) {
             System.out.println("Контакт сохранен!");
         } else {
             System.out.println("Неверный формат!");
@@ -33,10 +35,11 @@ public class PhoneBook {
     }
 
     public Set<String> getPhonesByName(String name) {
-        TreeSet<String> treeSet = new TreeSet<>();
-        Map<String, String> hashMap2 = new HashMap<>();
 
-        for (Map.Entry<String, String> entry : hashMap2.entrySet()) {
+        TreeSet<String> treeSet = new TreeSet<>();
+
+
+        for (Map.Entry<String, String> entry : hashMap.entrySet()) {
             String value = entry.getValue();
             String key = entry.getKey();
             if (name.equals(entry.getValue())) {
@@ -48,10 +51,15 @@ public class PhoneBook {
 
         }
         return treeSet;
-    }
-
+}
     public Set<String> getAllContacts() {
         TreeSet<String> treeSet = new TreeSet<>();
+        for (Map.Entry<String, String> entry : hashMap.entrySet()) {
+            String value = entry.getValue();
+            String key = entry.getKey();
+            String combiningStrings = value + key;
+            treeSet.add(combiningStrings);
+        }
 
 
 // формат одного контакта "Имя - Телефон"
