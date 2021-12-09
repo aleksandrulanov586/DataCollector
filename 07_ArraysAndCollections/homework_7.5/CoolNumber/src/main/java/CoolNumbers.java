@@ -2,25 +2,25 @@ import java.util.*;
 
 public class CoolNumbers {
     public static ArrayList<String> list = new ArrayList<>();
-   public static String LETTERS = "АВЕКМНОРСТУХ";
-   public static String NUMBER = "0123456789";
+    public static String LETTERS = "АВЕКМНОРСТУХ";
+    public static String NUMBER = "0123456789";
 
 
     public static List<String> generateCoolNumbers() {
 
 
         // String NumbersLetters = letters + numbers;
-        for (int generatingLetters = 0; LETTERS.length() < 3000; generatingLetters++) {
+        for (int generatingLetters = 9; generatingLetters < 199; generatingLetters++) {
             list.add(String.valueOf(generatingLetters));
 
-            for (int generatingLetters2 = 0; LETTERS.length()  < 3000; generatingLetters2 ++) {
-                list.add(String.valueOf(generatingLetters2));
-                for (int generatingLetters3  = 0; LETTERS.length() < 3000; generatingLetters3++) {
-                    list.add(String.valueOf(generatingLetters3));
-                    for (int numder = 1; NUMBER.length() < 30000; numder++) {
-                        list.add(String.valueOf(numder));
-                        for (int generatingRegion = 1; LETTERS.length() < 199; generatingRegion++) {
-                            list.add(String.valueOf(generatingRegion));
+            for (int generatingLetters2 = 9; generatingLetters2 < 199; generatingLetters2++) {
+
+                for (int generatingLetters3 = 9; generatingLetters3 < 199; generatingLetters3++) {
+
+                    for (int numder = 9; numder < 199; numder++) {
+
+                        for (int generatingRegion = 1; generatingRegion < 199; generatingRegion++) {
+
                         }
                     }
                 }
@@ -28,7 +28,7 @@ public class CoolNumbers {
         }
 
 
-        return Collections.emptyList();
+        return list;
     }
 
     public static boolean bruteForceSearchInList(List<String> list, String number) {
