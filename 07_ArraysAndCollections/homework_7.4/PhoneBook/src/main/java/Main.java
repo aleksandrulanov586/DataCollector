@@ -16,30 +16,23 @@ public class Main {
         while (true) {
             String input = scanner.nextLine();
 
-
             if (input.matches(phoneBook.PHONE_NUMBER)) {
-                phoneBook.getPhonesByName(input);
                 Set<String> phones = phoneBook.getPhonesByName(input);
+                phoneBook.getPhonesByName(input);
                 if (phones.isEmpty()) {
-                    System.out.println("Такого номера нет  в телефонной книге." + "\n" + "Введите имя абонента для номера " + input);
-                } else {
-                    System.out.println("Неверный формат");
-
-
+                    System.out.println(phoneBook);
                     // записываете номер и имя в тел книгу
-
-
+                } else {
+                    phoneBook.addContact(input);
                     // печатайте полученный список
-
-                    if (input.matches(phoneBook.NAME)) {
-                        String phoness = phoneBook.getNameByPhone(input);
-                        if (phoness.isEmpty()) {
-                            phoneBook.addContact(input, input);
-                        } else {
-                            System.out.println("Неверный формат");
-                        }
+                }else{
+                    if (phones.isEmpty()) {
+                        System.out.println(phoneBook);
+                    } else {
+                        phoneBook.addContact(input);
                     }
                 }
+            }
                 if (input.equals("LIST")) {
                     System.out.println(phoneBook.hashMap);
                     continue;
@@ -51,4 +44,4 @@ public class Main {
             }
         }
     }
-}
+
