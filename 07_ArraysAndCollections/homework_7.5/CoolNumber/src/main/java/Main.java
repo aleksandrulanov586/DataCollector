@@ -12,12 +12,11 @@ public class Main {
      */
 
     public static void main(String[] args) {
-        String lettersAndNumber = "АВЕКМНОРСТУХ" + "0123456789";
-        String number = "0123456789";
+
 
         CoolNumbers coolNumbers = new CoolNumbers();
-        coolNumbers.generateCoolNumbers(lettersAndNumber);
-        System.out.println(coolNumbers.generateCoolNumbers());
+
+        System.out.println(coolNumbers.list);
 
 
     }

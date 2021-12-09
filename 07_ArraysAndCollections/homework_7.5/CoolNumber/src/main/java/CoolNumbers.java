@@ -10,22 +10,19 @@ public class CoolNumbers {
 
 
         // String NumbersLetters = letters + numbers;
-        for (int generatingLetters = 9; generatingLetters < 199; generatingLetters++) {
-            list.add(String.valueOf(generatingLetters));
-
-            for (int generatingLetters2 = 9; generatingLetters2 < 199; generatingLetters2++) {
-
-                for (int generatingLetters3 = 9; generatingLetters3 < 199; generatingLetters3++) {
-
-                    for (int numder = 9; numder < 199; numder++) {
-
-                        for (int generatingRegion = 1; generatingRegion < 199; generatingRegion++) {
-
+        for (char letter1 : LETTERS.toCharArray()) {
+            for (int number = 1; number < 9; number++) {
+                for (char letter2 : LETTERS.toCharArray()) {
+                    for (char letter3 : LETTERS.toCharArray()) {
+                        for (int region = 1; region < 199; region++){
+                            list.add(String.valueOf(region));
                         }
                     }
                 }
             }
         }
+
+
 
 
         return list;
