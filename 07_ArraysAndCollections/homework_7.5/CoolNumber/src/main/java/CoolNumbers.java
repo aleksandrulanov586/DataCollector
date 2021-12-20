@@ -11,11 +11,19 @@ public class CoolNumbers {
 
         // String NumbersLetters = letters + numbers;
         for (char letter1 : LETTERS.toCharArray()) {
+
             for (int number = 1; number < 9; number++) {
+
                 for (char letter2 : LETTERS.toCharArray()) {
+
                     for (char letter3 : LETTERS.toCharArray()) {
+
                         for (int region = 1; region < 199; region++){
                             list.add(String.valueOf(region));
+                            list.add(String.valueOf(letter1));
+                            list.add(String.valueOf(number));
+                            list.add(String.valueOf(letter2));
+                            list.add(String.valueOf(letter3));
                         }
                     }
                 }

@@ -16,8 +16,8 @@ public class Main {
 
         CoolNumbers coolNumbers = new CoolNumbers();
 
+       coolNumbers.generateCoolNumbers();
+
         System.out.println(coolNumbers.list);
-
-
     }
 }
