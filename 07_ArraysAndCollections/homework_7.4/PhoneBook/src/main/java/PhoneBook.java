@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class PhoneBook {
 
-    public String NAME = "[а-яА-Я]";
+    public String NAME = "[а-яА-Я]+";
 
     public String PHONE_NUMBER = "\\d{11}";
 

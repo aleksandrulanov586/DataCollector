@@ -17,7 +17,7 @@ public class Main {
             String input = scanner.nextLine();
 
             if (input.matches(phoneBook.PHONE_NUMBER)) {
-                Set<String> phones = phoneBook.getPhonesByName(input);
+                  Set<String> phones = phoneBook.getPhonesByName(input);
                 phoneBook.getPhonesByName(input);
                 if (phones.isEmpty()) {
                     System.out.println(phoneBook);
