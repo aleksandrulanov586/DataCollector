@@ -25,7 +25,10 @@ public class Main {
       }
       if (input.matches(phoneBook.NAME)) {
         phoneBook.getPhonesByName(input);
-      } else if (phoneBook.hashMap.containsValue(input)) {
+      }
+      for (String w : phoneBook.hashMap) {
+
+      }else if (phoneBook.hashMap.containsValue(input)) {
         phoneBook.addContact(input, input);
       }
 
