@@ -11,13 +11,12 @@ public class Main {
      - проанализоровать полученные данные
      */
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
+    CoolNumbers coolNumbers = new CoolNumbers();
 
-        CoolNumbers coolNumbers = new CoolNumbers();
+    coolNumbers.generateCoolNumbers();
 
-       coolNumbers.generateCoolNumbers();
-
-        System.out.println(coolNumbers.list);
-    }
+    System.out.println(coolNumbers.arrayList);
+  }
 }
