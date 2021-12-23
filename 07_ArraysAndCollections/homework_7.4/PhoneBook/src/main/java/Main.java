@@ -17,7 +17,7 @@ public class Main {
       String input = scanner.nextLine();
 
       if (input.matches(phoneBook.PHONE_NUMBER)) {
-
+        String phones = phoneBook.getNameByPhone(input);
 
         if (phones.isEmpty()) {
           System.out.println(phoneBook);
@@ -25,16 +25,20 @@ public class Main {
         } else {
           System.out.println("Введите имя!");
           String input1 = scanner.nextLine();
+
           // печатайте полученный список
         }
-      } else if() {
+      } else if (input.matches(phoneBook.NAME)) {
+        Set<String> name = phoneBook.getPhonesByName(input);
+        for (String n : phoneBook.hashMap) {
 
-        if (phones.isEmpty()) {
+        }
+        if (name.isEmpty()) {
           System.out.println(phoneBook);
 
         } else {
 
-          phoneBook.addContact(input, input1);
+          phoneBook.addContact(input, name);
         }
       }
 

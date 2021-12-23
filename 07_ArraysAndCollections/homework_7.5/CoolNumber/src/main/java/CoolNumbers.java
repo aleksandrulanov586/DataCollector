@@ -38,8 +38,11 @@ public class CoolNumbers {
 
     public static boolean bruteForceSearchInList(List<String> list, String number) {
         List<String> arrayList = new ArrayList();
-        for (String text : arrayList) {
-            System.out.println(text);
+        for (String s : arrayList) {
+           if (arrayList.contains(number)){
+               System.out.println(s);
+           }
+
         }
         return false;
     }
