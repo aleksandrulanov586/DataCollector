@@ -12,10 +12,8 @@ public class Main {
   public static void main(String[] args) {
     PhoneBook phoneBook = new PhoneBook();
     Scanner scanner = new Scanner(System.in);
-
     while (true) {
       String input = scanner.nextLine();
-
       if (input.matches(phoneBook.PHONE_NUMBER)) {
         Set<String> phones = phoneBook.getPhonesByName(input);
         for (String phone : phones) {
@@ -25,25 +23,21 @@ public class Main {
           } else {
             System.out.println("Введите имя!");
             String input1 = scanner.nextLine();
-
             // печатайте полученный список
           }
         }
         else if (input.matches(phoneBook.NAME)) {
           String name = phoneBook.getNameByPhone(input);
           for (String s : name) {
-
           }
           if (name.isEmpty()) {
             System.out.println(phoneBook);
 
           } else {
-
             phoneBook.addContact(input, name);
           }
         }
       }
-
       if (input.equals("LIST")) {
         System.out.println(phoneBook.hashMap);
         continue;
@@ -51,7 +45,6 @@ public class Main {
       if (input.matches(PRINT_THE_EXIT)) {
         return;
       }
-
     }
   }
 }
