@@ -17,28 +17,30 @@ public class Main {
       String input = scanner.nextLine();
 
       if (input.matches(phoneBook.PHONE_NUMBER)) {
-        String phones = phoneBook.getNameByPhone(input);
+        Set<String> phones = phoneBook.getPhonesByName(input);
+        for (String phone : phones) {
+          if (phone.isEmpty()) {
+            System.out.println(phone);
+            // записываете номер и имя в тел книгу
+          } else {
+            System.out.println("Введите имя!");
+            String input1 = scanner.nextLine();
 
-        if (phones.isEmpty()) {
-          System.out.println(phoneBook);
-          // записываете номер и имя в тел книгу
-        } else {
-          System.out.println("Введите имя!");
-          String input1 = scanner.nextLine();
-
-          // печатайте полученный список
+            // печатайте полученный список
+          }
         }
-      } else if (input.matches(phoneBook.NAME)) {
-        Set<String> name = phoneBook.getPhonesByName(input);
-        for (String n : phoneBook.hashMap) {
+        else if (input.matches(phoneBook.NAME)) {
+          String name = phoneBook.getNameByPhone(input);
+          for (String s : name) {
 
-        }
-        if (name.isEmpty()) {
-          System.out.println(phoneBook);
+          }
+          if (name.isEmpty()) {
+            System.out.println(phoneBook);
 
-        } else {
+          } else {
 
-          phoneBook.addContact(input, name);
+            phoneBook.addContact(input, name);
+          }
         }
       }
 
