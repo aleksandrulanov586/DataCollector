@@ -18,7 +18,7 @@ public class CoolNumbers {
           for (char letter3 : LETTERS.toCharArray()) {
 
             for (int region = 1; region < 199; region++) {
-              arrayList.add("" + letter1 + "" + number + "" + letter2 + letter3 + "" + region);
+              arrayList.add("" + letter1 +  number +  letter2 + letter3 +  region);
 
             }
           }
@@ -35,7 +35,8 @@ public class CoolNumbers {
   }
 
   public static boolean binarySearchInList(List<String> sortedList, String number) {
-    return arrayList.sort(number);
+
+    return Collections.sort(arrayList);
   }
 
 
