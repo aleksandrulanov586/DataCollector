@@ -35,8 +35,10 @@ public class CoolNumbers {
   }
 
   public static boolean binarySearchInList(List<String> sortedList, String number) {
-
-    return Collections.sort(arrayList);
+    Iterator iterator = arrayList.iterator();
+    Collections.sort(arrayList);
+    Collections.binarySearch(sortedList,number);
+    return iterator.hasNext();
   }
 
 

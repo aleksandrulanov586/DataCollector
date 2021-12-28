@@ -26,7 +26,7 @@ public class Main {
                     System.out.println("Введите имя!");
                     String input1 = scanner.nextLine();
                 } else {
-                    phoneBook.addContact(input);
+                    System.out.println("Введите имя!");
 
                     // печатайте полученный списо
                 }
