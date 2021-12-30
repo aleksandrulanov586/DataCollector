@@ -18,38 +18,37 @@ public class Main {
                 Set<String> phones = phoneBook.getPhonesByName(input);
                 if (phones.isEmpty()) {
 
-                    // записываете номер и имя в тел книгу
+                    System.out.println("Введите имя!");
+                    String name = scanner.nextLine();
+                    phoneBook.addContact(name, input);
+                } else {
                     for (String phone : phones) {
                         System.out.println(phone);
 
                     }
-                    System.out.println("Введите имя!");
-                    String input1 = scanner.nextLine();
-                } else {
-                    System.out.println("Введите имя!");
-
-                    // печатайте полученный списо
                 }
             } else if (input.matches(phoneBook.NAME)) {
                 String name = phoneBook.getNameByPhone(input);
 
                 if (name.isEmpty()) {
-                    System.out.println(phoneBook);
+                    System.out.println("Введите номер!");
+                    String number = scanner.nextLine();
+                    phoneBook.addContact(input, number);
 
                 } else {
-                    phoneBook.addContact(input, input);
+                    System.out.println(phoneBook);
                 }
             }
+        }
 
-
-            if (input.equals("LIST")) {
-                System.out.println(phoneBook.hashMap);
-                continue;
-            }
-            if (input.matches(PRINT_THE_EXIT)) {
-                return;
-            }
+        if (input.equals("LIST")) {
+            System.out.println(phoneBook.hashMap);
+            continue;
+        }
+        if (input.matches(PRINT_THE_EXIT)) {
+            return;
         }
     }
 }
+
 
