@@ -20,7 +20,7 @@ public class Main {
 
           System.out.println("Введите имя!");
           String name = scanner.nextLine();
-          phoneBook.addContact(name, input);
+          phoneBook.addContact(input, name);
         } else {
           for (String phone : phones) {
             System.out.println(phone);

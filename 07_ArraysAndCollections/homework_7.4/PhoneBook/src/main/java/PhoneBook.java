@@ -15,6 +15,7 @@ public class PhoneBook {
   public void addContact(String phone, String name) {
 
     if (phone.matches(PHONE_NUMBER) && (name.matches(NAME))) {
+      hashMap.put(phone, name);
       System.out.println("Контакт сохранен!");
     } else {
       System.out.println("Неверный формат!");
