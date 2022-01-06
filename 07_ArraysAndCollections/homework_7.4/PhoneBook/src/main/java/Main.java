@@ -33,7 +33,7 @@ public class Main {
         if (name.isEmpty()) {
           System.out.println("Введите номер!");
           String number = scanner.nextLine();
-          phoneBook.addContact(input, number);
+          phoneBook.addContact(number, input);
 
         } else {
           System.out.println(phoneBook);
