@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class Main {
     CoolNumbers coolNumbers = new CoolNumbers();
 
     coolNumbers.generateCoolNumbers();
+    coolNumbers.binarySearchInList(Collections.sort();
 
     System.out.println(coolNumbers.arrayList);
   }
