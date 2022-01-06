@@ -12,7 +12,7 @@ public class CoolNumbers {
   public static List<String> generateCoolNumbers() {
 
     for (char letter1 : LETTERS.toCharArray()) {
-      for (int number = 1; number < 199; number++) {
+      for (int number = 1; number < 9; number++) {
         for (char letter2 : LETTERS.toCharArray()) {
           for (char letter3 : LETTERS.toCharArray()) {
             for (int region = 1; region < 199; region++) {
