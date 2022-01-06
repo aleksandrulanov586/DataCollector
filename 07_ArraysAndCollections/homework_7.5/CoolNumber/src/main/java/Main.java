@@ -15,7 +15,6 @@ public class Main {
   public static void main(String[] args) {
 
     CoolNumbers coolNumbers = new CoolNumbers();
-
     coolNumbers.generateCoolNumbers();
     coolNumbers.binarySearchInList(Collections.sort();
 
