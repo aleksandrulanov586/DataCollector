@@ -3,6 +3,8 @@ import java.util.*;
 public class CoolNumbers {
 
     public static ArrayList<String> arrayList = new ArrayList<>();
+    public static HashSet<String> hash = new HashSet<>();
+    public static TreeSet<String> tree = new TreeSet<>();
 
     public static String LETTERS = "АВЕКМНОРСТУХ";
 
@@ -38,16 +40,17 @@ public class CoolNumbers {
         //Collections.sort(arrayList);
 
         //Collections.binarySearch(sortedList, number);
-        return Collections.binarySearch(sortedList, number) >= 0 ? number : sortedList;
+        return Collections.binarySearch(sortedList, number) >= 0;
     }
 
 
     public static boolean searchInHashSet(HashSet<String> hashSet, String number) {
-        return false;
+        return hash.contains(number);
     }
 
     public static boolean searchInTreeSet(TreeSet<String> treeSet, String number) {
-        return false;
+
+        return tree.contains(number);
     }
 
 }
