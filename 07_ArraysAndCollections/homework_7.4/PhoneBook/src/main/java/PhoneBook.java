@@ -15,7 +15,7 @@ public class PhoneBook {
     public void addContact(String phone, String name) {
 
         if (phone.matches(PHONE_NUMBER) && (name.matches(NAME))) {
-            hashMap.put(phone, name + " " + "-" + " ");
+            hashMap.put(phone, name);
             System.out.println("Контакт сохранен!");
         } else {
             System.out.println("Неверный формат!");
@@ -30,7 +30,7 @@ public class PhoneBook {
 
         // формат одного контакта "Имя - Телефон"
         // если контакт не найдены - вернуть пустую строку
-        return gettingName == null ? "" : gettingName + phone;
+        return gettingName == null ? "" : gettingName + " - " + phone;
     }
 
     public Set<String> getPhonesByName(String name) {
@@ -41,7 +41,7 @@ public class PhoneBook {
             String value = entry.getValue();
             String key = entry.getKey();
             if (name.equals(entry.getValue())) {
-                String combiningStrings = value + key;
+                String combiningStrings = value + " - " + key;
                 treeSet.add(combiningStrings);
             }
             // формат одного контакта "Имя - Телефон"
@@ -56,7 +56,7 @@ public class PhoneBook {
         for (Map.Entry<String, String> entry : hashMap.entrySet()) {
             String value = entry.getValue();
             String key = entry.getKey();
-            String combiningStrings = value + key;
+            String combiningStrings = value + " - " + key;
             treeSet.add(combiningStrings);
         }
 
