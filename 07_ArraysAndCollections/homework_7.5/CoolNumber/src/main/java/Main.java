@@ -19,5 +19,6 @@ public class Main {
 
 
     System.out.println(coolNumbers.arrayList);
+    System.out.println(System.currentTimeMillis());
   }
 }

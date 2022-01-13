@@ -8,7 +8,7 @@ public class CoolNumbers {
 
     public static String LETTERS = "АВЕКМНОРСТУХ";
 
-    public static String NUMBER = "0123456789";
+
 
 
     public static List<String> generateCoolNumbers() {
