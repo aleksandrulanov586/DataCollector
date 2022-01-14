@@ -12,13 +12,14 @@ public class Main {
      - проанализоровать полученные данные
      */
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    CoolNumbers coolNumbers = new CoolNumbers();
-    coolNumbers.generateCoolNumbers();
+        CoolNumbers coolNumbers = new CoolNumbers();
+
+        long m = System.currentTimeMillis();
+        coolNumbers.bruteForceSearchInList("fdsfdfssf", "12233");
+        System.out.println(coolNumbers.bruteForceSearchInList("dfsdfsd", "12151545"));
 
 
-    System.out.println(coolNumbers.arrayList);
-    System.out.println(System.currentTimeMillis());
-  }
+    }
 }

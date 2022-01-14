@@ -2,17 +2,14 @@ import java.util.*;
 
 public class CoolNumbers {
 
-    public static ArrayList<String> arrayList = new ArrayList<>();
-    public static HashSet<String> hash = new HashSet<>();
-    public static TreeSet<String> tree = new TreeSet<>();
+
+
 
     public static String LETTERS = "АВЕКМНОРСТУХ";
 
 
-
-
     public static List<String> generateCoolNumbers() {
-
+         ArrayList<String> arrayList = new ArrayList<>();
         for (char letter1 : LETTERS.toCharArray()) {
             for (int number = 1; number < 9; number++) {
                 for (char letter2 : LETTERS.toCharArray()) {
@@ -32,7 +29,7 @@ public class CoolNumbers {
     }
 
     public static boolean bruteForceSearchInList(List<String> list, String number) {
-        return arrayList.contains(number);
+        return list.contains(number);
     }
 
     public static boolean binarySearchInList(List<String> sortedList, String number) {
@@ -45,12 +42,12 @@ public class CoolNumbers {
 
 
     public static boolean searchInHashSet(HashSet<String> hashSet, String number) {
-        return hash.contains(number);
+        return hashSet.contains(number);
     }
 
     public static boolean searchInTreeSet(TreeSet<String> treeSet, String number) {
 
-        return tree.contains(number);
+        return treeSet.contains(number);
     }
 
 }
