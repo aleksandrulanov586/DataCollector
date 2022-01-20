@@ -4,9 +4,12 @@ public class Test {
         int y = 0;
 
       while (x < 5) {
-         // y = x - y;
-          y = y + x;
-         /**   y = y + 2;//бесконечность
+
+           x++; //11 33
+
+         // y = y + x; // 00 11 23 36 410
+
+
              if (y < 5) {
                  x++;
                  if (y < 3) {
@@ -24,5 +27,4 @@ public class Test {
 
 
     }
-}
 }
