@@ -3,13 +3,11 @@ import java.util.*;
 public class CoolNumbers {
 
 
-
-
     public static String LETTERS = "АВЕКМНОРСТУХ";
 
 
     public static List<String> generateCoolNumbers() {
-         ArrayList<String> arrayList = new ArrayList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
         for (char letter1 : LETTERS.toCharArray()) {
             for (int number = 1; number < 9; number++) {
                 for (char letter2 : LETTERS.toCharArray()) {
