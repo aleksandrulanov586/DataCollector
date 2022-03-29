@@ -10,6 +10,9 @@ public class Main {
     }
 
     public static void sortBySalaryAndAlphabet(List<Employee> staff) {
+         staff.stream().filter(Employee -> Employee.getName() ))
+
+
         //TODO Метод должен отсортировать сотрудников по заработной плате и алфавиту.
     }
 }
