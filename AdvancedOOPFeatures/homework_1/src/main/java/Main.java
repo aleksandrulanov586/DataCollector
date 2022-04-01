@@ -1,7 +1,8 @@
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class Main implements Comparator<Employee> {
 
     public static final String STAFF_TXT = "data/staff.txt";
 
@@ -12,12 +13,15 @@ public class Main {
 
     public static void sortBySalaryAndAlphabet(List<Employee> staff) {
 
-        staff.sort(Employee, Employee) ->
-        staff.stream().sorted(Employee., Employee.->)
-        Collections.sort(staff, (employee, t1) -> {
-            employee.getSalary().compareTo(t1.getSalary());
-            employee.getName().compareTo(t1.getName());
+        staff.sort(this);
 
-            //TODO Метод должен отсортировать сотрудников по заработной плате и алфавиту.
-        }
+
+        //TODO Метод должен отсортировать сотрудников по заработной плате и алфавиту.
     }
+
+
+    @Override
+    public int compare(Employee o1, Employee o2) {
+        return Integer.compare(o1.getSalary(), o2.getSalary());
+    }
+}
