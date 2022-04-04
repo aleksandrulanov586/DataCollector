@@ -13,7 +13,9 @@ public class Main implements Comparator<Employee> {
 
     public static void sortBySalaryAndAlphabet(List<Employee> staff) {
 
-        staff.sort(this);
+        Collections.sort(staff, (employee, t1) -> {
+            employee.getSalary().compareTo(t1.getSalary());
+            employee.getName().compareTo(t1.getName());
 
 
         //TODO Метод должен отсортировать сотрудников по заработной плате и алфавиту.
