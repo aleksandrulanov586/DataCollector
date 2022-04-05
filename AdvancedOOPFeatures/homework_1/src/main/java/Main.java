@@ -12,11 +12,12 @@ public class Main {
 
     public static int sortBySalaryAndAlphabet(List<Employee> staff) {
 
-        Collections.sort(staff, (employee, t1) -> {
-            employee.getSalary().compareTo(t1.getSalary());
-            return employee.getName().compareTo(t1.getName());
-
-
+        Collections.sort(staff, (o1, o2) -> {
+            if (o1.getSalary().equals(o2.getSalary())) {
+                return o1.getName().compareTo(o2.getName());
+            } else {
+                return o1.getSalary().compareTo(o2.getSalary());
+            }
         });
 
 
