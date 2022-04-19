@@ -1,5 +1,5 @@
-import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class Main {
 
@@ -10,16 +10,18 @@ public class Main {
         System.out.println(staff);
     }
 
-    public static Employee sortBySalaryAndAlphabet(List<Employee> staff) {
+    public static Optional<Employee> sortBySalaryAndAlphabet(List<Employee> staff) {
 
 
-        Employee employee = (Employee) staff.stream().sorted((o1, o2) -> {
+        Optional<Employee> employee = staff.stream().max((o1, o2) -> {
             if (o1.getSalary() == o2.getSalary())
                 return o1.getName().compareTo(o2.getName());
             else if (o1.getSalary() > o2.getSalary())
-                return o1.getSalary().compareTo(o2.getSalary());
+                return o1.getName().compareTo(o2.getName());
             else return -1;
         });
+
+
         return employee;
 
     }
