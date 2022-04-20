@@ -1,5 +1,6 @@
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
@@ -14,7 +15,7 @@ public class Main {
     public static Employee sortBySalaryAndAlphabet(List<Employee> staff) {
 
 
-        Employee employee = (Employee) staff.stream().filter(employee1 -> employee1.getWorkStart() == employee1.getWorkStart());
+        Employee employee = (Employee) staff.stream().map(employee1 -> staff).collect(Collectors.toList()).stream().max((o1, o2) -> o1.)
 
 
         return employee;
