@@ -1,5 +1,6 @@
+import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -10,16 +11,10 @@ public class Main {
         System.out.println(staff);
     }
 
-    public static Optional<Employee> sortBySalaryAndAlphabet(List<Employee> staff) {
+    public static Employee sortBySalaryAndAlphabet(List<Employee> staff) {
 
 
-        Optional<Employee> employee = staff.stream().max((o1, o2) -> {
-            if (o1.getSalary() == o2.getSalary())
-                return o1.getName().compareTo(o2.getName());
-            else if (o1.getSalary() > o2.getSalary())
-                return o1.getName().compareTo(o2.getName());
-            else return -1;
-        });
+        Employee employee = (Employee) staff.stream().filter(employee1 -> employee1.getWorkStart() == employee1.getWorkStart());
 
 
         return employee;

@@ -57,7 +57,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Date getWorkStart() {
+    public boolean getWorkStart() {
         return workStart;
     }
 
