@@ -15,7 +15,7 @@ public class Main {
     public static Employee sortBySalaryAndAlphabet(List<Employee> staff) {
 
 
-        Employee employee = (Employee) staff.stream().map(employee1 -> staff).collect(Collectors.toList()).stream().max((o1, o2) -> o1.)
+        Employee employee = staff.stream().filter(employee1 -> employee1.getWorkStart().equals(employee1.getSalary())).max((employee1, employee2) -> employee1.getSalary().equals(employee2.getSalary()));
 
 
         return employee;
