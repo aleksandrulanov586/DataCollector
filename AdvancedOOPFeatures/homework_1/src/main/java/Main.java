@@ -15,9 +15,13 @@ public class Main {
     public static Employee sortBySalaryAndAlphabet(List<Employee> staff) {
 
 
-        Employee employee = staff.stream().filter(employee1 -> employee1.getWorkStart().equals(employee1.getSalary())).max((employee1, employee2) -> employee1.getSalary().equals(employee2.getSalary()));
-
-
+        Employee employee = staff.stream().filter(employee1 -> {
+            if (employee1.getWorkStart() == employee1.getWorkStart())
+                return employee1.getName().equals(employee1.getName());
+            else if (employee1.getSalary() > employee1.getSalary())
+                return employee1.getName().equals(employee1.getName());
+            else return false;
+        });
         return employee;
 
     }
