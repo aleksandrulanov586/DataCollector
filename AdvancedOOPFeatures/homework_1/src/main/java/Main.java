@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,13 +16,11 @@ public class Main {
     public static Employee sortBySalaryAndAlphabet(List<Employee> staff) {
 
 
-        Employee employee = staff.stream().filter(employee1 -> {
-            if (employee1.getWorkStart() == employee1.getWorkStart())
-                return employee1.getName().equals(employee1.getName());
-            else if (employee1.getSalary() > employee1.getSalary())
-                return employee1.getName().equals(employee1.getName());
-            else return false;
-        });
+        Employee employee = staff.stream().
+                filter(employee1 -> employee1.getWorkStart().equals(employee1.getWorkStart())).
+                max((o1, o2) -> o1.getSalary().equals(o2.getSalary()));
+
+
         return employee;
 
     }
