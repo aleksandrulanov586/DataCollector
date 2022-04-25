@@ -17,8 +17,8 @@ public class Main {
 
 
         Employee employee = staff.stream().
-                filter(employee1 -> employee1.getWorkStart().equals(employee1.getWorkStart())).
-                max(Comparator.comparing(Employee::getSalary)).get();
+                sorted((o1, o2) -> o1.getSalary().equals(o2.getSalary())).
+                limit(1);
 
         return employee;
 
