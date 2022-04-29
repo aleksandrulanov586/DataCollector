@@ -17,7 +17,7 @@ public class Main {
 
 
         Employee employee = staff.stream().
-                sorted((o1, o2) -> o1.getSalary().equals(o2.getSalary())).
+                sorted((o1) -> o1.getSalary() > o1.getSalary()).
                 limit(1);
 
         return employee;
