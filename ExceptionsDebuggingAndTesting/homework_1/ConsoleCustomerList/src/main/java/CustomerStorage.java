@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.lang.reflect.UndeclaredThrowableException;
+import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,21 +16,21 @@ public class CustomerStorage {
         final int INDEX_SURNAME = 1;
         final int INDEX_EMAIL = 2;
         final int INDEX_PHONE = 3;
-        String[] components = data.split("\\s+");
-        String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME] ;
 
-        storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
+        try {   String[] components = data.split("\\s+");
+           String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME] ;
 
-        if ( name.equals(INDEX_NAME) || name.equals(INDEX_SURNAME) ) {
-            storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
-        }else{ throw new RuntimeException(name);
-        }
+           storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
+       }catch (ArrayStoreException | IndexOutOfBoundsException ignored){
 
-
-
-
-
+       }
     }
+
+
+
+
+
+
 
     public void listCustomers() {
         storage.values().forEach(System.out::println);
