@@ -17,14 +17,20 @@ public class CustomerStorage {
         final int INDEX_SURNAME = 1;
         final int INDEX_EMAIL = 2;
         final int INDEX_PHONE = 3;
-        String w = "//d";
+
         String[] components = data.split("\\s+");
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
-        storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
-        if (name.equals(w)) {
+        // storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
+        if (Arrays.stream(components).allMatch(s -> s.length() > 3)) {
             throw new ArrayStoreException();
-        } else if (Arrays.stream(components).allMatch(s -> s.length() >= 4)) {
+        } else if ((Arrays.stream(components).allMatch(s -> s.length() < 3))) {
             throw new ArrayStoreException();
+        } else if (components[2].contains("[a-zA-Z]")) {
+            throw new ArrayStoreException();
+        } else if (!components[3].contains("//@")) {
+            throw new ArrayStoreException();
+        } else {
+            storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
         }
 
 
