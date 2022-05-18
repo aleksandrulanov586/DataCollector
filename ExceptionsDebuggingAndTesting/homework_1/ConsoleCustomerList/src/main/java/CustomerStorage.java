@@ -21,33 +21,36 @@ public class CustomerStorage {
         String[] components = data.split("\\s+");
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
 
-        if (components.length > 4) {
-            throw new ArrayIndexOutOfBoundsException();
-
-        } else if (components[3].matches("[a-zA-Z]")) {
+        if (Arrays.stream(components).allMatch(s -> s.length() > 3)) {
+            throw new ArrayStoreException();
+        } else if ((Arrays.stream(components).allMatch(s -> s.length() < 3))) {
+            throw new ArrayStoreException();
+        } else if (components[2].contains("[a-zA-Z]")) {
+            throw new ArrayStoreException();
+        } else if (Arrays.stream(components).allMatch(s -> s.length() >= 4)) {
+        } else if (!components[3].contains("//@")) {
             throw new ArrayStoreException();
         } else {
             storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
         }
-
-
     }
 
-    public void listCustomers() {
+
+        public void listCustomers () {
 
 
-        storage.values().forEach(System.out::println);
+            storage.values().forEach(System.out::println);
+        }
+
+        public void removeCustomer (String name){
+            storage.remove(name);
+        }
+
+        public Customer getCustomer (String name){
+            return storage.get(name);
+        }
+
+        public int getCount () {
+            return storage.size();
+        }
     }
-
-    public void removeCustomer(String name) {
-        storage.remove(name);
-    }
-
-    public Customer getCustomer(String name) {
-        return storage.get(name);
-    }
-
-    public int getCount() {
-        return storage.size();
-    }
-}
