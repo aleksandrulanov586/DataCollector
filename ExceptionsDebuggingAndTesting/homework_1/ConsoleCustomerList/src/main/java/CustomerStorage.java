@@ -21,7 +21,7 @@ public class CustomerStorage {
         String[] components = data.split("\\s+");
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
 
-        if (Arrays.stream(components).allMatch(s -> s.length() > 5)) {
+        if (components.length > 4) {
             throw new ArrayStoreException();
         } else {
             storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
