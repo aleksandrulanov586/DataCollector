@@ -12,7 +12,7 @@ public class CustomerStorage {
         storage = new HashMap<>();
     }
 
-    public void addCustomer(String data) throws Exception {
+    public void addCustomer(String data)  {
         final int INDEX_NAME = 0;
         final int INDEX_SURNAME = 1;
         final int INDEX_EMAIL = 2;
@@ -21,17 +21,11 @@ public class CustomerStorage {
         String[] components = data.split("\\s+");
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
 
-        if (Arrays.stream(components).allMatch(s -> s.length() > 3)) {
-            throw new ArrayStoreException();
-        } else if ((Arrays.stream(components).allMatch(s -> s.length() < 3))) {
-            throw new ArrayStoreException();
-        } else if (components[2].contains("[a-zA-Z]")) {
-            throw new ArrayStoreException();
-        } else if (Arrays.stream(components).allMatch(s -> s.length() >= 4)) {
-        } else if (!components[3].contains("//@")) {
+        if (Arrays.stream(components).allMatch(s -> s.length() > 5)) {
             throw new ArrayStoreException();
         } else {
             storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
+
         }
     }
 

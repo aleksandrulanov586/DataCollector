@@ -9,7 +9,7 @@ public class Main {
             COMMAND_EXAMPLES;
     private static final String helpText = "Command examples:\n" + COMMAND_EXAMPLES;
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         Scanner scanner = new Scanner(System.in);
         CustomerStorage executor = new CustomerStorage();
 
