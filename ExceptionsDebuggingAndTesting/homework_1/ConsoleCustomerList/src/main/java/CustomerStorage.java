@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CustomerStorage {
     private final Map<String, Customer> storage;
@@ -20,13 +22,24 @@ public class CustomerStorage {
 
         String[] components = data.split("\\s+");
         String name = components[INDEX_NAME] + " " + components[INDEX_SURNAME];
+        Pattern pattern = Pattern.compile("[a-zA-Z]");
+        Matcher matcher = pattern.matcher(components[3]);
+        Pattern pattern1 = Pattern.compile("\\@");
+        Matcher matcher2 = pattern1.matcher(components[2]);
 
         if (components.length > 4) {
+            throw new ArrayStoreException();
+        } else if (matcher.find()) {
+            throw new ArrayStoreException();
+
+        } else if (!matcher2.find()) {
             throw new ArrayStoreException();
         } else {
             storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
 
         }
+
+
     }
 
 
