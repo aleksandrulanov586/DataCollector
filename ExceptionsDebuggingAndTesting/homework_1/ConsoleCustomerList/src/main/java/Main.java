@@ -14,6 +14,7 @@ public class Main {
         CustomerStorage executor = new CustomerStorage();
 
         while (true) {
+           try {
             String command = scanner.nextLine();
             String[] tokens = command.split("\\s+", 2);
 
@@ -29,7 +30,9 @@ public class Main {
                 System.out.println(helpText);
             } else {
                 System.out.println(COMMAND_ERROR);
-            }
+            }} catch (ArrayIndexOutOfBoundsException e){
+               System.out.println("Ошибка: отрицательный или превышающей размер массива индекса");
+           }
         }
     }
 }

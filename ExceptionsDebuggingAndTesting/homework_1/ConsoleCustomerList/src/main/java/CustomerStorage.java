@@ -1,9 +1,6 @@
 import java.io.IOException;
 import java.lang.reflect.UndeclaredThrowableException;
-import java.util.Arrays;
-import java.util.EmptyStackException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,8 +43,9 @@ public class CustomerStorage {
         public void listCustomers () {
 
 
-            storage.values().forEach(System.out::println);
-        }
+    storage.values().forEach(System.out::println);
+}
+
 
         public void removeCustomer (String name){
             storage.remove(name);
