@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class RouteCalculator { // создаем класс
 
-    private static final StationIndex stationIndex; // ссылка на обьект
+    private  final StationIndex stationIndex; // ссылка на обьект
 
     private static final double INTER_STATION_DURATION = 2.5; // константа со значением
     private static final double INTER_CONNECTION_DURATION = 3.5;
@@ -18,7 +18,7 @@ public class RouteCalculator { // создаем класс
 
 
 
-    public static List<Station> getShortestRoute(Station from, Station to) { // публичный метод который возвращает коллекцию (джинерик)
+    public  List<Station> getShortestRoute(Station from, Station to) { // публичный метод который возвращает коллекцию (джинерик)
         List<Station> route = getRouteOnTheLine(from, to); // ссылка на коллекцию( джинерик ) передача в метод с аргументами
         if (route != null) { // проверка евляется ли коллекция которая переданныя в метод пустой
             return route; // если нет то вернуть коллекцию
@@ -33,7 +33,7 @@ public class RouteCalculator { // создаем класс
         return route; // и после этого возвращаем его
     }
 
-    public static double calculateDuration(List<Station> route) { // создаем статический метод который возвращает значение с плавующий точкой с аргуметом коллекции
+    public  double calculateDuration(List<Station> route) { // создаем статический метод который возвращает значение с плавующий точкой с аргуметом коллекции
         double duration = 0; // создаем переменную со значением 0
         Station previousStation = null; // создаем переменную со значением null
         for (int i = 0; i < route.size(); i++) { // создаем массив перебора по коллекции аргумента
@@ -47,7 +47,7 @@ public class RouteCalculator { // создаем класс
         return duration; // возвращаем значение переменной после цикла
     }
 
-    private static List<Station> getRouteOnTheLine(Station from, Station to) {
+    private  List<Station> getRouteOnTheLine(Station from, Station to) {
 
         if (!from.getLine().equals(to.getLine())) { // проверка если не откуда и куда не одинаковые
             return null; // то возвращаем null
@@ -80,7 +80,7 @@ public class RouteCalculator { // создаем класс
         return route;
     }
 
-    private static List<Station> getRouteWithOneConnection(Station from, Station to) {
+    private  List<Station> getRouteWithOneConnection(Station from, Station to) {
         if (from.getLine().equals(to.getLine())) { // если пункт назначения откуда и куда равна, то возвращаем null
             return null;
         }
@@ -110,7 +110,7 @@ public class RouteCalculator { // создаем класс
         return connected.contains(station2);
     }
 
-    private static List<Station> getRouteViaConnectedLine(Station from, Station to) {
+    private  List<Station> getRouteViaConnectedLine(Station from, Station to) {
         Set<Station> fromConnected = stationIndex.getConnectedStations(from);
         Set<Station> toConnected = stationIndex.getConnectedStations(to);
         for (Station srcStation : fromConnected) {
@@ -123,7 +123,7 @@ public class RouteCalculator { // создаем класс
         return null;
     }
 
-    private static List<Station> getRouteWithTwoConnections(Station from, Station to) {
+    private  List<Station> getRouteWithTwoConnections(Station from, Station to) {
         if (from.getLine().equals(to.getLine())) {
             return null;
         }

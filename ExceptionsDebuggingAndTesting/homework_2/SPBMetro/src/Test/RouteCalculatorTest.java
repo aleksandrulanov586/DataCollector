@@ -1,16 +1,15 @@
+package Test;
+
 import core.Line;
 import core.Station;
-import junit.framework.TestCase;
-import org.junit.Before;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
-
+import junit.framework.TestCase;
+import org.junit.Test;
+import core.;
+import core.*;
 public class RouteCalculatorTest extends TestCase {
-
+RouteCalculator
 
     List<Station> stations;
 
