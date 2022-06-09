@@ -33,7 +33,7 @@ public class RouteCalculator { // создаем класс
         return route; // и после этого возвращаем его
     }
 
-    public  double calculateDuration(List<Station> route) { // создаем статический метод который возвращает значение с плавующий точкой с аргуметом коллекции
+    public static double calculateDuration(List<Station> route) { // создаем статический метод который возвращает значение с плавующий точкой с аргуметом коллекции
         double duration = 0; // создаем переменную со значением 0
         Station previousStation = null; // создаем переменную со значением null
         for (int i = 0; i < route.size(); i++) { // создаем массив перебора по коллекции аргумента
