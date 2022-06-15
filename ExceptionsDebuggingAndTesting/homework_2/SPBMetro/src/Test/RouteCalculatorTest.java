@@ -36,9 +36,10 @@ RouteCalculator routeCalculator = new RouteCalculator(new StationIndex());
     }
     public void testgetShortestRouteNull() throws Exception {
 
-        ArrayList<String> route = new ArrayList<>();
-        Station actual = (Station) routeCalculator.getShortestRoute((Station) stations, (Station) stations);
-        assertNull(String.valueOf(route), actual);
+
+
+        Station actual = (core.Station) routeCalculator.getShortestRoute("sss" );
+        assertNull(actual);
 
 
     }
