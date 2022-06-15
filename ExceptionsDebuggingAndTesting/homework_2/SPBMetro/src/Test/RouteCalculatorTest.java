@@ -1,4 +1,4 @@
-package Test;
+
 
 import core.Line;
 import core.Station;
@@ -8,7 +8,7 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 public class RouteCalculatorTest extends TestCase {
-RouteCalculator
+RouteCalculator routeCalculator = new RouteCalculator(new StationIndex());
 
     List<Station> stations;
 
@@ -17,24 +17,31 @@ RouteCalculator
         stations = new ArrayList<>();
         Line line = new Line(1, "Первая");
         Line line2 = new Line(2, "Вторая");
-
+        Line line3 = new Line(2, "Вторая");
         stations.add(new Station("Петровская", line));
         stations.add(new Station("Арбузная", line));
         stations.add(new Station("Морковна", line2));
-        stations.add(new Station("Морковна", line2));
+        stations.add(new Station("Морковна", line3));
 
     }
 
     @Test
     public void calculateDuration() throws Exception {
+        double expected = 9.5;
+        double actual = RouteCalculator.calculateDuration(stations);
 
-        double actual = RouteCalculator.getShortestRoute();
-        double expected = 8.5;
         assertEquals(expected, actual);
 
 
     }
+    public void testgetShortestRouteNull() throws Exception {
 
+        ArrayList<String> route = new ArrayList<>();
+        Station actual = (Station) routeCalculator.getShortestRoute((Station) stations, (Station) stations);
+        assertNull(String.valueOf(route), actual);
+
+
+    }
     @Override
     protected void tearDown() throws Exception {
 

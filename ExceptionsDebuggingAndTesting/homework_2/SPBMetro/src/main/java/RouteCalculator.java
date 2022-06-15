@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class RouteCalculator { // создаем класс
 
-    private  final StationIndex stationIndex; // ссылка на обьект
+    private final StationIndex stationIndex; // ссылка на обьект
 
     private static final double INTER_STATION_DURATION = 2.5; // константа со значением
     private static final double INTER_CONNECTION_DURATION = 3.5;
@@ -17,10 +17,9 @@ public class RouteCalculator { // создаем класс
     }
 
 
-
-    public  List<Station> getShortestRoute(Station from, Station to) { // публичный метод который возвращает коллекцию (джинерик)
+    public List<Station> getShortestRoute(Station from, Station to) { // публичный метод который возвращает коллекцию (джинерик)
         List<Station> route = getRouteOnTheLine(from, to); // ссылка на коллекцию( джинерик ) передача в метод с аргументами
-        if (route != null) { // проверка евляется ли коллекция которая переданныя в метод пустой
+        if (route != null) { // проверка является ли коллекция которая переданные в метод пустой
             return route; // если нет то вернуть коллекцию
         }
 
@@ -39,7 +38,7 @@ public class RouteCalculator { // создаем класс
         for (int i = 0; i < route.size(); i++) { // создаем массив перебора по коллекции аргумента
             Station station = route.get(i); // создаем ссылку на обьект и ложем ее в коллекцию аргумента которая будет возвращать колличество стацний
             if (i > 0) { // проверка пока переменная в цикле равна больше 0
-                duration += previousStation.getLine().equals(station.getLine())  ? // то ложится в переменную сравнения null с 0
+                duration += previousStation.getLine().equals(station.getLine()) ? // то ложится в переменную сравнения null с 0
                         INTER_STATION_DURATION : INTER_CONNECTION_DURATION; // если совпадения тру то ложим в переменную  2.5 если нет то 3.5
             }
             previousStation = station; // null присваивается и ложим в коллекцию? Не совсем понятно зачем?
@@ -47,9 +46,9 @@ public class RouteCalculator { // создаем класс
         return duration; // возвращаем значение переменной после цикла
     }
 
-    private  List<Station> getRouteOnTheLine(Station from, Station to) {
+    private List<Station> getRouteOnTheLine(Station from, Station to) {
 
-        if (!from.getLine().equals(to.getLine())) { // проверка если не откуда и куда не одинаковые
+        if (!from.getLine().equals(to.getLine())) { // проверка два пункта назначения, если  откуда и куда не одинаковые
             return null; // то возвращаем null
         }
 
@@ -80,7 +79,7 @@ public class RouteCalculator { // создаем класс
         return route;
     }
 
-    private  List<Station> getRouteWithOneConnection(Station from, Station to) {
+    private List<Station> getRouteWithOneConnection(Station from, Station to) {
         if (from.getLine().equals(to.getLine())) { // если пункт назначения откуда и куда равна, то возвращаем null
             return null;
         }
@@ -91,62 +90,62 @@ public class RouteCalculator { // создаем класс
         List<Station> toLineStations = to.getLine().getStations();
         for (Station srcStation : fromLineStations) { // цикл на первую ссылку перебор "откуда"
             for (Station dstStation : toLineStations) {// цикл на вторую ссылку перебор "куда"
-                if (isConnected(srcStation, dstStation)) { //
-                    ArrayList<Station> way = new ArrayList<>();
-                    way.addAll(getRouteOnTheLine(from, srcStation));
+                if (isConnected(srcStation, dstStation)) { // помещаем в метод isConnected
+                    ArrayList<Station> way = new ArrayList<>(); // после чего создаем нувую коллекцию
+                    way.addAll(getRouteOnTheLine(from, srcStation)); // добавлаем в коллекцию из других коллекций после работы метода
                     way.addAll(getRouteOnTheLine(dstStation, to));
-                    if (route.isEmpty() || route.size() > way.size()) {
-                        route.clear();
-                        route.addAll(way);
+                    if (route.isEmpty() || route.size() > way.size()) { // если коллекция route пустая или больше коллекции way
+                        route.clear(); // то отчищаем коллекцию route
+                        route.addAll(way);// и добавляем все из коллекции way
                     }
                 }
             }
         }
-        return route;
+        return route;// после чего возвращем коллекцию route
     }
 
-    private boolean isConnected(Station station1, Station station2) {
-        Set<Station> connected = stationIndex.getConnectedStations(station1);
-        return connected.contains(station2);
+    private boolean isConnected(Station station1, Station station2) { // создаем приватный метод который возвращем логическое выражения
+        Set<Station> connected = stationIndex.getConnectedStations(station1); // ссылка на метод getConnectedStations в классе stationIndex который выполняет сравнения ключи в дереве если не совпадает возвращает пустое дерево
+        return connected.contains(station2); // возвращаем результат работы ссылки connected и сравнивает со станцией 2
     }
 
-    private  List<Station> getRouteViaConnectedLine(Station from, Station to) {
-        Set<Station> fromConnected = stationIndex.getConnectedStations(from);
+    private List<Station> getRouteViaConnectedLine(Station from, Station to) {// приватный метод
+        Set<Station> fromConnected = stationIndex.getConnectedStations(from);//ссылка на метод getConnectedStations в классе stationIndex который выполняет сравнения ключи "Откуда" в дереве если не совпадает возвращает пустое дерево
         Set<Station> toConnected = stationIndex.getConnectedStations(to);
         for (Station srcStation : fromConnected) {
             for (Station dstStation : toConnected) {
-                if (srcStation.getLine().equals(dstStation.getLine())) {
-                    return getRouteOnTheLine(srcStation, dstStation);
+                if (srcStation.getLine().equals(dstStation.getLine())) { // сравниваем два пункта откуда и куда
+                    return getRouteOnTheLine(srcStation, dstStation);// если они не одинаковые возвращаем null
                 }
             }
         }
         return null;
     }
 
-    private  List<Station> getRouteWithTwoConnections(Station from, Station to) {
-        if (from.getLine().equals(to.getLine())) {
-            return null;
+    private List<Station> getRouteWithTwoConnections(Station from, Station to) {
+        if (from.getLine().equals(to.getLine())) { //  сравнения два пункта откуда и куда
+            return null; // если одинаковые то возвращаем null
         }
 
         ArrayList<Station> route = new ArrayList<>();
 
-        List<Station> fromLineStations = from.getLine().getStations();
+        List<Station> fromLineStations = from.getLine().getStations();// ссылка на два метода  где возврает станию и линию
         List<Station> toLineStations = to.getLine().getStations();
 
         for (Station srcStation : fromLineStations) {
             for (Station dstStation : toLineStations) {
                 List<Station> connectedLineRoute =
-                        getRouteViaConnectedLine(srcStation, dstStation);
-                if (connectedLineRoute == null) {
-                    continue;
+                        getRouteViaConnectedLine(srcStation, dstStation); // ссылка(коллекции) на метод где сравниваем и передаем туда перебор двух циклов в коллекциях
+                if (connectedLineRoute == null) { // сравниваем ссылку с null
+                    continue;// null пропускается и программа продолжает работать дальше
                 }
                 List<Station> way = new ArrayList<>();
-                way.addAll(getRouteOnTheLine(from, srcStation));
-                way.addAll(connectedLineRoute);
+                way.addAll(getRouteOnTheLine(from, srcStation));// добавляем все в новый созданную коллекцию после того как передадим "откуда" c переборам цикла
+                way.addAll(connectedLineRoute); // Добавляем все в коллекцию из ссылки коллекции
                 way.addAll(getRouteOnTheLine(dstStation, to));
-                if (route.isEmpty() || route.size() > way.size()) {
-                    route.clear();
-                    route.addAll(way);
+                if (route.isEmpty() || route.size() > way.size()) { // проверка если коллекция  пустая или она больше чем другая коллекция
+                    route.clear(); //то отчищаем колекцию
+                    route.addAll(way);// после чего добавляем все из одной коллекции в другую
                 }
             }
         }
