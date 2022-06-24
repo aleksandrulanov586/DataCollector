@@ -25,13 +25,15 @@ public class RouteCalculatorTest extends TestCase {
         Line line3 = new Line(3, "Третья");
 
 
-        Station station1 = new Station("Петровская", line);
-        Station station2 = new Station("Петровская", line2);
-        Station station3 = new Station("Морковна", line3);
-        Station station4 = new Station("Морковна", line3);
+        Station station1 = new Station("Лесная", line);
+        Station station2 = new Station("Достоевская", line3);
+        Station station3 = new Station("Сенная площадь", line2);
+        Station station4 = new Station("Гостиный двор", line3);
 
         List<Station> transfer1 = new ArrayList<>();
         List<Station> transfer2 = new ArrayList<>();
+        transfer1.add(station2);
+        transfer2.add(station3);
         stationIndex.addStation(station1);
         stationIndex.addStation(station2);
         stationIndex.addStation(station3);
@@ -39,16 +41,23 @@ public class RouteCalculatorTest extends TestCase {
 
         stationIndex.addConnection(transfer1);
         stationIndex.addConnection(transfer2);
-testcalculateDuration(station1, station2, station3, station4 );
+
     }
 
 
-    public void testcalculateDuration(Station station1,Station station2,Station station3,Station station4 ) throws Exception {
+    public void testcalculateDuration() throws Exception {
 
 
+        Line line = stationIndex.getLine(1);
+        Line line2 = stationIndex.getLine(2);
+        Line line3 = stationIndex.getLine(3);
 
+        Station station1 = new Station("Лесная", line);
+        Station station2 = new Station("Достоевская", line2);
+        Station station3 = new Station("Сенная площадь", line2);
+        Station station4 = new Station("Гостиный двор", line3);
 
-        List<Station> actual = routeCalculator.getShortestRoute(station1, station4);
+        List<Station> actual = routeCalculator.getShortestRoute(station1, station2);
         List<Station> expected = List.of(station1, station2, station3, station4);
         assertEquals(expected, actual);
 
