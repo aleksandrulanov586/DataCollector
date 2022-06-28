@@ -23,10 +23,7 @@ public class StationIndex {
         number2line.put(line.getNumber(), line);
     }
 
-    private void addStationToLine(Station station, Line line) {
 
-        number2line.put(station.getLine(), line);
-    }
 
     public void addConnection(List<Station> stations) {
         for (Station station : stations) {
