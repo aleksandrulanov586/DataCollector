@@ -93,14 +93,14 @@ public class RouteCalculatorTest extends TestCase {
         Line line2 = stationIndex.getLine(2);
         Line line3 = stationIndex.getLine(3);
         List<Station> stations = line.getStations();
-        List<Station> stations2 = line2.getStations();
-        List<Station> stations3 = line3.getStations();
+        List<Station> stations2 = line.getStations();
+        // List<Station> stations3 = line3.getStations();
         Station station = stations.get(1);
         Station station2 = stations2.get(2);
-        Station station3 = stations3.get(3);
+      //  Station station3 = stations3.get(3);
 
         List<Station> actual = routeCalculator.getShortestRoute(station, station2);
-        List<Station> expected = List.of(station, station2, station3);
+        List<Station> expected = List.of(station, station2);
         assertEquals(expected, actual);
 
 
