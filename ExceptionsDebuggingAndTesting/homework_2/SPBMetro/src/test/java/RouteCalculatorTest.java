@@ -30,18 +30,17 @@ public class RouteCalculatorTest extends TestCase {
         Station station3 = new Station("Сенная площадь", line2);
         Station station4 = new Station("Гостиный двор", line3);
         Station station5 = new Station("Девяткино", line3);
-
         Station station6 = new Station("Гражданский проспект", line);
         Station station7 = new Station("Академическая", line3);
         Station station8 = new Station("Политехническая", line2);
         Station station9 = new Station("Площадь Мужества", line3);
         Station station10 = new Station("Лесная", line3);
-
         Station station11 = new Station("Выборгская", line);
         Station station12 = new Station("Площадь Ленина", line3);
         Station station13 = new Station("Чернышевская", line2);
         Station station14 = new Station("Площадь Восстания", line3);
         Station station15 = new Station("Владимирская", line3);
+
         line.addStation(station1);
         line.addStation(station2);
         line.addStation(station3);
@@ -59,9 +58,8 @@ public class RouteCalculatorTest extends TestCase {
         line.addStation(station15);
 
         stationIndex.addLine(line);
-        stationIndex.addLine(line);
-        ;
-        stationIndex.addLine(line);
+        stationIndex.addLine(line2);
+        stationIndex.addLine(line3);
 
         stationIndex.addStation(station1);
         stationIndex.addStation(station2);
@@ -82,6 +80,7 @@ public class RouteCalculatorTest extends TestCase {
 
         stationIndex.addConnection(transfer1);
         stationIndex.addConnection(transfer2);
+
         transfer1.add(station2);
         transfer2.add(station3);
     }
@@ -90,18 +89,18 @@ public class RouteCalculatorTest extends TestCase {
     public void testcalculateDuration() throws Exception {
 
 
-        Line line = stationIndex.getLine(0);
-        Line line2 = stationIndex.getLine(1);
-        Line line3 = stationIndex.getLine(2);
+        Line line = stationIndex.getLine(1);
+        Line line2 = stationIndex.getLine(2);
+        Line line3 = stationIndex.getLine(3);
         List<Station> stations = line.getStations();
         List<Station> stations2 = line2.getStations();
         List<Station> stations3 = line3.getStations();
-        Station station = stations.get(0);
-        Station station2 = stations2.get(1);
-        Station station3 = stations3.get(2);
+        Station station = stations.get(1);
+        Station station2 = stations2.get(2);
+        Station station3 = stations3.get(3);
 
         List<Station> actual = routeCalculator.getShortestRoute(station, station2);
-        List<Station> expected = List.of(station, station2, station3, station3);
+        List<Station> expected = List.of(station, station2, station3);
         assertEquals(expected, actual);
 
 
