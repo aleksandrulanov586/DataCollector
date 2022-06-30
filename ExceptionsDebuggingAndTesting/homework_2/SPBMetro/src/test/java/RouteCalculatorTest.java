@@ -46,16 +46,18 @@ public class RouteCalculatorTest extends TestCase {
         line.addStation(station3);
         line.addStation(station4);
         line.addStation(station5);
-        line.addStation(station6);
-        line.addStation(station7);
-        line.addStation(station8);
-        line.addStation(station9);
-        line.addStation(station10);
-        line.addStation(station11);
-        line.addStation(station12);
-        line.addStation(station13);
-        line.addStation(station14);
-        line.addStation(station15);
+
+        line2.addStation(station6);
+        line2.addStation(station7);
+        line2.addStation(station8);
+        line2.addStation(station9);
+        line2.addStation(station10);
+
+        line3.addStation(station11);
+        line3.addStation(station12);
+        line3.addStation(station13);
+        line3.addStation(station14);
+        line3.addStation(station15);
 
         stationIndex.addLine(line);
         stationIndex.addLine(line2);
@@ -93,14 +95,14 @@ public class RouteCalculatorTest extends TestCase {
         Line line2 = stationIndex.getLine(2);
         Line line3 = stationIndex.getLine(3);
         List<Station> stations = line.getStations();
-        List<Station> stations2 = line.getStations();
-        // List<Station> stations3 = line3.getStations();
+        List<Station> stations2 = line2.getStations();
+        List<Station> stations3 = line3.getStations();
         Station station = stations.get(1);
         Station station2 = stations2.get(2);
-      //  Station station3 = stations3.get(3);
+        Station station3 = stations3.get(3);
 
         List<Station> actual = routeCalculator.getShortestRoute(station, station2);
-        List<Station> expected = List.of(station, station2);
+        List<Station> expected = List.of(station, station2, station3);
         assertEquals(expected, actual);
 
 
