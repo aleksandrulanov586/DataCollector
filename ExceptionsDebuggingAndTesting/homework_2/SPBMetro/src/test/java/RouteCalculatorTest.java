@@ -31,7 +31,7 @@ public class RouteCalculatorTest extends TestCase {
         Station station4 = new Station("Гостиный двор", line);
         Station station5 = new Station("Девяткино", line);
 
-        /** Station station6 = new Station("Гражданский проспект", line2);
+        /* Station station6 = new Station("Гражданский проспект", line2);
         Station station7 = new Station("Академическая", line2);
         Station station8 = new Station("Политехническая", line2);
         Station station9 = new Station("Площадь Мужества", line2);
@@ -41,7 +41,7 @@ public class RouteCalculatorTest extends TestCase {
         Station station12 = new Station("Площадь Ленина", line3);
         Station station13 = new Station("Чернышевская", line3);
         Station station14 = new Station("Площадь Восстания", line3);
-        Station station15 = new Station("Владимирская", line3); **/
+        Station station15 = new Station("Владимирская", line3); */
 
         line.addStation(station1);
         line.addStation(station2);
@@ -49,7 +49,7 @@ public class RouteCalculatorTest extends TestCase {
         line.addStation(station4);
         line.addStation(station5);
 
-       /** line2.addStation(station6);
+       /* line2.addStation(station6);
         line2.addStation(station7);
         line2.addStation(station8);
         line2.addStation(station9);
@@ -59,7 +59,7 @@ public class RouteCalculatorTest extends TestCase {
         line3.addStation(station12);
         line3.addStation(station13);
         line3.addStation(station14);
-        line3.addStation(station15);**/
+        line3.addStation(station15);*/
 
         stationIndex.addLine(line);
        /* stationIndex.addLine(line2);
@@ -70,7 +70,7 @@ public class RouteCalculatorTest extends TestCase {
         stationIndex.addStation(station3);
         stationIndex.addStation(station4);
         stationIndex.addStation(station5);
-       /** stationIndex.addStation(station6);
+       /* stationIndex.addStation(station6);
         stationIndex.addStation(station7);
         stationIndex.addStation(station8);
         stationIndex.addStation(station9);
@@ -79,7 +79,7 @@ public class RouteCalculatorTest extends TestCase {
         stationIndex.addStation(station12);
         stationIndex.addStation(station13);
         stationIndex.addStation(station14);
-        stationIndex.addStation(station15);**/
+        stationIndex.addStation(station15);*/
 
 
         stationIndex.addConnection(transfer1);
@@ -94,19 +94,26 @@ public class RouteCalculatorTest extends TestCase {
 
 
         Line line = stationIndex.getLine(1);
-        /**Line line2 = stationIndex.getLine(2);
-        Line line3 = stationIndex.getLine(3);**/
+        /*Line line2 = stationIndex.getLine(2);
+        Line line3 = stationIndex.getLine(3);*/
         List<Station> stations = line.getStations();
-       /** List<Station> stations2 = line2.getStations();
-        List<Station> stations3 = line3.getStations(); **/
+       /* List<Station> stations2 = line2.getStations();
+        List<Station> stations3 = line3.getStations(); */
         Station station = stations.get(1);
-        /**Station station2 = stations2.get(2);
-        Station station3 = stations3.get(3);**/
-
-        List<Station> actual = routeCalculator.getShortestRoute(station, station);
-        List<Station> expected = List.of(station);
+        Station station2 = stations.get(4);
+        /*Station station2 = stations2.get(2);
+        Station station3 = stations3.get(3);*/
+        double actual = RouteCalculator.calculateDuration(transfer1);
+        List<Station> actual = routeCalculator.getShortestRoute(station, station2);
+        List<Station> expected = List.of(station, station2);
         assertEquals(expected, actual);
 
+
+    }
+
+    public void testcalculateDuration() throws Exception {
+        double actual = RouteCalculator.calculateDuration()
+        double expected = 8.5;
 
     }
 
