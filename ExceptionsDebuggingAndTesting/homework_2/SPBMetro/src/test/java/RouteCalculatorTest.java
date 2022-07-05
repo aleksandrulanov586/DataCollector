@@ -9,6 +9,7 @@ import java.util.List;
 import junit.framework.TestCase;
 
 public class RouteCalculatorTest extends TestCase {
+
     StationIndex stationIndex = new StationIndex();
     RouteCalculator routeCalculator = new RouteCalculator(stationIndex);
 
@@ -23,7 +24,7 @@ public class RouteCalculatorTest extends TestCase {
         Line line = new Line(1, "Первая");
         Line line2 = new Line(2, "Вторая");
         Line line3 = new Line(3, "Третья");
-
+        addStation("K", line);
 
         Station station1 = new Station("Лесная", line);
         Station station2 = new Station("Достоевская", line);
@@ -92,7 +93,7 @@ public class RouteCalculatorTest extends TestCase {
 
     public void testcalculateDuration() throws Exception {
 
-
+        double expectedTime = 10.0;
         Line line = stationIndex.getLine(1);
         /*Line line2 = stationIndex.getLine(2);
         Line line3 = stationIndex.getLine(3);*/
@@ -100,20 +101,14 @@ public class RouteCalculatorTest extends TestCase {
        /* List<Station> stations2 = line2.getStations();
         List<Station> stations3 = line3.getStations(); */
         Station station = stations.get(1);
-        Station station2 = stations.get(4);
+        Station station2 = stations.get(2);
         /*Station station2 = stations2.get(2);
         Station station3 = stations3.get(3);*/
-        double actual = RouteCalculator.calculateDuration(transfer1);
+        double actualTime = RouteCalculator.calculateDuration(stations);
         List<Station> actual = routeCalculator.getShortestRoute(station, station2);
         List<Station> expected = List.of(station, station2);
         assertEquals(expected, actual);
-
-
-    }
-
-    public void testcalculateDuration() throws Exception {
-        double actual = RouteCalculator.calculateDuration()
-        double expected = 8.5;
+        assertEquals(expectedTime, actualTime);
 
     }
 
