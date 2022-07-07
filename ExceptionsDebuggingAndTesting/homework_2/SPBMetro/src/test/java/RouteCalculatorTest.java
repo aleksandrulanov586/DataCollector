@@ -84,12 +84,12 @@ public class RouteCalculatorTest extends TestCase {
         stationIndex.addStation(station14);
         stationIndex.addStation(station15);*/
 
-
+        transfer1.add(station7);
+        transfer2.add(station3);
         stationIndex.addConnection(transfer1);
         stationIndex.addConnection(transfer2);
 
-        transfer1.add(station2);
-        transfer2.add(station3);
+
     }
 
 
@@ -103,7 +103,7 @@ public class RouteCalculatorTest extends TestCase {
         List<Station> stations2 = line2.getStations();
         /* List<Station> stations3 = line3.getStations(); */
         Station station = stations.get(1);
-        Station station2 = stations.get(2);
+        Station station2 = stations.get(5);
         Station stationLin2 = stations2.get(2);
         /*Station station3 = stations3.get(3);*/
 
@@ -116,7 +116,7 @@ public class RouteCalculatorTest extends TestCase {
 
     public void testcalculateDuration2() throws Exception {
 
-        double expectedTime = 10.0;
+        double expectedTime = 0.0;
         Line line = stationIndex.getLine(1);
         Line line2 = stationIndex.getLine(2);
 
@@ -125,13 +125,15 @@ public class RouteCalculatorTest extends TestCase {
         List<Station> stations2 = line2.getStations();
         /* List<Station> stations3 = line3.getStations(); */
 
-        Station station = stations.get(1);
+        Station station = stations.get(0);
 
-        Station stationLin2 = stations2.get(2);
+        Station stationLin2 = stations2.get(4);
         /*Station station2 = stations2.get(2);
         Station station3 = stations3.get(3);*/
-        double actualTime = RouteCalculator.calculateDuration(stations2);
-        assertEquals(expectedTime, actualTime);
+        List<Station> actualTime = routeCalculator.getShortestRoute(station, stationLin2);
+        double actual = RouteCalculator.calculateDuration(actualTime);
+
+        assertEquals(expectedTime, actual);
 
     }
 
