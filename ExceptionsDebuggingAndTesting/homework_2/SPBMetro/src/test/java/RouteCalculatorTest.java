@@ -38,6 +38,12 @@ public class RouteCalculatorTest extends TestCase {
         Station station9 = new Station("Площадь Мужества", line2);
         Station station10 = new Station("Чёрная речка", line2);
 
+        Station station11 = new Station("Выборгская", line3);
+        Station station12 = new Station("Площадь Ленина", line3);
+        Station station13 = new Station("Чернышевская", line3);
+        Station station14 = new Station("Площадь Восстания", line3);
+        Station station15 = new Station("Владимирская", line3);
+
 
         line.addStation(station1);
         line.addStation(station2);
@@ -51,10 +57,15 @@ public class RouteCalculatorTest extends TestCase {
         line2.addStation(station9);
         line2.addStation(station10);
 
+        line3.addStation(station11);
+        line3.addStation(station12);
+        line3.addStation(station13);
+        line3.addStation(station14);
+        line3.addStation(station15);
 
         stationIndex.addLine(line);
         stationIndex.addLine(line2);
-
+        stationIndex.addLine(line3);
 
         stationIndex.addStation(station1);
         stationIndex.addStation(station2);
@@ -68,9 +79,16 @@ public class RouteCalculatorTest extends TestCase {
         stationIndex.addStation(station9);
         stationIndex.addStation(station10);
 
+        stationIndex.addStation(station11);
+        stationIndex.addStation(station12);
+        stationIndex.addStation(station13);
+        stationIndex.addStation(station14);
+        stationIndex.addStation(station15);
 
         transfer1.add(station7);
         transfer1.add(station3);
+        transfer1.add(station13);
+        transfer1.add(station9);
         stationIndex.addConnection(transfer1);
 
 
@@ -86,11 +104,11 @@ public class RouteCalculatorTest extends TestCase {
         List<Station> stations = line.getStations();
 
 
-        Station station = stations.get(0);
-        Station station2 = stations.get(4);
+        Station forest = stations.get(0);
+        Station devyatkina = stations.get(4);
 
 
-        List<Station> actualTime = routeCalculator.getShortestRoute(station, station2);
+        List<Station> actualTime = routeCalculator.getShortestRoute(forest, devyatkina);
         double actual = RouteCalculator.calculateDuration(actualTime);
 
         assertEquals(expectedTime, actual);
@@ -98,7 +116,7 @@ public class RouteCalculatorTest extends TestCase {
 
     }
 
-    public void testcalculateDuration2() throws Exception {
+    public void testshortestRoute() throws Exception {
 
         Line line = stationIndex.getLine(1);
 
@@ -130,14 +148,61 @@ public class RouteCalculatorTest extends TestCase {
         List<Station> stations = line.getStations();
         List<Station> stations2 = line2.getStations();
 
-        Station station = stations.get(1);
-        Station station2 = stations2.get(4);
+        Station blackRiver = stations.get(1);
+        Station dostoevsky = stations2.get(4);
 
 
-        List<Station> actualTime = routeCalculator.getShortestRoute(station, station2);
+        List<Station> actualTime = routeCalculator.getShortestRoute(blackRiver, dostoevsky);
         double actual = RouteCalculator.calculateDuration(actualTime);
 
         assertEquals(expectedTime, actual);
+
+    }
+
+    public void testcalculateDurationTwoTransfers() throws Exception {
+
+
+        double expectedTime = 13.5;
+
+        Line line = stationIndex.getLine(1);
+        Line line3 = stationIndex.getLine(3);
+
+        List<Station> stations = line.getStations();
+        List<Station> stations3 = line3.getStations();
+
+        Station forest = stations.get(0);
+
+        Station vladimirovskaya = stations3.get(4);
+
+        List<Station> actualTime = routeCalculator.getShortestRoute(forest, vladimirovskaya);
+        double actual = RouteCalculator.calculateDuration(actualTime);
+
+        assertEquals(expectedTime, actual);
+
+    }
+
+    public void testshortestRouteTwoTransfers() throws Exception {
+
+        Line line = stationIndex.getLine(1);
+
+        Line line3 = stationIndex.getLine(3);
+
+        List<Station> StationsOfLine1 = line.getStations();
+        List<Station> StationsOfLine3 = line3.getStations();
+
+
+        Station forest = StationsOfLine1.get(0);
+        Station vladimirovskaya = StationsOfLine3.get(4);
+
+        Station dostoevsky = StationsOfLine1.get(1);
+        Station sennapLoschad = StationsOfLine1.get(2);
+
+        Station chernyshevskaya = StationsOfLine3.get(2);
+        Station vosstaniyaSquare = StationsOfLine3.get(3);
+
+        List<Station> actual = routeCalculator.getShortestRoute(forest, vladimirovskaya);
+        List<Station> expected = List.of(forest, dostoevsky, sennapLoschad, chernyshevskaya, vosstaniyaSquare, vladimirovskaya);
+        assertEquals(expected, actual);
 
     }
 
