@@ -24,20 +24,14 @@ public class StationIndex {
     }
 
 
-
-    public void addConnection(List<Station> stations, List<Station> stations2) {
+    public void addConnection(List<Station> stations) {
         for (Station station : stations) {
             if (!connections.containsKey(station)) {
                 connections.put(station, new TreeSet<>());
             }
-            for (Station station2 : stations2) {
-                if (!connections.containsKey(station2 )) {
-                    connections.put(station, new TreeSet<>());
-                }
-                TreeSet<Station> connectedStations = connections.get(station);
-                connectedStations.addAll(stations.stream()
-                        .filter(s -> !s.equals(station)).collect(Collectors.toList()));
-            }
+            TreeSet<Station> connectedStations = connections.get(station);
+            connectedStations.addAll(stations.stream()
+                    .filter(s -> !s.equals(station)).collect(Collectors.toList()));
         }
     }
 
