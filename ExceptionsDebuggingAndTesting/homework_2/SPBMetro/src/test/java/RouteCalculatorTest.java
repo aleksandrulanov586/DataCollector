@@ -87,9 +87,11 @@ public class RouteCalculatorTest extends TestCase {
 
         transfer1.add(station7);
         transfer1.add(station3);
-        transfer1.add(station13);
-        transfer1.add(station9);
-        stationIndex.addConnection(transfer1);
+        transfer2.add(station13);
+        transfer2.add(station9);
+        stationIndex.addConnection(transfer1,transfer2);
+
+
 
 
     }
