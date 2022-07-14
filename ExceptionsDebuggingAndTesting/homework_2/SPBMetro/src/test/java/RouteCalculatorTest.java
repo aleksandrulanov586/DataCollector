@@ -163,7 +163,7 @@ public class RouteCalculatorTest extends TestCase {
     public void testcalculateDurationTwoTransfers() throws Exception {
 
 
-        double expectedTime = 13.5;
+        double expectedTime = 22.0;
 
         Line line = stationIndex.getLine(1);
         Line line3 = stationIndex.getLine(3);
@@ -185,10 +185,11 @@ public class RouteCalculatorTest extends TestCase {
     public void testshortestRouteTwoTransfers() throws Exception {
 
         Line line = stationIndex.getLine(1);
-
+        Line line2 = stationIndex.getLine(2);
         Line line3 = stationIndex.getLine(3);
 
         List<Station> StationsOfLine1 = line.getStations();
+        List<Station> StationsOfLine2 = line2.getStations();
         List<Station> StationsOfLine3 = line3.getStations();
 
 
@@ -196,13 +197,17 @@ public class RouteCalculatorTest extends TestCase {
         Station vladimirovskaya = StationsOfLine3.get(4);
 
         Station dostoevsky = StationsOfLine1.get(1);
-        Station sennapLoschad = StationsOfLine1.get(2);
 
+        Station sennapLoschad = StationsOfLine1.get(2);
+        Station academic = StationsOfLine2.get(1);
+
+        Station polytechnic = StationsOfLine2.get(2);
+        Station courageSquare = StationsOfLine2.get(3);
         Station chernyshevskaya = StationsOfLine3.get(2);
         Station vosstaniyaSquare = StationsOfLine3.get(3);
 
         List<Station> actual = routeCalculator.getShortestRoute(forest, vladimirovskaya);
-        List<Station> expected = List.of(forest, dostoevsky, sennapLoschad, chernyshevskaya, vosstaniyaSquare, vladimirovskaya);
+        List<Station> expected = List.of(forest, dostoevsky, sennapLoschad, academic, polytechnic, courageSquare, chernyshevskaya, vosstaniyaSquare, vladimirovskaya);
         assertEquals(expected, actual);
 
     }

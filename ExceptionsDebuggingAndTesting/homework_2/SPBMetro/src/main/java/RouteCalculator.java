@@ -17,14 +17,14 @@ public class RouteCalculator { // создаем класс
     }
 
 
-    public List<Station> getShortestRoute(Station from, Station to) { // публичный метод который возвращает коллекцию (джинерик)
-        List<Station> route = getRouteOnTheLine(from, to); // ссылка на коллекцию( джинерик ) передача в метод с аргументами
-        if (route != null) { // проверка является ли коллекция которая переданные в метод пустой
+    public List<Station> getShortestRoute(Station from, Station to) {
+        List<Station> route = getRouteOnTheLine(from, to);
+        if (route != null && route.size() != 0 ) { // проверка является ли коллекция которая переданные в метод пустой
             return route; // если нет то вернуть коллекцию
         }
 
-        route = getRouteWithOneConnection(from, to); // после этого перадаем коллекцию в другой метод
-        if (route != null) { // проверка евляется ли переданная коллекция в другой метод пустой
+        route = getRouteWithOneConnection(from, to);
+        if (route != null && route.size() != 0  ) {
             return route;// если нет то вернуть коллекцию
         }
 
