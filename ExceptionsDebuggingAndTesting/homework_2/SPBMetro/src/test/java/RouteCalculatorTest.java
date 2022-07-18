@@ -44,24 +44,12 @@ public class RouteCalculatorTest extends TestCase {
         Station station14 = new Station("Площадь Восстания", line3);
         Station station15 = new Station("Владимирская", line3);
 
+        addStationsToTheLine(line, station1, station2, station3, station4, station5);
 
-        line.addStation(station1);
-        line.addStation(station2);
-        line.addStation(station3);
-        line.addStation(station4);
-        line.addStation(station5);
 
-        line2.addStation(station6);
-        line2.addStation(station7);
-        line2.addStation(station8);
-        line2.addStation(station9);
-        line2.addStation(station10);
+        addStationsToTheLine(line2, station6, station7, station8, station9, station10);
 
-        line3.addStation(station11);
-        line3.addStation(station12);
-        line3.addStation(station13);
-        line3.addStation(station14);
-        line3.addStation(station15);
+        addStationsToTheLine(line3, station11, station12, station13, station14, station15);
 
         stationIndex.addLine(line);
         stationIndex.addLine(line2);
@@ -210,6 +198,12 @@ public class RouteCalculatorTest extends TestCase {
         List<Station> expected = List.of(forest, dostoevsky, sennapLoschad, academic, polytechnic, courageSquare, chernyshevskaya, vosstaniyaSquare, vladimirovskaya);
         assertEquals(expected, actual);
 
+    }
+
+    private void addStationsToTheLine(Line line, Station... stations) {
+        for (Station station : stations) {
+            line.addStation(station);
+        }
     }
 
     @Override
