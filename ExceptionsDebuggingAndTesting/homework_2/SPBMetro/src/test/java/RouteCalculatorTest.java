@@ -5,6 +5,7 @@ import core.Station;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import junit.framework.TestCase;
 
@@ -204,6 +205,12 @@ public class RouteCalculatorTest extends TestCase {
         for (Station station : stations) {
             line.addStation(station);
         }
+    }
+    private static Logger log = Logger.getLogger(RouteCalculatorTest.class.getName());
+
+    public void someMethod()
+    {
+        log.info("Some message");
     }
 
     @Override
