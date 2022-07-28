@@ -206,12 +206,9 @@ public class RouteCalculatorTest extends TestCase {
             line.addStation(station);
         }
     }
-    private static Logger log = Logger.getLogger(RouteCalculatorTest.class.getName());
 
-    public void someMethod()
-    {
-        log.info("Some message");
-    }
+
+
 
     @Override
     protected void tearDown() throws Exception {
