@@ -13,15 +13,15 @@
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
-        <File name="MyFile" fileName="logs/search.log" immediateFlush="true">
+        <File name="SearchFile" fileName="logs/search.log" immediateFlush="true">
 
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
-        <File name="MyFile" fileName="logs/input_errors.log " immediateFlush="true">
+        <File name="Input_errors" fileName="logs/input_errors.log " immediateFlush="true">
 
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
-        <File name="MyFile" fileName="logs/exceptions.log" immediateFlush="true">
+        <File name="Exceptions" fileName="logs/exceptions.log" immediateFlush="true">
 
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
@@ -29,12 +29,12 @@
 
     <loggers>
 
-        <logger name="filelogger" level="error">
-            <appender-ref ref="MyFile"/>
-        </logger>
 
-        <root level="info">
-            <appender-ref ref="Console"/>
+        <root level="ALL">
+            <appender-ref ref="SearchFile" level="INFO"/>
+            <appender-ref ref="Input_errors" level="WARN"/>
+            <appender-ref ref="Exceptions" level="ERROR"/>
         </root>
+
     </loggers>
 </configuration>
