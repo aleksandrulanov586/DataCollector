@@ -71,7 +71,7 @@ public class Main {
             if (station != null) {
                 return station;
             }
-            logger.info("Станция не найдена" + line);
+            logger.warn("Станция не найдена" + line);
             System.out.println("Станция не найдена :(");
         }
     }
