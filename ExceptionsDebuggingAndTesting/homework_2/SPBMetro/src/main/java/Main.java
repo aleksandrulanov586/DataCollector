@@ -5,6 +5,8 @@ import core.Station;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -23,7 +25,7 @@ public class Main {
     private static Scanner scanner;
 
     private static StationIndex stationIndex;
-
+    private static final Marker INVALID_STATIONS_MARKER = MarkerManager.getMarker("INVALID_STATIONS");
     public static void main(String[] args) {
         RouteCalculator calculator = getRouteCalculator();
         logger = LogManager.getRootLogger();
@@ -71,7 +73,7 @@ public class Main {
             if (station != null) {
                 return station;
             }
-            logger.warn("Станция не найдена" + line);
+           logger.warn(INVALID_STATIONS_MARKER, "Станция не найдена :  " +  "информация о станции", "которая не найдена");
             System.out.println("Станция не найдена :(");
         }
     }

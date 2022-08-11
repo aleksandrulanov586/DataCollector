@@ -7,24 +7,33 @@
 
         </Filters>
 
+        <File name="Input_errors" fileName="logs/input_errors.log">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="INVALID_STATIONS"/>
+            </Filters>
+        </File>
+
+        <File name="Input_errors" fileName="logs/exceptions.log">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="INVALID_STATIONS"/>
+            </Filters>
+        </File>
+        <File name="Input_errors" fileName="logs/search.log">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="INVALID_STATIONS"/>
+            </Filters>
+        </File>
+
     </Configuration>
     <appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
-        <File name="SearchFile" fileName="logs/search.log" immediateFlush="true">
 
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-        <File name="Input_errors" fileName="logs/input_errors.log " immediateFlush="true">
-
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-        <File name="Exceptions" fileName="logs/exceptions.log" immediateFlush="true">
-
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
     </appenders>
 
     <loggers>
