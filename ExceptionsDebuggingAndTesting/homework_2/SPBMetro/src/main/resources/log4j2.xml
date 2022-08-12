@@ -6,7 +6,12 @@
             <MarkerFilter marker="FLOW" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
 
         </Filters>
-
+        <File name="Input_errors" fileName="logs/search.log">
+            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Filters>
+                <MarkerFilter marker="ACTUAL_STATIONS"/>
+            </Filters>
+        </File>
         <File name="Input_errors" fileName="logs/input_errors.log">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <Filters>
@@ -14,18 +19,14 @@
             </Filters>
         </File>
 
+
         <File name="Input_errors" fileName="logs/exceptions.log">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <Filters>
-                <MarkerFilter marker="INVALID_STATIONS"/>
+                <MarkerFilter marker="STATIONS_EXCEPTIONS"/>
             </Filters>
         </File>
-        <File name="Input_errors" fileName="logs/search.log">
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-            <Filters>
-                <MarkerFilter marker="INVALID_STATIONS"/>
-            </Filters>
-        </File>
+
 
     </Configuration>
     <appenders>
