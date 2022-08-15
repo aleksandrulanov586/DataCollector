@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <configuration status="WARN">
-    <Configuration status="warn" name="MyApp" packages="">
-        <Filters>
-            <MarkerFilter marker="FLOW" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
-
-        </Filters>
-        <File name="Input_errors" fileName="logs/search.log">
+    <appenders>
+        <Console target="SYSTEM_OUT" name="Console">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="SearchFile" fileName="logs/search.log">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <Filters>
                 <MarkerFilter marker="ACTUAL_STATIONS"/>
@@ -18,33 +16,18 @@
                 <MarkerFilter marker="INVALID_STATIONS"/>
             </Filters>
         </File>
-
-
-        <File name="Input_errors" fileName="logs/exceptions.log">
+        <File name="Exceptions" fileName="logs/exceptions.log">
             <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
             <Filters>
                 <MarkerFilter marker="STATIONS_EXCEPTIONS"/>
             </Filters>
         </File>
-
-
-    </Configuration>
-    <appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </Console>
-
-
     </appenders>
-
     <loggers>
-
-
         <root level="ALL">
-            <appender-ref ref="SearchFile" level="INFO"/>
-            <appender-ref ref="Input_errors" level="WARN"/>
-            <appender-ref ref="Exceptions" level="ERROR"/>
+            <appender-ref level="INFO" ref="SearchFile"/>
+            <appender-ref level="INFO" ref="Input_errors"/>
+            <appender-ref level="ERROR" ref="Exceptions"/>
         </root>
-
     </loggers>
 </configuration>
