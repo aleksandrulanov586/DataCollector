@@ -73,11 +73,13 @@ public class Main {
         for (; ; ) {
             System.out.println(message);
             String line = scanner.nextLine().trim();
+            logger.warn(INVALID_STATIONS_MARKER, line + "информация о станции", "которая не найдена");
+
             Station station = stationIndex.getStation(line);
             if (station != null) {
                 return station;
             }
-            logger.warn(INVALID_STATIONS_MARKER, message + "информация о станции", "которая не найдена");
+
             System.out.println("Станция не найдена :(");
         }
     }
@@ -156,6 +158,7 @@ public class Main {
             lines.forEach(line -> builder.append(line));
         } catch (Exception ex) {
             ex.printStackTrace();
+            logger.warn(STATIONS_EXCEPTIONS_MARKER, "Ошибка", ex);
         }
         return builder.toString();
     }
