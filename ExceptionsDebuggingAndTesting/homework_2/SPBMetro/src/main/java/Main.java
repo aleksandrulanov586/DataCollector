@@ -74,7 +74,7 @@ public class Main {
         for (; ; ) {
             System.out.println(message);
             String line = scanner.nextLine().trim();
-            logger.warn(INVALID_STATIONS_MARKER,    " информация о станции  " + line +  " которая не найдена");
+            logger.warn(INVALID_STATIONS_MARKER, " информация о станции  " + line + " которая не найдена");
 
             Station station = stationIndex.getStation(line);
             if (station != null) {
@@ -158,8 +158,9 @@ public class Main {
         try {
             List<String> lines = Files.readAllLines(Paths.get(DATA_FILE));
             lines.forEach(line -> builder.append(line));
+            logger.error(STATIONS_EXCEPTIONS_MARKER, "Ошибка " + lines);
         } catch (Exception ex) {
-            logger.warn(STATIONS_EXCEPTIONS_MARKER,  "Ошибка " + ex);
+            logger.error(STATIONS_EXCEPTIONS_MARKER, "Ошибка " + ex);
             ex.printStackTrace();
         }
         return builder.toString();
