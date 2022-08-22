@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Logger logger;
+    private static Logger logger = LogManager.getRootLogger();
     private static final String DATA_FILE = "src/main/resources/map.json";
     private static Scanner scanner;
 
@@ -31,7 +31,7 @@ public class Main {
 
     public static void main(String[] args) {
         RouteCalculator calculator = getRouteCalculator();
-        logger = LogManager.getRootLogger();
+
         System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
         scanner = new Scanner(System.in);
         for (; ; ) {
@@ -70,10 +70,11 @@ public class Main {
     }
 
     private static Station takeStation(String message) {
+
         for (; ; ) {
             System.out.println(message);
             String line = scanner.nextLine().trim();
-            logger.warn(INVALID_STATIONS_MARKER, line + "информация о станции", "которая не найдена");
+            logger.warn(INVALID_STATIONS_MARKER,    " информация о станции  " + line +  " которая не найдена");
 
             Station station = stationIndex.getStation(line);
             if (station != null) {
@@ -152,13 +153,14 @@ public class Main {
     }
 
     private static String getJsonFile() {
+
         StringBuilder builder = new StringBuilder();
         try {
             List<String> lines = Files.readAllLines(Paths.get(DATA_FILE));
             lines.forEach(line -> builder.append(line));
         } catch (Exception ex) {
+            logger.warn(STATIONS_EXCEPTIONS_MARKER,  "Ошибка " + ex);
             ex.printStackTrace();
-            logger.warn(STATIONS_EXCEPTIONS_MARKER, "Ошибка", ex);
         }
         return builder.toString();
     }
