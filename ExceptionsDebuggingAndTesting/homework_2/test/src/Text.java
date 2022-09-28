@@ -2,6 +2,7 @@ public class Text {
     String name;
     String fam;
     String num;
+
     public Text(String name, String fam, String num) {
         this.name = name;
         this.fam = fam;
@@ -10,6 +11,6 @@ public class Text {
 
     @Override
     public String toString() {
-        return  name + " " +   fam + " " + num;
+        return name + " " + fam + " " + num;
     }
 }
