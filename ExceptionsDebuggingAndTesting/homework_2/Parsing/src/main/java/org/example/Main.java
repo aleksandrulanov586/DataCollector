@@ -19,7 +19,7 @@ public class Main {
         assert all != null;
         Elements station = all.select("p[class=single-station]");
        // Elements line= all.select("div[class=js-toggle-depend s-depend-control-single ]");
-        Elements line= all.select("div [class=js-toggle-depend s-depend-control-single  s-depend-control-active] ");
+        Elements line= all.select("div [class=js-toggle-depend s-depend-control-single ] ");
 
 
         String text = all.text();
