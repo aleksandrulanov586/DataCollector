@@ -1,19 +1,19 @@
 package org.example;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
 
-import javax.swing.text.Document;
-import java.io.File;
+import javax.lang.model.util.Elements;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
+
         Document document = Jsoup.connect("https://skillbox-java.github.io/").get();
 
         Element all = document.select("body > div > div > div").first();
