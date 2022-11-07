@@ -2,6 +2,7 @@
 
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -13,9 +14,11 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-
+@JsonPropertyOrder({"stations" + "{" + "[" + "line" + "]" + "}"})
 public class Main {
-
+    public int line;
+    public String station;
+    public String stations;
 
     public static void main(String[] args) throws IOException {
 
@@ -27,16 +30,14 @@ public class Main {
 
         Elements station1 = document.getElementById("metrodata").select("div[data-depend-set=lines-1]");
         Elements line = document.getElementById("metrodata").select("span[data-line=\"1\"]");
-        Elements namber = document.getElementById("metrodata").select("div[data-depend=\"{'toggle-slide':'lines-1'}\"ln-1]");
+        Elements namber = document.getElementById("metrodata").select("div[class=js-metro-stations t-metrostation-list-table data-line=]");
 
 
-        String line2 = line.text();
+        String line1 = line.text();
         String stationText = station1.text();
-
-        System.out.println(namber );
+        String namber1 = namber.text();
+        System.out.println(namber);
         ObjectMapper mapper = new ObjectMapper();
-
-
 
 
     }
