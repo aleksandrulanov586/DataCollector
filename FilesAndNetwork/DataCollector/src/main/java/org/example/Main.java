@@ -6,12 +6,12 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import javax.sound.sampled.Line;
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-import static org.example.Metro.parseLines;
+import static org.example.Line.parseLines;
+import static org.example.Station.parseStation;
 
 
 public class Main {
@@ -25,10 +25,11 @@ public class Main {
         Element all = document.select("body > div > div > div").first();
         assert all != null;
         Element metrodata = all.getElementById("metrodata");
-        List<Metro> lines = parseLines(metrodata);
+        List<Station> station = parseStation(metrodata);
+        List<Line> lines = parseLines(metrodata);
 
         lines.stream().forEach(System.out::println);
-
+        station.stream().forEach(System.out::println);
        /* document = Jsoup.connect("https://skillbox-java.github.io/").get();
 
         Element all = document.select("body > div > div > div").first();
