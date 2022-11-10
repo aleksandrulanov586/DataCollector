@@ -36,28 +36,16 @@ public class Line {
 
 
     static List<Line> parseLines(Element metrodata) {
-        return metrodata.select("span[data-line]")
+        return metrodata.select("div[data-line=1]")
                 .stream()
                 .map(e -> {
                     String lineName = e.text();
-                    String lineNumber = e.attr("data-line");
-                    return new Line(lineName, lineNumber);
-                })
-                .collect(Collectors.toList());
-    }
-    static List<Line> parseStation(Element metrodata) {
-        return metrodata.select("span[data-line=1]")
-                .stream()
-                .map(e -> {
-                    String lineName = e.text();
-                    String lineNumber = e.attr("data-line=1");
+                    String lineNumber = e.attr("p[single-station]");
                     return new Line(lineName, lineNumber);
                 })
                 .collect(Collectors.toList());
     }
 
-    @Override
-    public String toString() {
-        return "{" + "\n" +"lineName "+    lineName + "\n" + "{" + "\n"  + "\n" + "lineNumber " +  lineNumber;
-    }
+
+
 }

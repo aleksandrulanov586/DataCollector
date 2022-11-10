@@ -2,6 +2,8 @@
 
 package org.example;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -20,16 +22,19 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-
+        String jsonLines = null;
+        String jsonStation = null;
         Document document = Jsoup.connect("https://skillbox-java.github.io/").get();
         Element all = document.select("body > div > div > div").first();
         assert all != null;
         Element metrodata = all.getElementById("metrodata");
         List<Station> station = parseStation(metrodata);
         List<Line> lines = parseLines(metrodata);
+        ObjectMapper objectMapper = new ObjectMapper();
+        jsonLines = objectMapper.writeValueAsString(lines);
+      //  jsonStation = objectMapper.writeValueAsString(station);
+        System.out.println( jsonLines +  jsonStation);
 
-        lines.stream().forEach(System.out::println);
-        station.stream().forEach(System.out::println);
        /* document = Jsoup.connect("https://skillbox-java.github.io/").get();
 
         Element all = document.select("body > div > div > div").first();

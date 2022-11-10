@@ -29,10 +29,7 @@ public class Station {
                 })
                 .collect(Collectors.toList());
     }
-    @Override
-    public String toString() {
-        return "{" + "\n" +"stationName "+    stationName + "\n" + "{" + "\n";
-    }
+
 
 
 
