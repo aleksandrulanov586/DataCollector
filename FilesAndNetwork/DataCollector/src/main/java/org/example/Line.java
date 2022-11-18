@@ -36,7 +36,7 @@ public class Line {
 
 
     static List<Line> parseLines(Element metrodata) {
-        return metrodata.select("div[data-line=1]")
+        return metrodata.select("div[data-line]")
                 .stream()
                 .map(e -> {
                     String lineName = e.text();

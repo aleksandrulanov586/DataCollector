@@ -20,7 +20,7 @@ public class Station {
     }
 
     static List<Station> parseStation(Element metrodata) {
-        return metrodata.select("div[data-depend-set=lines-1]")
+        return metrodata.select("span[data-lines]")
                 .stream()
                 .map(e -> {
                     String stationName = e.text();

@@ -9,7 +9,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.example.Line.parseLines;
@@ -22,18 +23,39 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
+
         String jsonLines = null;
         String jsonStation = null;
         Document document = Jsoup.connect("https://skillbox-java.github.io/").get();
         Element all = document.select("body > div > div > div").first();
         assert all != null;
         Element metrodata = all.getElementById("metrodata");
+
         List<Station> station = parseStation(metrodata);
         List<Line> lines = parseLines(metrodata);
+        Element dataLine = all.getElementById("data-line");
+
+        for (Line r : lines) {
+            String i = r.getLineNumber();
+            Element dataLine = all.getElementById("data-line");
+            String i = r.getLineNumber();
+            String lineNumber = i.attr("p[single-station]");
+
+        }
+
+       /* lines.stream().map()
+        List<Line> lines1 = lines.stream().collect(Collectors.toList());
+
+        for (String r : lines1.toArray().keySet()
+             ) {
+
+        }*/
+
         ObjectMapper objectMapper = new ObjectMapper();
         jsonLines = objectMapper.writeValueAsString(lines);
-      //  jsonStation = objectMapper.writeValueAsString(station);
-        System.out.println( jsonLines +  jsonStation);
+        //  jsonStation = objectMapper.writeValueAsString(station);
+
+        System.out.println(jsonLines);
 
        /* document = Jsoup.connect("https://skillbox-java.github.io/").get();
 
