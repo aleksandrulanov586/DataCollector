@@ -13,6 +13,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static com.sun.tools.javac.comp.Resolve.ReferenceLookupResult.StaticKind.reduce;
+import static java.util.stream.Collectors.counting;
+import static java.util.stream.Collectors.groupingBy;
 import static org.example.Line.parseLines;
 import static org.example.Station.parseStation;
 
@@ -35,13 +38,19 @@ public class Main {
         List<Line> lines = parseLines(metrodata);
         Element dataLine = all.getElementById("data-line");
 
-        for (Line r : lines) {
-            String i = r.getLineNumber();
-            Element dataLine = all.getElementById("data-line");
-            String i = r.getLineNumber();
-            String lineNumber = i.attr("p[single-station]");
+        metrodata.select("div[data-line]")
+                .forEach(element -> {
+                    String lineNumber = element.attr("data-line");
+                    element.select("p.single-station").forEach(
+                            singleStationElement -> {
+                                String stationOnLineName = singleStationElement.text();
 
-        }
+                                stationOnLineName = stationOnLineName.replaceAll("\\d+.", "").trim();
+                                lines.stream().forEach(line -> line.getLineNumber().contains(lineNumber));
+                            }
+                    );
+
+                });
 
        /* lines.stream().map()
         List<Line> lines1 = lines.stream().collect(Collectors.toList());
