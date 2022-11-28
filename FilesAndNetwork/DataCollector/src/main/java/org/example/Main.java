@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static com.sun.tools.javac.comp.Resolve.ReferenceLookupResult.StaticKind.reduce;
+
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 import static org.example.Line.parseLines;
@@ -46,7 +46,19 @@ public class Main {
                                 String stationOnLineName = singleStationElement.text();
 
                                 stationOnLineName = stationOnLineName.replaceAll("\\d+.", "").trim();
-                                lines.stream().forEach(line -> line.getLineNumber().contains(lineNumber));
+                                for (Line line : lines) {
+                                    if (line.getLineNumber().contains(lineNumber)) {
+                                        List<String> stations = new ArrayList<>();
+                                        element.select("p.single-station").forEach(
+                                                singleStationElement2 -> {
+                                                    String stationOnLineName2 = singleStationElement.text();
+                                                    stationOnLineName2 = stationOnLineName2.replaceAll("\\d+.", "").trim();
+                                                    stations.add(stationOnLineName2);
+                                                });
+                                    }
+
+
+                                }
                             }
                     );
 
