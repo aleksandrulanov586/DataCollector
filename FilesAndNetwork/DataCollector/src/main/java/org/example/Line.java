@@ -2,23 +2,24 @@ package org.example;
 
 import org.jsoup.nodes.Element;
 
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Line {
 
 
     private String lineName;
     private String lineNumber;
-    private Map<String, String> LinkedHashMap = new LinkedHashMap<>();
 
     public Line(String lineName, String lineNumber) {
         this.lineName = lineName;
         this.lineNumber = lineNumber;
+
     }
+
+    private static List<String> LIN;
+
 
     public String getLineName() {
         return lineName;
@@ -39,11 +40,13 @@ public class Line {
 
 
     static List<Line> parseLines(Element metrodata) {
-        return metrodata.select("div[data-line]")
+        return metrodata.select("span[data-line]")
                 .stream()
                 .map(e -> {
                     String lineName = e.text();
-                    String lineNumber = e.attr("p[single-station]");
+                    String lineNumber = e.attr("data-line");
+
+
                     return new Line(lineName, lineNumber);
                 })
                 .collect(Collectors.toList());

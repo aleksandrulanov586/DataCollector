@@ -49,7 +49,7 @@ public class Main {
                                 for (Line line : lines) {
                                     if (line.getLineNumber().contains(lineNumber)) {
                                         List<String> stations = new ArrayList<>();
-                                        element.select("p.single-station").forEach(
+                                        element.select("p[single-station]").forEach(
                                                 singleStationElement2 -> {
                                                     String stationOnLineName2 = singleStationElement.text();
                                                     stationOnLineName2 = stationOnLineName2.replaceAll("\\d+.", "").trim();
