@@ -23,20 +23,29 @@ import static org.example.Station.parseStation;
 public class Main {
     private String lineName;
     private String lineNumber;
+    static String jsonLines = null;
+    String jsonStation = null;
+    static Document document;
 
+    static {
+        try {
+            document = Jsoup.connect("https://skillbox-java.github.io/").get();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static Element all = document.select("body > div > div > div").first();
+
+    static Element metrodata = all.getElementById("metrodata");
+    static List<Station> station = parseStation(metrodata);
+    static List<Line> lines = parseLines(metrodata);
+    Element dataLine = all.getElementById("data-line");
 
     public static void main(String[] args) throws IOException {
 
-        String jsonLines = null;
-        String jsonStation = null;
-        Document document = Jsoup.connect("https://skillbox-java.github.io/").get();
-        Element all = document.select("body > div > div > div").first();
         assert all != null;
-        Element metrodata = all.getElementById("metrodata");
 
-        List<Station> station = parseStation(metrodata);
-        List<Line> lines = parseLines(metrodata);
-        Element dataLine = all.getElementById("data-line");
 
         metrodata.select("div[data-line]")
                 .forEach(element -> {
@@ -63,6 +72,7 @@ public class Main {
                     );
 
                 });
+
 
        /* lines.stream().map()
         List<Line> lines1 = lines.stream().collect(Collectors.toList());
@@ -98,5 +108,25 @@ public class Main {
 
     }
 
+    static void addStation(Station station) {
+        for (Line line : lines) {
+        metrodata.select("div[data-line]")
+                .forEach(element -> {
+                    String lineNumber = element.attr("data-line");
+                    if(line.getLineNumber().equals(lineNumber)) {
+                        element.select("p.single-station").forEach(
+                                singleStationElement -> {
+                                    String stationOnLineName = singleStationElement.text().replaceAll("\\d+.", "").trim();
+                                    Station station = new Station(stationOnLineName);
+                                    line.addStation(station);
 
+                                  }
+                    }
+                        );
+                    }
+                });
+
+
+
+    }
 }

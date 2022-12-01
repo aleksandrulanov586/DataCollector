@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 public class Line {
 
-
+    private static List<Station> stations;
     private String lineName;
     private String lineNumber;
 
@@ -18,7 +18,7 @@ public class Line {
 
     }
 
-    private static List<String> LIN;
+
 
 
     public String getLineName() {
@@ -37,8 +37,6 @@ public class Line {
     public void setLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
     }
-
-
     static List<Line> parseLines(Element metrodata) {
         return metrodata.select("span[data-line]")
                 .stream()
@@ -51,6 +49,8 @@ public class Line {
                 })
                 .collect(Collectors.toList());
     }
+    void addStation  (Station station){
 
+    }
 
 }

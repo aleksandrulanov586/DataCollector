@@ -30,7 +30,9 @@ public class Station {
                 .collect(Collectors.toList());
     }
 
+    void addStation  (Station station){
 
+    }
 
 
 }
