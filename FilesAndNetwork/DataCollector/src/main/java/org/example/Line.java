@@ -6,6 +6,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.example.Main.lines;
+import static org.example.Main.metrodata;
+
 public class Line {
 
     private static List<Station> stations;
@@ -17,8 +20,6 @@ public class Line {
         this.lineNumber = lineNumber;
 
     }
-
-
 
 
     public String getLineName() {
@@ -37,6 +38,7 @@ public class Line {
     public void setLineNumber(String lineNumber) {
         this.lineNumber = lineNumber;
     }
+
     static List<Line> parseLines(Element metrodata) {
         return metrodata.select("span[data-line]")
                 .stream()
@@ -49,8 +51,24 @@ public class Line {
                 })
                 .collect(Collectors.toList());
     }
-    void addStation  (Station station){
 
+    static void addStation(Station station) {
+        for (Line line : lines) {
+            metrodata.select("div[data-line]")
+                    .forEach(element -> {
+                        String lineNumber = element.attr("data-line");
+                        if (line.getLineNumber().equals(lineNumber)) {
+                            element.select("p.single-station").forEach(
+                                    singleStationElement -> {
+                                        String stationOnLineName = singleStationElement.text().replaceAll("\\d+.", "").trim();
+                                        Station station2 = new Station(stationOnLineName);
+                                        line.addStation(station2);
+
+                                    }
+                            );
+                        }
+                    });
+
+        }
     }
-
 }

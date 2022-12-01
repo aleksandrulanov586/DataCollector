@@ -108,25 +108,7 @@ public class Main {
 
     }
 
-    static void addStation(Station station) {
-        for (Line line : lines) {
-        metrodata.select("div[data-line]")
-                .forEach(element -> {
-                    String lineNumber = element.attr("data-line");
-                    if(line.getLineNumber().equals(lineNumber)) {
-                        element.select("p.single-station").forEach(
-                                singleStationElement -> {
-                                    String stationOnLineName = singleStationElement.text().replaceAll("\\d+.", "").trim();
-                                    Station station = new Station(stationOnLineName);
-                                    line.addStation(station);
-
-                                  }
-                    }
-                        );
-                    }
-                });
 
 
 
-    }
-}
+        }
