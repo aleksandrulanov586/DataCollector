@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.example.GUIFrom">
+  <grid id="27dc6" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="34" y="28" width="596" height="466"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <vspacer id="dbf29">
+        <constraints border-constraint="North"/>
+      </vspacer>
+      <vspacer id="f24c7">
+        <constraints border-constraint="East"/>
+      </vspacer>
+      <grid id="d5771" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="9f0d7" class="javax.swing.JTextField" binding="filePath">
+            <constraints/>
+            <properties>
+              <editable value="false"/>
+              <preferredSize width="500" height="30"/>
+            </properties>
+          </component>
+          <component id="84994" class="javax.swing.JButton" binding="selectButton" default-binding="true">
+            <constraints/>
+            <properties>
+              <text value="Загрузить файл"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="NoLabelFor"/>
+  </inspectionSuppressions>
+</form>
